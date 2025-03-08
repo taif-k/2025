@@ -37,13 +37,6 @@ int main()
         }
     }
 
-    for (int i = 0; i < counter; i++)
-    {
-        printf(" %d ", unique[i]);
-    }
-
-    printf("\n\n 2 loop\n");
-
     for (int i = 0; i < 10; i++)
     {
         int match = 0;

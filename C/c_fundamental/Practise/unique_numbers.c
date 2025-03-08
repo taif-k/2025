@@ -3,7 +3,7 @@
 int main()
 {
     int numbers[10] = {1, 1, 4, 5, 5, 0, 2, 3, 7, 7};
-    int unique[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 1 5 7 0 0 0 0 0 0 0
+    int unique[10];
     int counter = 0;
 
     for (int i = 0; i < 10; i++)
@@ -42,19 +42,17 @@ int main()
         printf(" %d ", unique[i]);
     }
 
-    printf("\n 2 loop\n");
-
-    // int numbers[10] = {1, 1, 4, 5, 5, 0, 2, 3, 7, 7};
-    // int unique[10] =  {1 5 7 0 0 0 0 0 0 0};
+    printf("\n\n 2 loop\n");
 
     for (int i = 0; i < 10; i++)
     {
         int match = 0;
-        for (int j = i + 1; j < 10; j++)
+        for (int j = 0; j < 10; j++)
         {
-            if (unique[i] == unique[j])
+            if (numbers[i] == unique[j])
             {
                 match = 1;
+                break;
             }
         }
 

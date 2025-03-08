@@ -1,0 +1,2 @@
+
+        printf("------------Student details------ ");

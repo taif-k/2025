@@ -1,0 +1,6 @@
+[submodule "CodeMonkeys-BusReservationSys-C"]
+	path = CodeMonkeys-BusReservationSys-C
+	url = https://github.com/taif-k/CodeMonkeys-BusReservationSys-C.git
+[submodule "Indixpert_CodeMonkeys_C"]
+	path = Indixpert_CodeMonkeys_C
+	url = https://github.com/taif-k/Indixpert_CodeMonkeys_C.git

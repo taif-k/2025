@@ -4,3 +4,6 @@
 [submodule "Indixpert_CodeMonkeys_C"]
 	path = Indixpert_CodeMonkeys_C
 	url = https://github.com/taif-k/Indixpert_CodeMonkeys_C.git
+[submodule "C_Fundamentals"]
+	path = C_Fundamentals
+	url = https://github.com/taif-k/C_Fundamentals.git

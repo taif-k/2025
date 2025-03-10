@@ -13,5 +13,5 @@
 
 # Python with Date  
 
-1. Introduction - [10 march - ]
+1. Introduction  [10 march - ]
 

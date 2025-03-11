@@ -1,20 +1,11 @@
-def calculation(alphabetD):
-    a = 1
-    b = 3
-    print("D is ", alphabetD)
-    return a + b
 
-def main():
-    c = 2
-    d = 8
-    print("C is",c)
-    print("Sum is ",calculation(d))
+a = 5
+a += 1
+print("a is: ",a)
 
-main() 
+a = 't'
+print("Now a is: ",a)
 
-
-    
-
-
-
-
+b=2
+a=1
+print("Subtraction of a and b is: ",b-1) 

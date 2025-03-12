@@ -6,4 +6,4 @@ print(info)
 
 # dictionary
 location = {"city":"New Delhi"}
-print(country,location["city"])
+print(f"My location is {location["city"]}",country)

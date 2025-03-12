@@ -1,9 +1,6 @@
 # digit = 123
 # print(digit)
 
-number = 0123
-print(number)
-
 # digit = 0000
 # print(digit)
 
@@ -15,4 +12,7 @@ print(number)
 
 # digit = int(0000)
 # print(digit)
+
+number = 0123
+print(number)
 

@@ -29,7 +29,7 @@ print("\n ",type(check5),check5)
 check5 = int(check5)
 print("\n ",type(check5),check5)
 
-check6 = 1.1e2  # to take 0123 use it as string, this will give output as 83 
+check6 = 1.1e2
 print("\nCheck 6")
 print("\n ",type(check6),check6)
 check6 = int(check6)

@@ -20,7 +20,7 @@ print("\n ",type(check3),check3)
 check4 = "0x123"  # this will give error because this str is cant be converted to int because invalid literal for int() with base 10: '0x123'
 print("\nCheck 4")
 print("\n ",type(check4),check4)
-check4 = int(check4)
+check4 = int(check4)  # remove or comment this line to run this without error 
 print("\n ",type(check4),check4)
 
 check5 = 0o123  # to take 0123 use it as string, this will give output as 83 

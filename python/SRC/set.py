@@ -6,3 +6,6 @@ print(setdata)
 
 
 # Set is collection of unique unordered data 
+
+# [{}] OK
+# {[]} NO

@@ -11,3 +11,6 @@ set3 = {list2[1],9}  # there will be type error is we pass list in set, but we c
 print(set3)
 
 # list can have duplicate data and it is in ordered(sequence), it is in sequence so we can use index 
+
+# [{}] OK
+# {[]} NO

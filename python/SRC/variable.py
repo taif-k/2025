@@ -1,12 +1,15 @@
 
-a = 5
-a += 1
-print("a is: ",a)
+number = 5
+number += 1
+print("a is: ",number)
 
-a = 't'
-print("Now a is: ",a)
+number = 't'
+print("Now a is: ",number)
 
-b=2
-a=1
-print("Subtraction of a and b is: ",b-1) 
-#
+number2=2
+number=1
+print("Subtraction of a and b is: ",number-number2) 
+
+# py is dynamic typed
+# Variable names should describe the data they hold.
+# variable names are case-sensitive

@@ -9,6 +9,10 @@ print(listdata)
 listdata.pop(1) # pop takes index
 print(listdata) 
 
+listdata.append("adding in last")
+print(listdata) 
+print("Length of list is",len(listdata))
+
 # list2 = [8,9]
 # set3 = {list2[1],9}  # there will be type error is we pass list in set, but we can pass list2[index] in set
 # # print(set3)

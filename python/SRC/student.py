@@ -6,8 +6,9 @@ contact = int(input("Enter contact: "))
 qualification = input("Enter qualification: ")
 
 studentdetails = {"id":id,"name":name,"address":address,"contact":contact,"qualification":qualification}
-# studentstr = f"""id: {studentdetails["id"]} \nname: {studentdetails["name"]} \naddress: {studentdetails["address"]} \ncontact: {studentdetails["contact"] } \nqualification: {studentdetails["qualification"]}"""   
+studentstr = f"""id: {studentdetails["id"]} \nname: {studentdetails["name"]} \naddress: {studentdetails["address"]} \ncontact: {studentdetails["contact"] } \nqualification: {studentdetails["qualification"]}"""   
 print(studentdetails)
+print(studentstr)
 
 
 

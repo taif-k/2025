@@ -9,4 +9,11 @@
 7.   Functions   [6 Feb - 10 Feb]
 8.   Git & Github   [11 Feb - 14 Feb]
 9.   Bank management system project   [18 Feb - 25 Feb]
-10.  Bus Reservation system   [27 Feb - 5 march] 
+10.  Bus Reservation system   [27 Feb - 5 march]  
+
+
+# python Topics with Date  
+
+1. python introduction  [10 march - 13 march]  
+2. variables  [14 march - 16 march]  
+3. Data types [16 march - 17 march]  

@@ -5,13 +5,13 @@ listdata = [d1,d2,9,9,"9"]
 # print(listdata) 
 
 # # only takes one arg, here we have removed d2, anything can be removed from anywhere in the list
-print(listdata) 
+# print(listdata) 
 listdata.pop(1) # pop takes index
-print(listdata) 
+# print(listdata) 
 
 listdata.append("adding in last")
-print(listdata) 
-print("Length of list is",len(listdata))
+# print(listdata) 
+# print("Length of list is",len(listdata))
 
 # list2 = [8,9]
 # set3 = {list2[1],9}  # there will be type error is we pass list in set, but we can pass list2[index] in set
@@ -21,3 +21,12 @@ print("Length of list is",len(listdata))
 
 # [{}] OK
 # {[]} NO
+
+
+students = ["vikas","sumit","srishti","sheetal","deepak","raish","umang","vishal","taif","sandeep"]
+print(students)
+
+students.append("rohit")
+students.append("amaan")
+
+print(students)

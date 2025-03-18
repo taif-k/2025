@@ -1,3 +1,4 @@
+import json
 studentdetails = {} 
 
 studentdetails["id"] = (input("Enter id: "))
@@ -7,7 +8,7 @@ studentdetails["contact"] = int(input("Enter contact: "))
 studentdetails["contact"] = input("Enter qualification: ")
 
 # studentstr = f"""id: {studentdetails["id"]} \nname: {studentdetails["name"]} \naddress: {studentdetails["address"]} \ncontact: {studentdetails["contact"] } \nqualification: {studentdetails["qualification"]}"""   
-print(studentdetails)
+print(json.dumps(studentdetails,indent=4))
 # print(studentstr)
  
 

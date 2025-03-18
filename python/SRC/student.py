@@ -9,7 +9,7 @@ studentdetails["contact"] = input("Enter qualification: ")
 # studentstr = f"""id: {studentdetails["id"]} \nname: {studentdetails["name"]} \naddress: {studentdetails["address"]} \ncontact: {studentdetails["contact"] } \nqualification: {studentdetails["qualification"]}"""   
 print(studentdetails)
 # print(studentstr)
-
+ 
 
 
 

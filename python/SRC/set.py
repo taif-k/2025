@@ -17,11 +17,10 @@
 # # print(s3) # {{}} NO
 
 
-setdata1 = {1,2,3,4,5}
-# setdata2 = {3,4,5,6}
+setdata1 = {1,2,3,4}
+# setdata1.add(6-1)
+# setdata1.discard("string") # discard will not throw an error unlike remove, if the element is not present in set 
+# setdata1.remove(2)
+setdata1.pop() # when using pop in set it does not take any arg(index was passed as arg in list) but set is unordered so no index, pop in set will remove randomly
 
-# setdata.remove(2)
-# print(setdata2.difference(setdata1))
-
-# setdata.remove(3)
 print(setdata1)

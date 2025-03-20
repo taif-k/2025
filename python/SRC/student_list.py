@@ -10,7 +10,7 @@ qualificationdata["qualificationname"] = input("Enter 1st Qualification: ")
 qualificationdata["passingyear"] = input("Enter passing year: ")
 listdata.append(qualificationdata)
 
-qualificationdata = {}
+qualificationdata = {} # this is ued to reset the prevoius data, otherwise latest input will be updated in both qualifications
 
 qualificationdata["qualificationname"] = input("Enter 2nd Qualification: ")
 qualificationdata["passingyear"] = input("Enter passing year: ")

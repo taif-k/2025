@@ -2,12 +2,13 @@
 d1 = {1,2,3}
 d2 = {9,9,9,"t"}
 listdata = [4,5,6,7,8]
+listdata2 = [1,2,3,4,5,6,7]
 # print(listdata) 
 
 # # only takes one arg, here we have removed d2, anything can be removed from anywhere in the list
 # print(listdata) 
-listdata.pop() # pop takes index
-print(listdata) 
+listdata2.pop(-1+1) # pop takes index, or last element(default) without index
+print(listdata2) 
 
 # listdata.append("adding in last")
 # print(listdata) 

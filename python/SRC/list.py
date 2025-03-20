@@ -1,15 +1,15 @@
 
 d1 = {1,2,3}
 d2 = {9,9,9,"t"}
-listdata = [d1,d2,9,9,"9"]
+listdata = [4,5,6,7,8]
 # print(listdata) 
 
 # # only takes one arg, here we have removed d2, anything can be removed from anywhere in the list
 # print(listdata) 
-listdata.pop(1) # pop takes index
-# print(listdata) 
+listdata.pop() # pop takes index
+print(listdata) 
 
-listdata.append("adding in last")
+# listdata.append("adding in last")
 # print(listdata) 
 # print("Length of list is",len(listdata))
 
@@ -23,10 +23,10 @@ listdata.append("adding in last")
 # {[]} NO
 
 
-students = ["vikas","sumit","srishti","sheetal","deepak","raish","umang","vishal","taif","sandeep"]
-print(students)
+# students = ["vikas","sumit","srishti","sheetal","deepak","raish","umang","vishal","taif","sandeep"]
+# print(students)
 
-students.append("rohit")
-students.append("amaan")
+# students.append("rohit")
+# students.append("amaan")
 
-print(students)
+# print(students)

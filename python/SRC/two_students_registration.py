@@ -27,7 +27,7 @@ studentqualification = {}
 studentqualification["name"] = input("Enter qualification: ")
 studentqualification["passingyear"] = int(input("Enter passing year: "))
 qualificationlist.append(studentqualification)
-#/////////////////////////////////////////////////////////////////////////////
+#//////////////////////////////////////////////////////////////////////////////
 studentdict2 = {}
 studentqualification = {}
 qualificationlist = []
@@ -46,15 +46,8 @@ studentskills.append(input("Enter 3rd skill: "))
 
 studentqualification["name"] = input("Enter qualification: ")
 studentqualification["passingyear"] = input("Enter passing year: ")
-qualificationlist.append(studentqualification)
-studentqualification = {}
-studentqualification["name"] = input("Enter qualification: ")
-studentqualification["passingyear"] = int(input("Enter passing year: "))
-qualificationlist.append(studentqualification)
-studentqualification = {}
-studentqualification["name"] = input("Enter qualification: ")
-studentqualification["passingyear"] = int(input("Enter passing year: "))
-qualificationlist.append(studentqualification)
+qualificationlist.append(studentqualification) #
+
 mainlist = [studentdict,studentdict]
 print(json.dumps(mainlist,indent=4))
 

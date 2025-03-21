@@ -1,13 +1,20 @@
 numbers = list(range(1,51))
+# 1 2 3 4..
+print(numbers[2:])  # [ inclusive:exclusive ]
+print(numbers[:2])
+print(numbers[24:])
+print(numbers[:25])
 
 
-# print(numbers[2:])
+digits = [2,4,6,8,10]
+# print 6
+print(digits[2:3])  # [ inclusive:exclusive ]
+print(digits[:-1])
+print(digits[-1:]) # -1 is always the last index
 
-# print(numbers[:2])
-
-print(numbers[:10])
-print(numbers[10:20])
-print(numbers[20:30])
-print(numbers[30:40])
-print(numbers[40:50])
+listdata = ["a","b","c",1,2,3,4.0,5.0,6.0]
+# print alphabets, inetegers and float seperatly
+print(listdata[:3])
+print(listdata[3:6])
+print(listdata[6:])
 

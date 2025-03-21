@@ -23,11 +23,9 @@ studentqualification = {}
 studentqualification["name"] = input("Enter qualification: ")
 studentqualification["passingyear"] = int(input("Enter passing year: "))
 qualificationlist.append(studentqualification)
-studentqualification = {}
-studentqualification["name"] = input("Enter qualification: ")
-studentqualification["passingyear"] = int(input("Enter passing year: "))
-qualificationlist.append(studentqualification)
-#//////////////////////////////////////////////////////////////////////////////
+
+#
+
 studentdict2 = {}
 studentqualification2 = {}
 qualificationlist2 = []

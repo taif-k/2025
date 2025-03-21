@@ -3,31 +3,21 @@ d1 = {1,2,3}
 d2 = {9,9,9,"t"}
 listdata = [4,5,6,7,8]
 listdata2 = [1,2,3,4,5,6,7]
-# print(listdata) 
+list = [d1,d2,listdata,listdata2]
+print(list) 
 
-# # only takes one arg, here we have removed d2, anything can be removed from anywhere in the list
-# print(listdata) 
-listdata2.pop(-1+1) # pop takes index, or last element(default) without index
-print(listdata2) 
+list.pop() # pop takes index, or last element(default) without index
+print(list) 
+print("Length of list is",len(list))
 
-# listdata.append("adding in last")
-# print(listdata) 
-# print("Length of list is",len(listdata))
+city = ["mumbai","delhi","gugurgram"]
+city.reverse() # descending
+print(city)
 
-# list2 = [8,9]
-# set3 = {list2[1],9}  # there will be type error is we pass list in set, but we can pass list2[index] in set
-# # print(set3)
-
+city = ["mumbai","delhi","gugurgram"]
+city.sort() # ascending
+print(city)
 # list can have duplicate data and it is in ordered(sequence), it is in sequence so we can use index 
 
 # [{}] OK
 # {[]} NO
-
-
-# students = ["vikas","sumit","srishti","sheetal","deepak","raish","umang","vishal","taif","sandeep"]
-# print(students)
-
-# students.append("rohit")
-# students.append("amaan")
-
-# print(students)

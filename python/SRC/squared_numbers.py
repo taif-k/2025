@@ -1,6 +1,5 @@
-numbers =list(range(1,11))  
-numbers = numbers[:5]      
+numbers = list(range(10,0,-1))
+print(numbers)
 
-squared_numbers = {num ** 2 for num in numbers }  # using for loop to iterate over each num from 1 - 5 and squaring it using ( ** 2)
-                                                   
+squared_numbers = [num ** 2 for num in numbers]
 print(squared_numbers)

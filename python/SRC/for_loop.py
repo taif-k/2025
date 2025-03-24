@@ -8,5 +8,5 @@ for keys,values in student.items():  # items is used here for both keys and valu
     print(f"""{keys}:{values}""")
 
 for keys in student.items(): 
-    print(f"""{keys}""") # output will be both keys and values in a tuple because items is unpacking keys and values in each key [key = (key,value)]
+    print(f"""{keys}""") # iterating over car.items(), but unpacking the key-value tuple, means key will hold the entire tuple (key, value).  
                          # use student.keys to het values of keys

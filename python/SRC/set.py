@@ -12,6 +12,11 @@ print("Printing set 2 after using add,dicard,remove and pop: ",setdata2)
 
 setdata3 = {1,2,3,4}
 setdata4 = {4,5,6,7}
+
 print("set 3: ",setdata3)
 print("set 4: ",setdata4)
 print("Difference method used on set 3 and set 4",setdata3.difference(setdata4))
+
+colors = {"blue","green","black","red","white"}
+for color in colors:
+    print(color)

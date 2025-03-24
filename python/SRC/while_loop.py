@@ -28,6 +28,6 @@ while True:
 for keys,values in student.items():  # items is used here for both keys and values, for only keys or values use student.keys or student.values respectively.  
     print(f"""{keys} is {values}""")
 
-# for keys in student.items(): 
+ # for keys in student.items(): 
     # print(f"""{keys}""") # iterating over car.items(), but unpacking the key-value tuple, means key will hold the entire tuple (key, value).  
-                         # use student.keys to het values of keys
+                           # use student.keys to het values of keys 

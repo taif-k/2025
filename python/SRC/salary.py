@@ -1,6 +1,5 @@
 salaries = []
 
-
 salary = input("Enter salary 1: ")
 if salary.isdigit():
         salary = int(salary)
@@ -12,7 +11,6 @@ if salary.isdigit():
 else:
     print("Enter salary in Positive numbers Only")
 
-
 salary = input("Enter salary 2: ")
 if salary.isdigit():
     salary = int(salary)
@@ -23,7 +21,6 @@ if salary.isdigit():
 else:
     print("Enter salary in Positive numbers Only")
 
-
 salary = input("Enter salary 3: ")
 if salary.isdigit():
     salary = int(salary)
@@ -33,7 +30,6 @@ if salary.isdigit():
         print("Enter salary between 10,000 and 1,00,000")    
 else:
     print("Enter salary in Positive numbers Only")
-
 
 salary = input("Enter salary 4: ")
 if salary.isdigit():

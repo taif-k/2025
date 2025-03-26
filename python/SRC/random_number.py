@@ -18,7 +18,7 @@ while True:
                        print("Generated number: ",random_number)
                        break
         else:
-            print("Enter only Numbers")    
+            print("Enter only positive Numbers")    
 
     
         

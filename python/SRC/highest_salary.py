@@ -25,8 +25,8 @@ if salary4 >=10000:
 else:
     print("Enter higher salary")       
 
-
 salaries.sort()
+print(salaries)
 # print(salaries[1:])    
 
 

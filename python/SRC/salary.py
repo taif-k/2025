@@ -43,8 +43,8 @@ if salary4.isdigit():
     else:
         print("Enter higher salary")       
 
-salaries.sort()
-print("Two Highest salaries are ",salaries[2:])    
+salaries.sort(reverse=True)
+print("Two Highest salaries are ",salaries[:2])    
 
 
 

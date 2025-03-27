@@ -15,15 +15,16 @@
 namelist = ["taif","sumit","srishti","sheetal"]
 
 not_present = True
+name_input = input("Enter name: ")
 
 for name in namelist:
-    if name == "fi":
+    if name == name_input:
         print(f"{name} is present")
         break
     else:
         not_present = False
 
 if not_present == False:
-    print("Not present")        
+    print("Entered name is present")        
 
 

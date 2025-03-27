@@ -1,18 +1,17 @@
-# student = {}
+student = {}
 
-# student["id"] = int(input("Enter id: "))
-# student["name"] = input("Enter name: ")
-# student["contact"] = int(input("Enter contact: "))
+student["id"] = 123 #int(input("Enter id: "))
+student["name"] = "taif" #input("Enter name: ")
+student["contact"] = 7827639909 #int(input("Enter contact: "))
 
-# for keys,values in student.items():  # items is used here for both keys and values, for only keys or values use student.keys or student.values respectively.  
-#     print(f"""{keys}:{values}""")
-
-# for keys in student.items(): 
-#     print(f"""{keys}""") # iterating over car.items(), but unpacking the key-value tuple, means key will hold the entire tuple (key, value).  
-#                          # use student.keys to het values of keys
+for keys,values in student.items():
+    if keys == "name":
+        if values == "taif":
+            print("key is matched with value")
 
 
 namelist = ["taif","sumit","srishti","sheetal"]
+print(namelist)
 
 not_present = True
 name_input = input("Enter name: ")

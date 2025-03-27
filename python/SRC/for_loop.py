@@ -25,3 +25,11 @@ for name in namelist:
 
 if not_present == False:
     print("Not present")        
+
+
+names = []
+for name in range(0,5):
+    names.append(input("Enter name: "))
+    # print(names)
+
+print(names)

@@ -8,7 +8,7 @@
 # print(num)
 
 # num = (1 == 2-1)
-# print(num)
+# print(num) 
 
 num = (0.2 == 0.4-0.2)
 print(num)

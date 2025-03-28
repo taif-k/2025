@@ -1,7 +1,7 @@
 import json
 
 listdata = []
-for num in range(1,3):
+for num in range(1,4):
     studentdata = {}
     qualificationlist = []
     studentdata["id"] = num + 100
@@ -20,18 +20,20 @@ for num in range(1,3):
 
     listdata.append(studentdata)
 
-print(json.dumps(listdata,indent=4))    
-qualification_search = input("Enter qualification to search: ")
-if qualification_search.isalpha():
-    for d in listdata:
-        for keys in d.keys():
-            if keys == "qualification":
-                for n in qualificationlist:
-                    for value in n.values():
-                        if value == qualification_search:
-                            print(d["name"])
-else:
-    print("Enter valid Qualification")
+print(json.dumps(listdata,indent=4))
+for x in range(1,10000000):
+    qualification_search = input("Enter qualification to search: ")
+    if qualification_search.isalpha():
+        for d in listdata:
+            for keys in d.keys():
+                if keys == "qualification":
+                    for n in qualificationlist:
+                        for value in n.values():
+                            if value == qualification_search:
+                                print(d["name"])
+        break
+    else:
+        print("Enter valid Qualification")
 
                 
 

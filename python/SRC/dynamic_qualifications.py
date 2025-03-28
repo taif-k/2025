@@ -1,24 +1,26 @@
 import json
 
 listdata = [] # {studentdata (k,v)}, {studentdata (k,v)}, {studentdata (k,v)}
-qualificationlist = [] # qualificationdict
+ # qualificationdict
 
 for num in range(1,3):
     studentdata = {}
-
+    qualificationlist = []
     studentdata["id"] = num
     studentdata["name"] = input("Enter name: ")
+    
     studentdata["qualification"] = qualificationlist
     for q in range(1,3):
         qualificationdict = {}
         qualificationdict["qname"] = input("Enter qualification: ")
         qualificationdict["passingyear"] = int(input("Enter passing year: "))
+        qualificationlist.append(qualificationdict)
         ask_qualification = input("Add More qualification - y or n: ")
         if ask_qualification.lower() == "y":
             continue
         else:
             break 
-    qualificationlist.append(qualificationdict)
+
     listdata.append(studentdata)
 
 print(json.dumps(listdata,indent=4))    

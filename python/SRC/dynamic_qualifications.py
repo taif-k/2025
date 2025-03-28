@@ -1,14 +1,11 @@
 import json
 
-listdata = [] # {studentdata (k,v)}, {studentdata (k,v)}, {studentdata (k,v)}
- # qualificationdict
-
+listdata = []
 for num in range(1,3):
     studentdata = {}
     qualificationlist = []
-    studentdata["id"] = num
+    studentdata["id"] = num + 100
     studentdata["name"] = input("Enter name: ")
-    
     studentdata["qualification"] = qualificationlist
     for q in range(1,3):
         qualificationdict = {}
@@ -24,21 +21,21 @@ for num in range(1,3):
     listdata.append(studentdata)
 
 print(json.dumps(listdata,indent=4))    
-
-
 qualification_search = input("Enter qualification to search: ")
-not_present = True
+for d in listdata:
+    for keys in d.keys():
+        if keys == "qualification":
+            for n in qualificationlist:
+                for value in n.values():
+                    if value == qualification_search:
+                        print(d["name"])
 
-for dict in listdata: # {}, {}
-    for key in dict.keys(): # id: name: qualification:
-        if key == "qualification":
-             for d in qualificationlist: # qualificationdict qualificationdict
-                  for value in d.values(): # qname: passingyear:
-                       if value == qualification_search:
-                            print("Names: ",dict["name"])
-                       else:
-                            not_present = False
+                
+
+
+            
+            
+        
                        
-if not_present == True:
-        print("qualification not present")                
+              
 

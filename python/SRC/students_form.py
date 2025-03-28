@@ -1,6 +1,6 @@
 listdata = []
 
-for num in range(1,5):
+for num in range(1,2):
     studentdata = {}
     studentdata["id"] = num
     studentdata["name"] = input("Enter name: ")

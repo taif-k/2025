@@ -22,13 +22,16 @@ for num in range(1,3):
 
 print(json.dumps(listdata,indent=4))    
 qualification_search = input("Enter qualification to search: ")
-for d in listdata:
-    for keys in d.keys():
-        if keys == "qualification":
-            for n in qualificationlist:
-                for value in n.values():
-                    if value == qualification_search:
-                        print(d["name"])
+if qualification_search.isalpha():
+    for d in listdata:
+        for keys in d.keys():
+            if keys == "qualification":
+                for n in qualificationlist:
+                    for value in n.values():
+                        if value == qualification_search:
+                            print(d["name"])
+else:
+    print("Enter valid Qualification")
 
                 
 

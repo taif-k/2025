@@ -24,20 +24,19 @@ for num in range(1,3):
 print(json.dumps(listdata,indent=4))    
 
 
-qualification_search = input("Enter qualification to search")
+qualification_search = input("Enter qualification to search: ")
 not_present = True
 
-for dict in listdata:
-    for key,value in dict.items():
+for dict in listdata: # {}, {}
+    for key in dict.keys(): # id: name: qualification:
         if key == "qualification":
-             for d in qualificationlist:
-                  for keys,values in d.items():
-                       if keys == "qname":
-                            print(dict["name"])
+             for d in qualificationlist: # qualificationdict qualificationdict
+                  for value in d.values(): # qname: passingyear:
+                       if value == qualification_search:
+                            print("Names: ",dict["name"])
+                       else:
+                            not_present = False
                        
-              
-            
-
-if not_present == False:
+if not_present == True:
         print("qualification not present")                
 

@@ -24,15 +24,14 @@ for num in range(1,3):
         else:
             print("Enter valid name")
 
-    # percentage = (marksdict["hindi"] + marksdict["english"] + marksdict["math"] + marksdict["science"])/400 * 100
-    # percentagelist.append(percentage)
+    percentage = (marksdict["hindi"] + marksdict["english"] + marksdict["math"] + marksdict["science"])/400 * 100
+    percentagelist.append(percentage)
     listdata.append(studentdata)   
                 
-        
 print(json.dumps(listdata,indent=3))
-
+percentagelist.sort()
 print(percentagelist)
-print(percentage)
+print("Highest: ",percentagelist[-1])
 
   
 

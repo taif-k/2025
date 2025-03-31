@@ -6,13 +6,12 @@ percentagelist = []
 for num in range(1,3):
     studentdata = {}
     markslist = []
-    
+    marksdict = {}
+    count = 0
+
     studentdata["id"] = num + 100
     studentdata["name"] = input("Enter name: ")
     studentdata["marks"] = markslist
-    
-    marksdict = {}
-    count = 0
     while count == 0:
         marks = int(input("Enter Hindi marks (0 - 100): "))
         if marks >=0 and marks <=100:

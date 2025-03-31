@@ -19,16 +19,16 @@ for num in range(1,3):
                 sub = ["hindi","english","math","science"]
                 m = sub[m]
                 while True:
-                    marksdict[m] = input(f"Enter {m} marks")
+                    marksdict[m] = input(f"Enter {m} marks: ")
                     if marksdict[m].isdigit():
                         marksdict[m] = int(marksdict[m])
                         if marksdict[m] >=0 and marksdict[m] <=100:
-                            markslist.append(marksdict)
                             break
                         else:
                             print("Marks range should be 0 - 100")
                     else:
                         print("Marks should be in digits")
+            markslist.append(marksdict)
             break
         else:
             print("Enter valid name")

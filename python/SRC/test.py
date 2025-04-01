@@ -9,9 +9,8 @@ for num in range(1,3):
     marksdict = {}
     count = 0
 
+    studentdata["id"] = input("Enter id: ")
     while True:
-        studentdata["id"] = input("Enter id: ")
-        if studentdata["id"].isdigit():
             studentdata["name"] = input(f"Enter name {num}: ")
             if studentdata["name"].isalpha():
                 studentdata["marks"] = markslist
@@ -32,8 +31,7 @@ for num in range(1,3):
                 break
             else:
                 print("Enter valid name")
-        else:
-            print("Enter only digits")
+        
 
     percentage = (marksdict["hindi"] + marksdict["english"] + marksdict["math"] + marksdict["science"])/400 * 100
     percentagelist.append(percentage)

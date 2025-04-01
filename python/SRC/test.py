@@ -8,8 +8,13 @@ for num in range(1,3):
     markslist = []
     marksdict = {}
     count = 0
-
-    studentdata["id"] = input("Enter id: ")
+    
+    while True:
+        studentdata["id"] = input("Enter id: ")
+        if studentdata["id"].isdigit():
+            break
+        else:
+            print("Enter id in digits only")
     while True:
             studentdata["name"] = input(f"Enter name {num}: ")
             if studentdata["name"].isalpha():

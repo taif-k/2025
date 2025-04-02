@@ -5,7 +5,7 @@ def menu():
     print("Press 3 for Multiplication")
     print("Press 4 for Division")
     print("Press 0 for Exit")
-    
+
 menu()
 
 def addition():
@@ -32,13 +32,13 @@ def division():
 while True:
     menuinput = int(input("Enter Task no: ")) 
     if menuinput == 1:
-        print(addition())
+        print("Addition is ",addition())
     elif menuinput == 2:
-        print(subtraction())
+        print("Subtraction is ",subtraction())
     elif menuinput == 3:
-        print(multiplication())
+        print("Multiplication is ",multiplication())
     elif menuinput == 4:
-        print(division())
+        print("Division is ",division())
     elif menuinput == 0:
         break
     else:

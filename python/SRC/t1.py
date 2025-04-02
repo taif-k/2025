@@ -8,59 +8,35 @@ def menu():
 
 menu()
 
+def userinput():
+        while True:
+            first_number = input("Enter First Number: ")
+            if first_number.isdigit():
+                first_number = int(first_number)
+                while True:
+                    second_number = input("Enter Second Number: ")
+                    if second_number.isdigit():
+                        second_number = int(second_number)
+                        break
+                break 
+        return first_number,second_number    
+
 def addition():
-    while True:
-        first_number = input("Enter First Number: ")
-        if first_number.isdigit():
-            first_number = int(first_number)
-            while True:
-                second_number = input("Enter Second Number: ")
-                if second_number.isdigit():
-                    second_number = int(second_number)
-                    break
-            break        
-    return first_number + second_number
+    first_num,second_num = userinput()
+    return first_num + second_num
 
 def subtraction():
-    while True:
-        first_number = input("Enter First Number: ")
-        if first_number.isdigit():
-            first_number = int(first_number)
-            while True:
-                second_number = input("Enter Second Number: ")
-                if second_number.isdigit():
-                    second_number = int(second_number)
-                    break
-            break 
-    return first_number - second_number
+    first_num,second_num = userinput()
+    return first_num - second_num
 
 def multiplication():
-    while True:
-        first_number = input("Enter First Number: ")
-        if first_number.isdigit():
-            first_number = int(first_number)
-            while True:
-                second_number = input("Enter Second Number: ")
-                if second_number.isdigit():
-                    second_number = int(second_number)
-                    break
-            break 
-    return first_number * second_number
+    first_num,second_num = userinput()
+    return first_num * second_num
 
 def division():
-    while True:
-        first_number = input("Enter First Number: ")
-        if first_number.isdigit():
-            first_number = int(first_number)
-            while True:
-                second_number = input("Enter Second Number: ")
-                if second_number.isdigit():
-                    second_number = int(second_number)
-                    break
-            break  
-    return first_number/second_number
+    first_num,second_num = userinput()
+    return first_num / second_num
        
-
 while True:
     menuinput = input("Enter Task no: ")
     if menuinput.isdigit():

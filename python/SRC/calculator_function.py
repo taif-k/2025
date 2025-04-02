@@ -8,24 +8,25 @@ def menu():
 
 menu()
 
-def addition():
+def userinput():
     first_number = int(input("Enter First Number: "))
     second_number = int(input("Enter Second Number: "))
+    return first_number,second_number
+
+def addition():
+    first_number, second_number = userinput()
     return first_number + second_number
 
 def subtraction():
-    first_number = int(input("Enter First Number: "))
-    second_number = int(input("Enter Second Number: "))
+    first_number, second_number = userinput()
     return first_number - second_number
 
 def multiplication():
-    first_number = int(input("Enter First Number: "))
-    second_number = int(input("Enter Second Number: "))
+    first_number, second_number = userinput()
     return first_number * second_number
 
 def division():
-    first_number = int(input("Enter First Number: "))
-    second_number = int(input("Enter Second Number: ")) 
+    first_number, second_number = userinput()
     return first_number/second_number
        
 

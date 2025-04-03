@@ -35,7 +35,10 @@ def multiplication():
 
 def division():
     first_num,second_num = numbers_input()
+    # if second_num !=0:
     return first_num / second_num
+    # else:
+
        
 while True:
     menuinput = input("Enter Task no: ")

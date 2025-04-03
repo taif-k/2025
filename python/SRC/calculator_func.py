@@ -8,7 +8,7 @@ def menu():
 
 menu()
 
-def userinput():
+def numbers_input():
         while True:
             first_number = input("Enter First Number: ")
             if first_number.isdigit():
@@ -22,19 +22,19 @@ def userinput():
         return first_number,second_number    
 
 def addition():
-    first_num,second_num = userinput()
+    first_num,second_num = numbers_input()
     return first_num + second_num
 
 def subtraction():
-    first_num,second_num = userinput()
+    first_num,second_num = numbers_input()
     return first_num - second_num
 
 def multiplication():
-    first_num,second_num = userinput()
+    first_num,second_num = numbers_input()
     return first_num * second_num
 
 def division():
-    first_num,second_num = userinput()
+    first_num,second_num = numbers_input()
     return first_num / second_num
        
 while True:

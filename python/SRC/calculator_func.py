@@ -42,7 +42,6 @@ def division():
         first_num,second_num = numbers_input()
         return first_num / second_num
 
-       
 while True:
     menuinput = input("Enter Task no: ")
     if menuinput.isdigit():

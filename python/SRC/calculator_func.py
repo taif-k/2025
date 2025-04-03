@@ -35,9 +35,12 @@ def multiplication():
 
 def division():
     first_num,second_num = numbers_input()
-    # if second_num !=0:
-    return first_num / second_num
-    # else:
+    if second_num !=0:
+        return first_num / second_num
+    else:
+        print("Second number should not be zero")
+        first_num,second_num = numbers_input()
+        return first_num / second_num
 
        
 while True:

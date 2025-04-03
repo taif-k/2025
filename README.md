@@ -17,3 +17,11 @@
 1. python introduction  [10 march - 13 march]  
 2. variables  [14 march - 16 march]  
 3. Data types [16 march - 17 march]  
+4. List and Dictionary [ 17 March - 20 March ]  
+5. Set and Tuples [21 March - 23 March]  
+6. Control Statement [24 Marc - 26 March]  
+7. Loops [27 March - 29 March]    
+8. Nested if else  [28 march - 30 March]  
+9. List & dict inside loop [28 March - 30 March]    
+
+

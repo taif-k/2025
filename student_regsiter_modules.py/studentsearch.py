@@ -7,8 +7,8 @@ def student_search(data):
                 if dict["name"] == search_name:
                     ispresent = True
                     print(dict)
-
             if ispresent == False:
                 print("Not found") 
         else:
             print("Name should be in alphabets only")
+        break

@@ -1,7 +1,7 @@
 
 def student_register():
     studentlist = []
-    for n in range(1,3):
+    while True:
         studentdict = {}
         count = 0        
         while count <1:                
@@ -22,5 +22,9 @@ def student_register():
                         print("Name should be in alphabets only")
             else:
                 print("Id should be in digit")
-            studentlist.append(studentdict)
+        studentlist.append(studentdict)        
+        add_student = input("Add another student y/n: ")
+        if add_student != "y":
+             break   
+        
     return studentlist 

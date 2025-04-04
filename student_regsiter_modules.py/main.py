@@ -7,8 +7,7 @@ def menu():
     print("2 - Get details")
     print("3 - Search")
     print("0 - Exit")
-
-
+ 
 def userinput():
     data = []
     while True:
@@ -27,7 +26,6 @@ def userinput():
                 print("Choose Valid option")
         else:
             print("Task number should be in digit")
-            
-
+    
 menu()
 userinput()

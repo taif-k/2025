@@ -6,5 +6,9 @@ def divide():
         return firstnum / secondnum
     else:
         print("Second number should not be zero")
-        firstnum,secondnum = inputnumbers.numbers_input()
-        return firstnum / secondnum
+        # firstnum,secondnum = inputnumbers.numbers_input()
+        try:
+            data=firstnum / secondnum
+        except:
+            print("Number can not be devide by 0")
+        return data

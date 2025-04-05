@@ -1,9 +1,9 @@
-import main
 
-def student_id(studentdata):
+def student_id(studentdict):
     while True:
-        studentdata["id"] = input("Enter id: ")
-        if studentdata["id"].isdigit():
-            return id
+        studentdict["id"] = input("Enter id: ")
+        if studentdict["id"].isdigit():
+            studentdict["id"] = int(studentdict["id"])
+            return studentdict["id"]
         else:
             print("Enter id in digits only")

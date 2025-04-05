@@ -1,5 +1,5 @@
 
-def student_id(studentdict):
+def input_id(studentdict):
     while True:
         studentdict["id"] = input("Enter id: ")
         if studentdict["id"].isdigit():

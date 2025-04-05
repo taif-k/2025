@@ -1,9 +1,9 @@
 
-def student_marks(studentdata):
+def input_marks(studentdata):
     markslist = []
     marksdict = {}    
     percentagelist = []
-    
+
     studentdata["marks"] = markslist
     for m in range(0,4):
         subject = ["hindi","english","math","science"]

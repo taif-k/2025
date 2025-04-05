@@ -2,4 +2,5 @@ import inputnumbers
 
 def addition():
     firstnum,secondnum = inputnumbers.numbers_input()
-    return firstnum + secondnum
+    add = firstnum + secondnum
+    return add

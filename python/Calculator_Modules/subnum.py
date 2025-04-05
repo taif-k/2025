@@ -2,4 +2,5 @@ import inputnumbers
 
 def subtraction():
     firstnum,secondnum = inputnumbers.numbers_input()
-    return firstnum - secondnum
+    sub = firstnum - secondnum
+    return sub

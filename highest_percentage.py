@@ -7,7 +7,6 @@ for num in range(1,3):
     studentdata = {}
     markslist = []
     marksdict = {}
-    count = 0
     
     while True:
         studentdata["id"] = input("Enter id: ")
@@ -18,6 +17,7 @@ for num in range(1,3):
     while True:
             studentdata["name"] = input(f"Enter name {num}: ")
             if studentdata["name"].isalpha():
+                
                 studentdata["marks"] = markslist
                 for m in range(0,4):
                     subject = ["hindi","english","math","science"]
@@ -32,6 +32,7 @@ for num in range(1,3):
                                 print("Marks range should be 0 - 100")
                         else:
                             print("Marks should be in digits")
+                            
                 markslist.append(marksdict)
                 break
             else:

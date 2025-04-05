@@ -8,8 +8,8 @@ def percentage():
     percentagelist = []
     for num in range (1,3):
         studentdict = {}
-        studentdict["id"] = studentid.input_id_id(studentdict)
-        studentdict["name"] = studentname.input_name_name(studentdict)
+        studentdict["id"] = studentid.input_id(studentdict)
+        studentdict["name"] = studentname.input_name(studentdict)
         marks, percentages = studentmarks.input_marks(studentdict)    
         studentdict["marks"] = marks  
         listdata.append(studentdict)

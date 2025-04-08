@@ -1,7 +1,5 @@
 import check_foldername
 
-path = r"D:\multiplefolders"
-
 def make_folders():
     while True:
         even_odd_name = input("1 for odd & 2 for even folder name: ")

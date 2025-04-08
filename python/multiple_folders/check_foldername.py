@@ -1,7 +1,7 @@
 import os
 
 def foldername(n):
-    path = r"D:\multiplefolders"
+    path = r"D:\multiplefolders" # change according to your desired path
     while True:
         user_input = input("Enter number of folders to make: ")     
         if user_input.isdigit():   

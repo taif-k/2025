@@ -13,6 +13,6 @@ def path_input():
 def read_file(n):
     with open(paths[n],"r") as file:
         data = file.read()
-        print(f"data from path {n+1}: ",data)
+        print(data)
 
 path_input()

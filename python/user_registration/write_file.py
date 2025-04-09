@@ -1,7 +1,6 @@
 import os
 
-def create_userfile(studentdict,jsondata):
-        path = r"D:\student_details"
-        fpath = os.path.join(path,f"{studentdict["name"]}.json")
-        with open(fpath,"w") as file:
-            file.write(jsondata) 
+def create_userfile(studentlist,jsondata):
+        path = r"D:\student_details\all_students.json"
+        with open(path,"w") as file:
+            file.write(jsondata)

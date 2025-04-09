@@ -21,8 +21,7 @@ def register_user():
         studentdict["joneddate"] = date.strftime("%d/%m/%Y, %H:%M:%S")
 
         studentlist.append(studentdict)
-        jsondata = json.dumps(studentdict,indent=3)
 
-        write_file.create_userfile(studentdict,jsondata)
+    jsondata = json.dumps(studentlist,indent=3)
+    write_file.create_userfile(studentlist,jsondata)
     return studentlist    
-    print(json.dumps(studentlist,indent=3))

@@ -1,15 +1,23 @@
 
-import create_file
+import write_file
 import json
+import input_id
+import input_name
+import input_contact
+import input_email
 
 def register_user():
     studentlist = []
     for n in range(1,3):
         studentdict = {} 
-        studentdict["id"] = int(input("Enter id: "))
-        studentdict["name"] = input("Enter name: ")
+
+        input_id.get_id(studentdict)
+        input_name.get_name(studentdict)
+        input_contact.get_contact(studentdict)
+        input_email.get_email(studentdict)
+
         studentlist.append(studentdict)
         jsondata = json.dumps(studentdict,indent=3)
 
-        create_file.create_userfile(studentdict,jsondata)
-    print(studentlist)   
+        write_file.create_userfile(studentdict,jsondata)
+    print(json.dumps(studentlist,indent=3))   

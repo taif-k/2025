@@ -4,7 +4,7 @@ import search_data
 def task_option():
     print("1- Register")
     print("2- See all Students")
-    print("3 - Search Email")
+    print("3 - Search data")
 
 def main():
     task_option()

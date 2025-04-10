@@ -2,13 +2,13 @@
 import json
 import datetime
 
+path = r"D:\student_details\all_students.json" # update path accordingly to save file locally 
+
 def create_userfile(jsondata):
-        path = r"D:\student_details\all_students.json"
         with open(path,"w") as file:
             file.write(jsondata)
 
 def read_allfiles():
-    path = r"D:\student_details\all_students.json"
     with open(path, "r") as file:
         data = file.read()
         print(data)
@@ -64,4 +64,4 @@ def register_user():
 
     jsondata = json.dumps(studentlist,indent=3)
     create_userfile(jsondata)
-    return studentlist    
+    # return studentlist    

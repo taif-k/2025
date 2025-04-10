@@ -2,8 +2,8 @@ import student_register
 import search_data
 
 def task_option():
-    print("1- Register")
-    print("2- See all Students")
+    print("1 - Register")
+    print("2 - See all Students")
     print("3 - Search data")
     print("0 - Exit")
 

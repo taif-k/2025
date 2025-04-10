@@ -1,0 +1,7 @@
+
+{'Error': ValueError("invalid literal for int() with base 10: 'a'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 18, 6, 655000)}
+{'Error': ValueError("invalid literal for int() with base 10: 'asdf'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 18, 12, 384936)}
+{'Error': ValueError("invalid literal for int() with base 10: 'printing error in different line'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 18, 26, 254065)}
+{'Error': ValueError("invalid literal for int() with base 10: 'hi'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 20, 0, 717234)}
+{'error': ValueError("invalid literal for int() with base 10: 'qwert'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 22, 49, 69035), 'function': 'input_number()'}
+{'function': 'input_number()', 'error': ValueError("invalid literal for int() with base 10: 'a-1'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 24, 0, 739322)}

@@ -56,7 +56,7 @@ def get_data():
 
                     if ispresent == False:
                         print("name not found")
-                except Exception as e:
+                except:
                     print("Students not registered yet") 
                     student_register.register_user()       
 

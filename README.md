@@ -1,4 +1,4 @@
- # C Topics with Date  
+ # C Topics  
 
 1.   Varibales and data types  [6 jan - 8 jan]
 2.   Control flow   [9 jan - 13 jan]    
@@ -12,7 +12,7 @@
 10.  Bus Reservation system   [27 Feb - 5 march]  
 
 
-# python Topics with Date  
+# python Topics  
 
 1. python introduction  [10 march - 13 march]  
 2. variables  [14 march - 16 march]  

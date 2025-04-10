@@ -1,7 +1,4 @@
-import addnum
-import subnum
-import multiplynum
-import dividenum
+import calculations
 
 def menu():
     print("Press 1 for Addition")
@@ -9,7 +6,7 @@ def menu():
     print("Press 3 for Multiplication")
     print("Press 4 for Division")
     print("Press 0 for Exit")
-
+    
 menu()
 
 while True:
@@ -17,13 +14,13 @@ while True:
     if menuinput.isdigit():
         menuinput = int(menuinput)
         if menuinput == 1:
-            print("Addition is ",addnum.addition())
+            print("Addition is ",calculations.addition())
         elif menuinput == 2:
-            print("Subtraction is",subnum.subtraction())
+            print("Subtraction is",calculations.subtraction())
         elif menuinput == 3:
-            print("Multiplication is",multiplynum.multiply())
+            print("Multiplication is",calculations.multiply())
         elif menuinput == 4:
-            print("Division is",dividenum.divide())
+            print("Division is",calculations.divide())
         elif menuinput == 0:
             break
         else:

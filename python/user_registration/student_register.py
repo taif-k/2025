@@ -50,7 +50,7 @@ def get_name(studentdict):
 
 def register_user():
     studentlist = []
-    for n in range(1,3):
+    for n in range(1,6):
         studentdict = {}
         studentdict["id"] = get_id(studentdict)
         studentdict["name"] = get_name(studentdict)

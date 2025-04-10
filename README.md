@@ -23,5 +23,9 @@
 7. Loops [27 March - 29 March]    
 8. Nested if else  [28 march - 30 March]  
 9. List & dict inside loop [28 March - 30 March]    
+10. Functions [1 April - 5 April]   
+11. Modules [5 April - 10 April]  
+12. File handling [7 April - 11 April]  
+13. Error logs [10 April - ]
 
 

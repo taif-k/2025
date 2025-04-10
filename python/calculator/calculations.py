@@ -10,7 +10,7 @@ def divide():
         firstnum,secondnum = inputnumbers.numbers_input()
         div = firstnum / secondnum
         return div
-    except Exception as e:
+    except:
         print("Second number should not be Zero")
         return divide()
 

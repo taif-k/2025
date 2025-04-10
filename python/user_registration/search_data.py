@@ -10,8 +10,9 @@ def get_data():
             for key,value in studentdict.items():
                 if key == "email":
                     if value == search_email:
+                        ispresent = True
                         print(studentdict)
-
+                        break
+                    
         if ispresent == False:
-            print("email Not found")
-
+            print("Email not found")

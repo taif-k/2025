@@ -1,4 +1,5 @@
 import json
+import student_register
 
 path =  r"D:\student_details\all_students.json" # update path accordingly to avoid error
 
@@ -18,69 +19,84 @@ def get_data():
     while True:
         print()
         search_menu()
-        search_option = input("Enter search option")
-
+        search_option = input("Enter search option: ")
         if search_option.isdigit():
             search_option = int(search_option)
             if search_option == 1:
-                search_email = input("Enter email to search: ")
-                data = get_file()
-                ispresent = False
-                for studentdict in data:
-                    for key,value in studentdict.items():
-                        if key == "email":
-                            if value == search_email.lower():
-                                ispresent = True
-                                print(studentdict)
-                                break
+                try:
+                    search_email = input("Enter email to search: ")
+                    data = get_file()
+                    ispresent = False
+                    for studentdict in data:
+                        for key,value in studentdict.items():
+                            if key == "email":
+                                if value == search_email.lower():
+                                    ispresent = True
+                                    print(studentdict)
+                                    break
 
-                if ispresent == False:
-                    print("Email not found")
+                    if ispresent == False:
+                        print("Email not found")
+                except:
+                    print("Students not registered yet") 
+                    student_register.register_user() 
 
             elif search_option == 2:
-                search_name = input("Enter name to search: ")
-                data = get_file()
-                ispresent = False
-                for studentdict in data:
-                    for key,value in studentdict.items():
-                        if key == "name":
-                            if value == search_name.lower():
-                                ispresent = True
-                                print(studentdict)
-                                break
+                try:
+                    search_name = input("Enter name to search: ")
+                    data = get_file()
+                    ispresent = False
+                    for studentdict in data:
+                        for key,value in studentdict.items():
+                            if key == "name":
+                                if value == search_name.lower():
+                                    ispresent = True
+                                    print(studentdict)
+                                    break
 
-                if ispresent == False:
-                    print("name not found")
+                    if ispresent == False:
+                        print("name not found")
+                except Exception as e:
+                    print("Students not registered yet") 
+                    student_register.register_user()       
 
             elif search_option == 3:
-                search_contact = int(input("Enter contact to search: "))
-                data = get_file()
-                ispresent = False
-                for studentdict in data:
-                    for key,value in studentdict.items():
-                        if key == "contact":
-                            if value == search_contact:
-                                ispresent = True
-                                print(studentdict)
-                                break
+                try:
+                    search_contact = int(input("Enter contact to search: "))
+                    data = get_file()
+                    ispresent = False
+                    for studentdict in data:
+                        for key,value in studentdict.items():
+                            if key == "contact":
+                                if value == search_contact:
+                                    ispresent = True
+                                    print(studentdict)
+                                    break
 
-                if ispresent == False:
-                    print("contact not found")
+                    if ispresent == False:
+                        print("contact not found")
+                except:
+                    print("Students not registered yet") 
+                    student_register.register_user()                     
 
             elif search_option == 4:
-                search_address = input("Enter address to search: ")
-                data = get_file()
-                ispresent = False
-                for studentdict in data:
-                    for key,value in studentdict.items():
-                        if key == "address":
-                            if value == search_address.lower():
-                                ispresent = True
-                                print(studentdict)
-                                break
+                try:
+                    search_address = input("Enter address to search: ")
+                    data = get_file()
+                    ispresent = False
+                    for studentdict in data:
+                        for key,value in studentdict.items():
+                            if key == "address":
+                                if value == search_address.lower():
+                                    ispresent = True
+                                    print(studentdict)
+                                    break
 
-                if ispresent == False:
-                    print("Address not found")
+                    if ispresent == False:
+                        print("Address not found")
+                except:
+                    print("Students not registered yet") 
+                    student_register.register_user() 
 
             elif search_option == 0:
                 break

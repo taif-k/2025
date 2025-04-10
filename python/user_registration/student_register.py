@@ -5,7 +5,7 @@ import datetime
 path = r"D:\student_details\all_students.json" # update path accordingly to save file locally 
 
 def create_userfile(jsondata):
-        with open(path,"w") as file:
+        with open(path,"a") as file:
             file.write(jsondata)
 
 def read_allfiles():

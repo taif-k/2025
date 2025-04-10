@@ -5,3 +5,4 @@
 {'Error': ValueError("invalid literal for int() with base 10: 'hi'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 20, 0, 717234)}
 {'error': ValueError("invalid literal for int() with base 10: 'qwert'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 22, 49, 69035), 'function': 'input_number()'}
 {'function': 'input_number()', 'error': ValueError("invalid literal for int() with base 10: 'a-1'"), 'errortime': datetime.datetime(2025, 4, 10, 19, 24, 0, 739322)}
+{'module': 'squared_numbers.py', 'function': 'input_number()', 'error': ValueError("invalid literal for int() with base 10: ''"), 'errortime': datetime.datetime(2025, 4, 10, 20, 40, 41, 331040)}

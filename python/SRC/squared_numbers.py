@@ -15,7 +15,7 @@ def input_number():
         print("Number should be in digits") 
 
         date = datetime.datetime.now()
-        errordict = str({"function":"input_number()","error":e,"errortime":date})
+        errordict = str({"module":"squared_numbers.py","function":"input_number()","error":e,"errortime":date})
         errorlog(errordict)
         input_number()
               

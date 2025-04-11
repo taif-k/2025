@@ -21,3 +21,5 @@
 {'module': 'error_source.py', 'function': 'err_source', 'error': 'invalid literal for int() with base 10: \'python -u "d:\\\\Repositories\\\\2025\\\\python\\\\SRC\\\\calculator_func.py"\'', 'date': datetime.datetime(2025, 4, 11, 9, 20, 38, 821794)}
 {'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'a'", 'date': datetime.datetime(2025, 4, 11, 9, 20, 50, 822221)}
 {'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'zxcvb'", 'date': datetime.datetime(2025, 4, 11, 9, 20, 55, 41015)}
+{'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'five'", 'date': datetime.datetime(2025, 4, 11, 10, 33, 5, 346723), 'line': 11}
+{'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'a'", 'date': datetime.datetime(2025, 4, 11, 10, 34, 55, 624637), 'line': 11}

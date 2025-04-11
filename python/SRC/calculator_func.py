@@ -1,4 +1,4 @@
-import error_logRW
+import error_log
 import datetime
 
 def menu():
@@ -17,7 +17,7 @@ def numbers_input():
             print("Numbers should be in digits only")    
             date = datetime.datetime.now()
             errordict = str({"module":"calculator_func.py","function":"numbers_input()","Error":e,"date":date})
-            error_logRW.create_log(errordict)
+            error_log.create_log(errordict)
             return numbers_input()
 
 def addition():

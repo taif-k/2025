@@ -1,4 +1,4 @@
-import error_logRW
+import error_log
 import datetime
 
 def main():
@@ -50,7 +50,7 @@ def main():
         print("Marks should be in digits only")
         date = datetime.datetime.now()
         errordict = str({"module":"dynamic_percentage.py","function":"main.py()","error":e,"date":date})
-        error_logRW.create_log(errordict)
+        error_log.create_log(errordict)
         main()
 
 main()

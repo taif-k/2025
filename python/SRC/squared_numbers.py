@@ -1,10 +1,7 @@
 import datetime
+import error_log
 
 path = r"D:\Repositories\2025\python\SRC\errordetails.txt"
-
-def errorlog(error):
-    with open(path,"a") as file:
-        file.write(f"\n{error}") #
 
 def input_number():
     try: 
@@ -16,7 +13,7 @@ def input_number():
 
         date = datetime.datetime.now()
         errordict = str({"module":"squared_numbers.py","function":"input_number()","error":e,"errortime":date})
-        errorlog(errordict)
+        error_log.create_log(errordict)
         input_number()
               
 input_number()

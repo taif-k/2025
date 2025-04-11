@@ -1,3 +1,5 @@
+import create_errorlog
+import datetime
 
 def menu():
     print("Press 1 for Addition")
@@ -41,22 +43,31 @@ def division():
         print("Second number should not be zero")
         first_num,second_num = numbers_input()
         return first_num / second_num
+    
+def main():    
+    try:    
+        while True:
+            menuinput = input("Enter Task no: ")
+            if menuinput.isdigit():
+                menuinput = int(menuinput)
+                if menuinput == 1:
+                    print("Addition is ",addition())
+                elif menuinput == 2:
+                    print("Subtraction is ",subtraction())
+                elif menuinput == 3:
+                    print("Multiplication is ",multiplication())
+                elif menuinput == 4:
+                    print("Division is ",division())
+                elif menuinput == 0:
+                    break
+                else:
+                    print("Choose valid option ")
+            else:
+                print("Enter valid Task Number")
+    except Exception as e:
+        print("Checking error log resolve problem")
+        date = datetime.datetime.now()
+        errordict = str({"module":"calculator_func.py","function":"main()","error":e,"errortime":date})
+        create_errorlog.create_log(errordict)
 
-while True:
-    menuinput = input("Enter Task no: ")
-    if menuinput.isdigit():
-        menuinput = int(menuinput)
-        if menuinput == 1:
-            print("Addition is ",addition())
-        elif menuinput == 2:
-            print("Subtraction is ",subtraction())
-        elif menuinput == 3:
-            print("Multiplication is ",multiplication())
-        elif menuinput == 4:
-            print("Division is ",division())
-        elif menuinput == 0:
-            break
-        else:
-            print("Choose valid option ")
-    else:
-        print("Enter valid Task Number")
+main()

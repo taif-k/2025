@@ -34,7 +34,7 @@ def main_option():
         print("Students data not available")
         date = datetime.datetime.now()
         errordict = str({"module":"main.py","function":"main_option()","error":e,"date":date})
-        student_register.create_userfile()
+        student_register.create_userfile(errordict)
 
         student_register.register_user()
 

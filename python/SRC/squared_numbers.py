@@ -1,4 +1,4 @@
-import datetime
+import error_source
 import error_log
 
 path = r"D:\Repositories\2025\python\SRC\errordetails.txt"
@@ -11,8 +11,7 @@ def input_number():
     except Exception as e:
         print("Number should be in digits") 
 
-        date = datetime.datetime.now()
-        errordict = str({"module":"squared_numbers.py","function":"input_number()","error":e,"errortime":date})
+        errordict = error_source.err_source(e)
         error_log.create_log(errordict)
         input_number()
               

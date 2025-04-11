@@ -1,3 +1,5 @@
+import error_log
+import datetime
 
 def menu():
     print("Press 1 for Addition")
@@ -6,20 +8,17 @@ def menu():
     print("Press 4 for Division")
     print("Press 0 for Exit")
 
-menu()
-
 def numbers_input():
-        while True:
-            first_number = input("Enter First Number: ")
-            if first_number.isdigit():
-                first_number = int(first_number)
-                while True:
-                    second_number = input("Enter Second Number: ")
-                    if second_number.isdigit():
-                        second_number = int(second_number)
-                        break
-                break 
-        return first_number,second_number    
+        try:
+            first_number = int(input("Enter first number"))
+            second_number = int(input("Enter second number"))
+            return first_number,second_number
+        except Exception as e:
+            print("Numbers should be in digits only")    
+            date = datetime.datetime.now()
+            errordict = str({"module":"calculator_func.py","function":"numbers_input()","Error":e,"date":date})
+            error_log.create_log(errordict)
+            return numbers_input()
 
 def addition():
     first_num,second_num = numbers_input()
@@ -41,22 +40,25 @@ def division():
         print("Second number should not be zero")
         first_num,second_num = numbers_input()
         return first_num / second_num
-
-while True:
-    menuinput = input("Enter Task no: ")
-    if menuinput.isdigit():
-        menuinput = int(menuinput)
-        if menuinput == 1:
-            print("Addition is ",addition())
-        elif menuinput == 2:
-            print("Subtraction is ",subtraction())
-        elif menuinput == 3:
-            print("Multiplication is ",multiplication())
-        elif menuinput == 4:
-            print("Division is ",division())
-        elif menuinput == 0:
-            break
+    
+def main():    
+    menu()
+    while True:
+        menuinput = input("Enter Task no: ")
+        if menuinput.isdigit():
+            menuinput = int(menuinput)
+            if menuinput == 1:
+                print("Addition is ",addition())
+            elif menuinput == 2:
+                print("Subtraction is ",subtraction())
+            elif menuinput == 3:
+                print("Multiplication is ",multiplication())
+            elif menuinput == 4:
+                print("Division is ",division())
+            elif menuinput == 0:
+                break
+            else:
+                print("Choose valid option ")
         else:
-            print("Choose valid option ")
-    else:
-        print("Enter valid Task Number")
+            print("Enter valid Task Number")
+main()

@@ -1,7 +1,7 @@
 import json
 import student_register
 
-path =  r"D:\student_details\all_students.json" # update path accordingly to avoid error
+path =  r"D:\Repositories\2025\python\user_registration\all_students.json" # update path accordingly to avoid error
 
 def search_menu():
     print("1- Search Email")

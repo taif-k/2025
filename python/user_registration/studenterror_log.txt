@@ -1,3 +1,10 @@
 
 {'module': 'main.py', 'function': 'main_option()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 11, 11, 32, 30, 730364)}
 {'module': 'main.py', 'function': 'main_option()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 11, 11, 33, 10, 660444)}
+{'module': 'main.py', 'function': 'main_option()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 12, 39, 54670)}
+{'module': 'main.py', 'function': 'main_option()', 'error': UnboundLocalError("cannot access local variable 'data' where it is not associated with a value"), 'date': datetime.datetime(2025, 4, 12, 9, 18, 23, 730203)}
+{'module': 'student_regsiter.py', 'function': 'read_allfiles()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 19, 41, 156149)}
+{'module': 'student_regsiter.py', 'function': 'read_allfiles()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 21, 28, 369441)}
+{'module': 'student_regsiter.py', 'function': 'read_allfiles()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 26, 40, 856389)}
+{'module': 'student_regsiter.py', 'function': 'read_allfiles()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 27, 0, 828779)}
+{'module': 'search_data.py', 'function': 'get_data', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 35, 55, 1674)}

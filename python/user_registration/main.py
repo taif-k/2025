@@ -1,7 +1,9 @@
 import student_register
 import search_data
 import datetime
-import student_register
+
+path = r"D:\Repositories\2025\python\user_registration\all_students.json"
+log_path = r"D:\Repositories\2025\python\user_registration\studenterror_log.txt"
 
 def task_option():
     print("1 - Register")
@@ -20,7 +22,7 @@ def main_option():
                 if task_input == 1: 
                     student_register.register_user()
                 elif task_input == 2:
-                    student_register.read_allfiles()
+                    student_register.read_alldata()
                 elif task_input == 3:
                     search_data.get_data()
                 elif task_input == 0:
@@ -31,12 +33,10 @@ def main_option():
                 print("task number should be in digit only")
                 
     except Exception as e:
-        print("Students data not available")
+        print("Please check after some time")
         date = datetime.datetime.now()
         errordict = str({"module":"main.py","function":"main_option()","error":e,"date":date})
-        student_register.create_userfile(errordict)
-
-        student_register.register_user()
+        student_register.create_userfile(errordict,log_path)
 
 main_option()
 

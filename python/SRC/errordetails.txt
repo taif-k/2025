@@ -16,9 +16,7 @@
 {'module': 'dynamic_percentage.py', 'function': 'main.py()', 'error': ValueError("invalid literal for int() with base 10: 'a'"), 'date': datetime.datetime(2025, 4, 11, 8, 5, 52, 179423)}
 {'module': 'dynamic_percentage.py', 'function': 'main.py()', 'error': ValueError("invalid literal for int() with base 10: 'not a number'"), 'date': datetime.datetime(2025, 4, 11, 8, 6, 34, 377918)}
 {'module': 'dynamic_percentage.py', 'function': 'main.py()', 'error': ValueError("invalid literal for int() with base 10: 'a'"), 'date': datetime.datetime(2025, 4, 11, 8, 20, 21, 475083)}
-<<<<<<< HEAD
 {'module': 'dynamic_percentage.py', 'function': 'main.py()', 'error': ValueError("invalid literal for int() with base 10: 'bca'"), 'date': datetime.datetime(2025, 4, 11, 8, 20, 27, 536416)}
-=======
 {'module': 'dynamic_percentage.py', 'function': 'main.py()', 'error': ValueError("invalid literal for int() with base 10: 'bca'"), 'date': datetime.datetime(2025, 4, 11, 8, 20, 27, 536416)}
 {'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'using separate function to get error source details'", 'date': datetime.datetime(2025, 4, 11, 9, 13, 58, 2789)}
 {'module': 'error_source.py', 'function': 'err_source', 'error': 'invalid literal for int() with base 10: \'python -u "d:\\\\Repositories\\\\2025\\\\python\\\\SRC\\\\calculator_func.py"\'', 'date': datetime.datetime(2025, 4, 11, 9, 20, 38, 821794)}
@@ -26,4 +24,14 @@
 {'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'zxcvb'", 'date': datetime.datetime(2025, 4, 11, 9, 20, 55, 41015)}
 {'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'five'", 'date': datetime.datetime(2025, 4, 11, 10, 33, 5, 346723), 'line': 11}
 {'module': 'error_source.py', 'function': 'err_source', 'error': "invalid literal for int() with base 10: 'a'", 'date': datetime.datetime(2025, 4, 11, 10, 34, 55, 624637), 'line': 11}
->>>>>>> 7959194c4f8b6bfae647041d94a7f9f60580ce6b
+{'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'six'"), 'date': datetime.datetime(2025, 4, 12, 13, 16, 34, 254836)}
+{'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'add'"), 'date': datetime.datetime(2025, 4, 12, 13, 17, 0, 978490)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'a'"), 'date': datetime.datetime(2025, 4, 12, 13, 45, 26, 366861)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'a'"), 'date': datetime.datetime(2025, 4, 12, 13, 45, 44, 512314)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'a'"), 'date': datetime.datetime(2025, 4, 12, 13, 46, 19, 272052)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: '@@@'"), 'date': datetime.datetime(2025, 4, 12, 13, 46, 47, 322470)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'random'"), 'date': datetime.datetime(2025, 4, 12, 13, 47, 26, 192653)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'a'"), 'date': datetime.datetime(2025, 4, 12, 13, 47, 55, 734451)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'aks;jbcakjsvb'"), 'date': datetime.datetime(2025, 4, 12, 13, 48, 8, 178854)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: ''"), 'date': datetime.datetime(2025, 4, 12, 13, 48, 35, 926611)}
+{'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'op'"), 'date': datetime.datetime(2025, 4, 12, 13, 49, 17, 134426)}

@@ -6,6 +6,6 @@ def read_errors():
         data = file.read()
         print(data)
 
-def create_log(error):
+def create_log(data):
     with open(path,"a") as file:
-        file.write(f"\n{error}") 
+        file.write(f"\n{data}") 

@@ -2,9 +2,9 @@
 import json
 import datetime
 
-path = r"D:\student_details\all_students.json" # update path accordingly to save file locally 
+path = r"D:\Repositories\2025\python\user_registration\all_students.json" # update path accordingly to save file locally 
 
-def create_userfile(jsondata):
+def create_userfile(jsondata,path):
         with open(path,"a") as file:
             file.write(jsondata)
 
@@ -50,7 +50,7 @@ def get_name(studentdict):
 
 def register_user():
     studentlist = []
-    for n in range(1,6):
+    for n in range(1,3):
         studentdict = {}
         studentdict["id"] = get_id(studentdict)
         studentdict["name"] = get_name(studentdict)
@@ -63,5 +63,4 @@ def register_user():
         studentlist.append(studentdict)
 
     jsondata = json.dumps(studentlist,indent=3)
-    create_userfile(jsondata)
-    # return studentlist    
+    create_userfile(jsondata) 

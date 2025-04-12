@@ -1,0 +1,3 @@
+
+{'module': 'main.py', 'function': 'main_option()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 11, 11, 32, 30, 730364)}
+{'module': 'main.py', 'function': 'main_option()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 11, 11, 33, 10, 660444)}

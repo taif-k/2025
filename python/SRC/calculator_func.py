@@ -1,5 +1,9 @@
 import error_log
+<<<<<<< HEAD
 import datetime
+=======
+import error_source
+>>>>>>> 7959194c4f8b6bfae647041d94a7f9f60580ce6b
 
 def menu():
     print("Press 1 for Addition")
@@ -15,8 +19,12 @@ def numbers_input():
             return first_number,second_number
         except Exception as e:
             print("Numbers should be in digits only")    
+<<<<<<< HEAD
             date = datetime.datetime.now()
             errordict = str({"module":"calculator_func.py","function":"numbers_input()","Error":e,"date":date})
+=======
+            errordict = error_source.err_source(e)
+>>>>>>> 7959194c4f8b6bfae647041d94a7f9f60580ce6b
             error_log.create_log(errordict)
             return numbers_input()
 

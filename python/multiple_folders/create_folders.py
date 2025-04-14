@@ -16,3 +16,15 @@ def make_folders():
                 break
 
 make_folders()
+
+
+
+    
+    # folder_path = rf"D:\student_details\{studentdict["name"]}"
+    # try:
+    #     os.mkdir(folder_path)
+    #     if os.path.exists(folder_path):
+    #         file_path = rf"D:\student_details\{studentdict["name"]}\{studentdict["name"]}.txt"
+    #         write_data(studentdict,file_path)
+    # except:
+    #     print("folder with same name already exyst in location")

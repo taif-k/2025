@@ -1,5 +1,4 @@
 import error_log
-import time
 import datetime
 
 
@@ -11,8 +10,6 @@ def input_details():
         userdict["accountno"] = 12345678901
 
         userdict["amount"] = int(input("Add amount: "))
-        print("processing...")
-        time.sleep(1)
         print(userdict) 
     except Exception as e:
         print("Unable to add money...")

@@ -2,7 +2,7 @@ import Domain
 import Search
 
 
-log_path = r"C:\Users\DELL\Desktop\Src\Database\errorslog.txt"
+log_path = r"D:\Repositories\2025\python\Student\Src\Database\errorslog.txt"
 
 def inactive_student():
     try:

@@ -3,8 +3,8 @@ import datetime
 import Domain
 import Report
 
-records_path = r"C:\Users\DELL\Desktop\Src\Database\all_students.json"
-log_path = r"C:\Users\DELL\Desktop\Src\Database\errorslog.txt"
+records_path = r"D:\Repositories\2025\python\Student\Src\Database\all_students.json"
+log_path = r"D:\Repositories\2025\python\Student\Src\Database\errorslog.txt"
 
 def search_menu():
     print("1- Get Active Students")

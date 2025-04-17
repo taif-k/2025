@@ -1,7 +1,3 @@
-import os
-import sys
-sys.path.append(os.getcwd())
-
 import Domain
 import Search
 import json

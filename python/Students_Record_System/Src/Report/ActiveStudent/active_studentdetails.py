@@ -18,6 +18,6 @@ def active_student():
     except Exception as e:
         date = Search.create_datetime()
         errordeatils = str({"mod":"active_studentdetails.py","error":e,"date":date})
-        path = Domain.log_path
+        path = Search.log_path
         Domain.update_errorlog(errordeatils,path)
         

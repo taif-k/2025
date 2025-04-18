@@ -1,6 +1,4 @@
 import error_log
-import datetime
-
 
 def input_details():
 
@@ -13,7 +11,7 @@ def input_details():
         print(userdict) 
     except Exception as e:
         print("Unable to add money...")
-        date = datetime.datetime.now()
+        date = error_log.get_currentdate()
         errordetails = str({"module":"add_money.py","function":"input_details","error":e,"date":date})
         error_log.create_log(errordetails)    
 

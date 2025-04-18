@@ -1,5 +1,4 @@
 import error_log
-import datetime
 import error_source
 
 def menu():
@@ -16,7 +15,7 @@ def numbers_input():
             return first_number,second_number
         except Exception as e:
             print("Numbers should be in digits only")    
-            date = datetime.datetime.now()
+            date = error_log.get_currentdate()
             errordict = str({"module":"calculator_func.py","function":"numbers_input()","Error":e,"date":date})
             errordict = error_source.err_source(e)
             error_log.create_log(errordict)

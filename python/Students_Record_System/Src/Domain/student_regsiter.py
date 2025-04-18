@@ -1,8 +1,8 @@
 import json
 import Search
 
-records_path = r"D:\Repositories\2025\python\Student\Src\Database\all_students.json"
-log_path = r"D:\Repositories\2025\python\Student\Src\Database\errorslog.txt"
+records_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\all_students.json"
+log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
 
 def write_data(data,path):
     with open(path,"w") as file:

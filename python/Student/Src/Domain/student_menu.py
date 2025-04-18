@@ -29,6 +29,7 @@ def menu_option():
         else:
             print("Task number should be in digit only\n")     
 
-menu_option()
+if __name__ == "__main__":
+    menu_option()
  
             

@@ -1,7 +1,7 @@
 import json
-import datetime
-
-log_path = r"D:\Repositories\2025\python\user_registration\studenterror_log.txt"
+import sys,os
+sys.path.append(os.getcwd())
+from python.Programs import create_log,get_currentdate
 path = r"D:\Repositories\2025\python\user_registration\all_students.json" 
 
 def create_userfile(jsondata,path):
@@ -15,9 +15,9 @@ def read_alldata():
             print(data)
     except Exception as e:
         print("Students data not available, Register to see data ")
-        date = datetime.datetime.now()
+        date = get_currentdate()
         errordetails = str({"module":"student_regsiter.py","function":"read_alldata()","error":e,"date":date})
-        create_userfile(errordetails,log_path)
+        create_log(errordetails)
         return register_user() # if json file missing, Registration and json file will be created
 
 def get_address(studentdict):
@@ -64,8 +64,7 @@ def register_user():
         studentdict["email"] = get_email(studentdict)
         studentdict["address"] = get_address(studentdict)
         studentdict["contact"] = get_contact(studentdict)
-        date = datetime.datetime.now()
-        studentdict["joneddate"] = date.strftime("%d/%m/%Y, %H:%M:%S")
+        studentdict["joneddate"] = get_currentdate()
 
         studentlist.append(studentdict)
 

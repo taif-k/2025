@@ -14,10 +14,12 @@ def get_data():
     if ask_report == 1:
         activedata = Report.active_student()
         print(json.dumps(activedata,indent=3))
+        print("\n-----Above is the List of Active Students-----\n")
 
     elif ask_report == 2:
         inactivedata = Report.inactive_student()
         print(json.dumps(inactivedata,indent=3))
+        print("\n-----Above is the List of Inactive Students-----\n")
         
 
  

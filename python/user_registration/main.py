@@ -1,9 +1,11 @@
 import student_register
 import search_data
-import datetime
+import sys
+import os
+sys.path.append(os.getcwd())
+from python.Programs import get_currentdate,create_log
 
 path = r"D:\Repositories\2025\python\user_registration\all_students.json"
-log_path = r"D:\Repositories\2025\python\user_registration\studenterror_log.txt"
 
 def task_option():
     print("1 - Register")
@@ -24,7 +26,8 @@ def main_option():
                 elif task_input == 2:
                     student_register.read_alldata()
                 elif task_input == 3:
-                    search_data.get_data()
+                    date = search_data.get_data()
+                    print(date)
                 elif task_input == 0:
                     break
                 else:
@@ -34,9 +37,9 @@ def main_option():
                 
     except Exception as e:
         print("Please check after some time")
-        date = datetime.datetime.now()
+        date = get_currentdate()
         errordict = str({"module":"main.py","function":"main_option()","error":e,"date":date})
-        student_register.create_userfile(errordict,log_path)
+        create_log(errordict)
 
 main_option()
 

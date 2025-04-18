@@ -1,9 +1,6 @@
 import json
 import Search
 
-records_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\all_students.json"
-log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
-
 def write_data(data,path):
     with open(path,"w") as file:
         file.write(f"\n{data}")
@@ -12,13 +9,12 @@ def update_errorlog(errordata,log_path):
     with open(log_path,"a") as file:
         file.write(f"\n{errordata}")
 
-
 def get_status():
-    ask_status = input("Is student Active: T/F: ")
-    if ask_status.lower() == "t":
+    ask_status = input("Is student Active: t/f: ")
+    if ask_status.lower() == "t".lower():
         isActive = "True"
         return isActive 
-    elif ask_status.lower() == "f":
+    elif ask_status.lower() == "f".lower():
         isActive = "False"
         return isActive
 
@@ -101,7 +97,7 @@ def get_qualification():
         print("Enter correct detail..")
         date = Search.create_datetime()
         errordetails = str({"module":"student_register.py","function":"get_qualification","error":e,"date":date})
-        update_errorlog(errordetails,log_path)
+        update_errorlog(errordetails,Search.log_path)
         return get_qualification()
     
 studentlist = Search.read_allrecords()
@@ -116,11 +112,11 @@ def register_user():
     studentdict["email"] = get_email()
     studentdict["address"] = get_address()
     studentdict["contact"] = get_contact()
-    studentdict["status"] = get_status()
+    studentdict["isActive"] = get_status()
     studentdict["joneddate"] = Search.create_datetime()
 
     studentlist.append(studentdict)
 
     json_string = json.dumps(studentlist,indent=3)
-    write_data(json_string,records_path)
+    write_data(json_string,Search.records_path)
     print("\nStudent register Sucessfully...")

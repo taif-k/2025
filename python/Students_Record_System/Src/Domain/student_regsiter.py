@@ -1,5 +1,9 @@
 import json
-import Search
+import Domain
+import datetime
+
+records_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\all_students.json"
+log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
 
 def write_data(data,path):
     with open(path,"w") as file:
@@ -8,6 +12,23 @@ def write_data(data,path):
 def update_errorlog(errordata,log_path):
     with open(log_path,"a") as file:
         file.write(f"\n{errordata}")
+
+def read_allrecords():  
+    try:
+        with open(records_path, "r") as file:
+            data = json.load(file) # or data = json.loads(file.read()) 
+        return data
+    except Exception as e:
+        print("Register students to search data")
+        date = create_datetime()
+        errordetail = str({"module":"search_data.py","function":"read_allrecords","error":e,"date":date})
+        Domain.update_errorlog(errordetail,log_path)
+        return []
+
+def create_datetime():
+    date = datetime.datetime.now()
+    shortdate = date.strftime("%d/%m/%Y, %H:%M:%S")
+    return shortdate
 
 def get_status():
     ask_status = input("Is student Active: t/f: ")
@@ -95,12 +116,12 @@ def get_qualification():
             
     except Exception as e:                   
         print("Enter correct detail..")
-        date = Search.create_datetime()
+        date = create_datetime()
         errordetails = str({"module":"student_register.py","function":"get_qualification","error":e,"date":date})
-        update_errorlog(errordetails,Search.log_path)
+        update_errorlog(errordetails,log_path)
         return get_qualification()
     
-studentlist = Search.read_allrecords()
+studentlist = read_allrecords()
 def register_user():
 
     # will return [] if no data present
@@ -113,10 +134,10 @@ def register_user():
     studentdict["address"] = get_address()
     studentdict["contact"] = get_contact()
     studentdict["isActive"] = get_status()
-    studentdict["joneddate"] = Search.create_datetime()
+    studentdict["joneddate"] = create_datetime()
 
     studentlist.append(studentdict)
 
     json_string = json.dumps(studentlist,indent=3)
-    write_data(json_string,Search.records_path)
+    write_data(json_string,records_path)
     print("\nStudent register Sucessfully...")

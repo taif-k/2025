@@ -1,6 +1,11 @@
 import Domain
-import Search
+import datetime
+log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
 
+def create_datetime():
+    date = datetime.datetime.now()
+    shortdate = date.strftime("%d/%m/%Y, %H:%M:%S")
+    return shortdate
 
 def active_student():
     #print(Domain.studentlist)
@@ -16,8 +21,7 @@ def active_student():
         return activelist
         #print(activelist)
     except Exception as e:
-        date = Search.create_datetime()
+        date = create_datetime()
         errordeatils = str({"mod":"active_studentdetails.py","error":e,"date":date})
-        path = Search.log_path
-        Domain.update_errorlog(errordeatils,path)
+        Domain.update_errorlog(errordeatils,log_path)
         

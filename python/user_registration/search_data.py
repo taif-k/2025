@@ -1,15 +1,15 @@
 import json
 import student_register
-import datetime
+import sys
+import os
+sys.path.append(os.getcwd())
+from python.Programs import get_currentdate,create_log
 
-log_path = r"D:\Repositories\2025\python\user_registration\studenterror_log.txt"
 path =  r"D:\Repositories\2025\python\user_registration\all_students.json" 
 
 def search_menu():
     print("1- Search Email")
-    print("2- Search name")
-    print("3- Search contact")
-    print("4- Search address")
+    print("2- Search contact")
     print("0 - Go Back")
 
 def get_file():
@@ -41,21 +41,6 @@ def get_data():
                         print("Email not found")
 
                 elif search_option == 2:
-                    search_name = input("Enter name to search: ")
-                    data = get_file()
-                    ispresent = False
-                    for studentdict in data:
-                        for key,value in studentdict.items():
-                            if key == "name":
-                                if value == search_name.lower():
-                                    ispresent = True
-                                    print(studentdict)
-                                    break
-
-                    if ispresent == False:
-                        print("name not found")   
-
-                elif search_option == 3:
                     search_contact = int(input("Enter contact to search: "))
                     data = get_file()
                     ispresent = False
@@ -69,21 +54,6 @@ def get_data():
 
                     if ispresent == False:
                         print("contact not found")                    
-
-                elif search_option == 4:
-                    search_address = input("Enter address to search: ")
-                    data = get_file()
-                    ispresent = False
-                    for studentdict in data:
-                        for key,value in studentdict.items():
-                            if key == "address":
-                                if value == search_address.lower():
-                                    ispresent = True
-                                    print(studentdict)
-                                    break
-
-                    if ispresent == False:
-                        print("Address not found")
     
                 elif search_option == 0:
                     break
@@ -93,10 +63,7 @@ def get_data():
                 print("Task number should be in digits")
     except Exception as e:
         print("Register students to search")
-        date = datetime.datetime.now()
+        date = get_currentdate()
         errordetail = str({"module":"search_data.py","function":"get_data","error":e,"date":date})
-        student_register.create_userfile(errordetail,log_path)
+        create_log(errordetail)
         return student_register.register_user() # if json file missing, Registration and json file will be created
-
-
-

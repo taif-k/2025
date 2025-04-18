@@ -37,3 +37,5 @@
 {'module': 'add_money.py', 'function': 'input_details', 'error': ValueError("invalid literal for int() with base 10: 'op'"), 'date': datetime.datetime(2025, 4, 12, 13, 49, 17, 134426)}
 {'mod': 'percentage_multiplyWhile.py', 'func': 'highest_percentage', 'error': ValueError("invalid literal for int() with base 10: 'abc'"), 'date': <function get_currentdate at 0x00000286918C2160>}
 {'mod': 'percentage_multiplyWhile.py', 'func': 'highest_percentage', 'error': ValueError("invalid literal for int() with base 10: 'ys'"), 'date': <function get_currentdate at 0x00000238FE38DE40>}
+{'mod': 'calculations.py', 'func': 'divide()', 'error': ZeroDivisionError('division by zero'), 'date': '18/04/2025, 22:39:43'}
+{'mod': 'calculations.py', 'func': 'divide()', 'error': ZeroDivisionError('division by zero'), 'date': '18/04/2025, 22:39:46'}

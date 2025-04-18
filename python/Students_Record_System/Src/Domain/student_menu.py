@@ -2,9 +2,6 @@ import Domain
 import json
 import Report
 
-records_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\all_students.json"
-log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
-
 def menu():
     print("1 - Student Registration")
     print("2 - Display All Records")

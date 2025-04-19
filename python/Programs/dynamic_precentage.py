@@ -1,4 +1,3 @@
-import error_log
 import error_source
 
 def main():
@@ -48,10 +47,7 @@ def main():
             print("\nStudent 2 is topper")
     except Exception as e:
         print("Marks should be in digits only")
-        date = error_log.get_currentdate()
-        errordict = str({"module":"dynamic_percentage.py","function":"main.py()","error":e,"date":date})
-        errordict = error_source.err_source(e)
-        error_log.create_log(errordict)
+        error_source.update_errorslog(error_source.error_details(e))
         main()
 
 main()

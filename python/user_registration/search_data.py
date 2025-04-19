@@ -1,9 +1,9 @@
 import json
 import student_register
-import sys
-import os
-sys.path.append(os.getcwd())
-from python import get_currentdate,create_log
+# import sys
+# import os
+# sys.path.append(os.getcwd())
+# from python import error_details,update_errorslog
 
 path =  r"D:\Repositories\2025\python\user_registration\all_students.json" 
 
@@ -61,9 +61,6 @@ def get_data():
                     print("Invalid option")
             else:
                 print("Task number should be in digits")
-    except Exception as e:
-        print("Register students to search")
-        date = get_currentdate()
-        errordetail = str({"module":"search_data.py","function":"get_data","error":e,"date":date})
-        create_log(errordetail)
-        return student_register.register_user() # if json file missing, Registration and json file will be created
+    except:
+        print("Students not registered yet....Register first to to search")
+         # if json file missing, Registration and json file will be created

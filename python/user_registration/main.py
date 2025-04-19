@@ -1,11 +1,13 @@
 import student_register
 import search_data
+import json
 import sys
 import os
 sys.path.append(os.getcwd())
-from python import get_currentdate,create_log
+from python import error_details,update_errorslog
 
 path = r"D:\Repositories\2025\python\user_registration\all_students.json"
+err_log = r"D:\Repositories\2025\python\user_registration\studenterror_log.txt"
 
 def task_option():
     print("1 - Register")
@@ -24,10 +26,9 @@ def main_option():
                 if task_input == 1: 
                     student_register.register_user()
                 elif task_input == 2:
-                    student_register.read_alldata()
+                    print(json.dumps(student_register.read_alldata(),indent=4))
                 elif task_input == 3:
-                    date = search_data.get_data()
-                    print(date)
+                    search_data.get_data()
                 elif task_input == 0:
                     break
                 else:
@@ -37,10 +38,10 @@ def main_option():
                 
     except Exception as e:
         print("Please check after some time")
-        date = get_currentdate()
-        errordict = str({"module":"main.py","function":"main_option()","error":e,"date":date})
-        create_log(errordict)
+        update_errorslog(error_details(e),err_log)
 
-main_option()
+if __name__ == "__main__":
+    main_option()
+    
 
 

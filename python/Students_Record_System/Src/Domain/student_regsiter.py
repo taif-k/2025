@@ -1,6 +1,9 @@
 import json
 import Domain
 import datetime
+import sys,os
+sys.path.append(os.getcwd())
+import python
 
 records_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\all_students.json"
 log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
@@ -20,9 +23,7 @@ def read_allrecords():
         return data
     except Exception as e:
         print("Register students to search data")
-        date = create_datetime()
-        errordetail = str({"module":"search_data.py","function":"read_allrecords","error":e,"date":date})
-        Domain.update_errorlog(errordetail,log_path)
+        Domain.update_errorlog(python.error_details(e),log_path)
         return []
 
 def create_datetime():
@@ -116,9 +117,8 @@ def get_qualification():
             
     except Exception as e:                   
         print("Enter correct detail..")
-        date = create_datetime()
-        errordetails = str({"module":"student_register.py","function":"get_qualification","error":e,"date":date})
-        update_errorlog(errordetails,log_path)
+        python.error_details(e)
+        update_errorlog(python.error_details(e),log_path)
         return get_qualification()
     
 studentlist = read_allrecords()

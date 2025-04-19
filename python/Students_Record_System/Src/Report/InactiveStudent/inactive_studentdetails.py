@@ -1,4 +1,7 @@
 import Domain
+import sys,os
+sys.path.append(os.getcwd())
+import python
 log_path = r"D:\Repositories\2025\python\Students_Record_System\Src\Database\errorslog.txt"
 
 def inactive_student():
@@ -13,6 +16,4 @@ def inactive_student():
         return inactivelist
     
     except Exception as e:
-        date = Domain.create_datetime()
-        errordetails = str({"mod":"inactive_studentdetails.py","error":e,"date":date})
-        Domain.update_errorlog(errordetails,log_path)
+        Domain.update_errorlog(python.error_details(e),log_path)

@@ -1,6 +1,5 @@
 import json
 import Domain
-import datetime
 import sys,os
 sys.path.append(os.getcwd())
 import python
@@ -25,11 +24,6 @@ def read_allrecords(path = records_path):
         print("Register students to search data")
         Domain.update_errorlog(python.error_details(e),log_path)
         return []
-
-def create_datetime():
-    date = datetime.datetime.now()
-    shortdate = date.strftime("%d/%m/%Y, %H:%M:%S")
-    return shortdate
 
 def get_status():
     ask_status = input("Is student Active: t/f: ")
@@ -117,16 +111,12 @@ def get_qualification():
             
     except Exception as e:                   
         print("Enter correct detail..")
-        python.error_details(e)
         update_errorlog(python.error_details(e),log_path)
         return get_qualification()
     
 studentlist = read_allrecords()
 def register_user():
-
-    # will return [] if no data present
     studentdict = {}
-
     studentdict["id"] = get_id()
     studentdict["name"] = get_name()
     studentdict["qualification"] = get_qualification()
@@ -134,7 +124,7 @@ def register_user():
     studentdict["address"] = get_address()
     studentdict["contact"] = get_contact()
     studentdict["isActive"] = get_status()
-    studentdict["joneddate"] = create_datetime()
+    studentdict["joneddate"] = python.error_details(get_onlydate=True)
 
     studentlist.append(studentdict)
 

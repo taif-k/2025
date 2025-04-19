@@ -1,8 +1,9 @@
 import json
 import sys,os
 sys.path.append(os.getcwd())
-from python import error_details
+from python import error_details,update_errorslog
 path = r"D:\Repositories\2025\python\user_registration\all_students.json" 
+err_log = r"D:\Repositories\2025\python\user_registration\studenterror_log.txt"
 
 def create_userfile(jsondata,path):
         with open(path,"w") as file:
@@ -17,49 +18,53 @@ def read_alldata():
         print("Students data not available, Register to see data ")
         return []
 
-def get_address(studentdict):
+def get_address():
     while True:
-        studentdict["address"] = input("Enter address: ")
-        return studentdict["address"]
-
-def get_email(studentdict):
-        studentdict["email"] = input("Enter email: ")
-        return studentdict["email"]
-
-def get_id(studentdict):
-    while True:
-        studentdict["id"] = input("Enter id: ")
-        if studentdict["id"].isdigit():
-            studentdict["id"] = int(studentdict["id"])
-            return studentdict["id"]
+        ask_address = input("Enter address: ")
+        if ask_address.isdigit():
+            continue
         else:
-            print("Id should be in digits only")
+            return ask_address
 
-def get_contact(studentdict):
+def get_email():
+    ask_email = input("Enter email: ")
+    return ask_email
+
+def get_id():
+    try:
+        while True:
+            ask_id = int(input("Enter id : "))
+            return ask_id
+    except Exception as e:
+        print("ID should be only digits ")
+        update_errorslog(error_details(e),err_log)
+        return get_id()
+
+def get_contact():
     while True:
-        studentdict["contact"] = input("Enter contact: ")
-        if studentdict["contact"].isdigit():
-            studentdict["contact"] = int(studentdict["contact"])
-            return studentdict["contact"]
+        ask_contact = input("Enter contact: ")
+        if ask_contact.isdigit():
+            ask_contact = int(input("Enter contact"))
+            return ask_contact
         else:
             print("Contact should be in digits only")
 
-def get_name(studentdict):
+def get_name():
     while True:
-        studentdict["name"] = input("Enter name: ")
-        if studentdict["name"].isalpha():
-            return studentdict["name"]
+        ask_name = input("Enter name: ")
+        if ask_name.isalpha():
+            return ask_name
         else:
-            print("name should not be in digits")
+            print("Name should be in alphabets")
 
 def register_user():
     studentlist = read_alldata()
     studentdict = {}
-    studentdict["id"] = get_id(studentdict)
-    studentdict["name"] = get_name(studentdict)
-    studentdict["email"] = get_email(studentdict)
-    studentdict["address"] = get_address(studentdict)
-    studentdict["contact"] = get_contact(studentdict)
+    studentdict["id"] = get_id()
+    studentdict["name"] = get_name()
+    studentdict["email"] = get_email()
+    studentdict["address"] = get_address()
+    studentdict["contact"] = get_contact()
     studentdict["joineddate"] = error_details(get_onlydate=True)
 
     studentlist.append(studentdict)

@@ -1,10 +1,4 @@
 import json
-import student_register
-# import sys
-# import os
-# sys.path.append(os.getcwd())
-# from python import error_details,update_errorslog
-
 path =  r"D:\Repositories\2025\python\user_registration\all_students.json" 
 
 def search_menu():
@@ -63,4 +57,3 @@ def get_data():
                 print("Task number should be in digits")
     except:
         print("Students not registered yet....Register first to to search")
-         # if json file missing, Registration and json file will be created

@@ -1,24 +1,21 @@
 import json
 import sys,os
 sys.path.append(os.getcwd())
-from python import create_log,get_currentdate
+from python import error_details
 path = r"D:\Repositories\2025\python\user_registration\all_students.json" 
 
 def create_userfile(jsondata,path):
-        with open(path,"a") as file:
+        with open(path,"w") as file:
             file.write(f"\n{jsondata}")
 
 def read_alldata():
     try:
         with open(path, "r") as file:
-            data = file.read()
-            print(data)
-    except Exception as e:
+            data = json.load(file)
+            return data
+    except:
         print("Students data not available, Register to see data ")
-        date = get_currentdate()
-        errordetails = str({"module":"student_regsiter.py","function":"read_alldata()","error":e,"date":date})
-        create_log(errordetails)
-        return register_user() # if json file missing, Registration and json file will be created
+        return []
 
 def get_address(studentdict):
     while True:
@@ -56,17 +53,17 @@ def get_name(studentdict):
             print("name should not be in digits")
 
 def register_user():
-    studentlist = []
-    for n in range(1,3):
-        studentdict = {}
-        studentdict["id"] = get_id(studentdict)
-        studentdict["name"] = get_name(studentdict)
-        studentdict["email"] = get_email(studentdict)
-        studentdict["address"] = get_address(studentdict)
-        studentdict["contact"] = get_contact(studentdict)
-        studentdict["joneddate"] = get_currentdate()
+    studentlist = read_alldata()
+    studentdict = {}
+    studentdict["id"] = get_id(studentdict)
+    studentdict["name"] = get_name(studentdict)
+    studentdict["email"] = get_email(studentdict)
+    studentdict["address"] = get_address(studentdict)
+    studentdict["contact"] = get_contact(studentdict)
+    studentdict["joineddate"] = error_details(get_onlydate=True)
 
-        studentlist.append(studentdict)
+    studentlist.append(studentdict)
 
     jsondata = json.dumps(studentlist,indent=3)
     create_userfile(jsondata,path) 
+    print("Registered sucessfully...")

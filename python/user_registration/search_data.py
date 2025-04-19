@@ -3,7 +3,7 @@ import student_register
 import sys
 import os
 sys.path.append(os.getcwd())
-from python.Programs import get_currentdate,create_log
+from python import get_currentdate,create_log
 
 path =  r"D:\Repositories\2025\python\user_registration\all_students.json" 
 

@@ -1,1 +1,0 @@
-from .error_log import err_logpath,get_currentdate,create_log

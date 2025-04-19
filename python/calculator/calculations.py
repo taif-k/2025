@@ -1,7 +1,7 @@
 import inputnumbers
 import sys,os
 sys.path.append(os.getcwd())
-from python.Programs import get_currentdate,create_log
+from python import get_currentdate,create_log
 
 def addition():
     firstnum,secondnum = inputnumbers.numbers_input()

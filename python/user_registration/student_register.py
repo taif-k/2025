@@ -1,7 +1,7 @@
 import json
 import sys,os
 sys.path.append(os.getcwd())
-from python.Programs import create_log,get_currentdate
+from python import create_log,get_currentdate
 path = r"D:\Repositories\2025\python\user_registration\all_students.json" 
 
 def create_userfile(jsondata,path):

@@ -1,5 +1,4 @@
 import json
-import Domain
 import sys,os
 sys.path.append(os.getcwd())
 import python
@@ -11,10 +10,6 @@ def write_data(data,path):
     with open(path,"w") as file:
         file.write(f"\n{data}")
 
-def update_errorlog(errordata,log_path):
-    with open(log_path,"a") as file:
-        file.write(f"\n{errordata}")
-
 def read_allrecords(path = records_path):  
     try:
         with open(path, "r") as file:
@@ -22,7 +17,7 @@ def read_allrecords(path = records_path):
         return data
     except Exception as e:
         print("Register students to search data")
-        Domain.update_errorlog(python.error_details(e),log_path)
+        python.update_errorslog(python.error_details(e),log_path)
         return []
 
 def get_status():
@@ -111,7 +106,7 @@ def get_qualification():
             
     except Exception as e:                   
         print("Enter correct detail..")
-        update_errorlog(python.error_details(e),log_path)
+        python.update_errorslog(python.error_details(e),log_path)
         return get_qualification()
     
 studentlist = read_allrecords()

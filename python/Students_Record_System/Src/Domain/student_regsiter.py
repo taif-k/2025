@@ -16,9 +16,9 @@ def update_errorlog(errordata,log_path):
     with open(log_path,"a") as file:
         file.write(f"\n{errordata}")
 
-def read_allrecords():  
+def read_allrecords(path = records_path):  
     try:
-        with open(records_path, "r") as file:
+        with open(path, "r") as file:
             data = json.load(file) # or data = json.loads(file.read()) 
         return data
     except Exception as e:

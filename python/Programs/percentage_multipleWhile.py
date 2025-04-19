@@ -1,5 +1,5 @@
 import json
-import error_log
+import error_source
 
 def highest_percentage():
     try:
@@ -43,9 +43,7 @@ def highest_percentage():
         print("Highest percentage is: ",percentagelist[-1])   
     except Exception as e:
         print("Enter valid data...Checking error log to resolve error")
-        date = error_log.get_currentdate()
-        errordetails = str({"mod":"percentage_multiplyWhile.py","func":"highest_percentage","error":e,"date":date})
-        error_log.create_log(errordetails)
+        error_source.update_errorslog(error_source.error_details(e))
 
 highest_percentage()
 

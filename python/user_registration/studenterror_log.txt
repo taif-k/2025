@@ -8,3 +8,11 @@
 {'module': 'student_regsiter.py', 'function': 'read_allfiles()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 26, 40, 856389)}
 {'module': 'student_regsiter.py', 'function': 'read_allfiles()', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 27, 0, 828779)}
 {'module': 'search_data.py', 'function': 'get_data', 'error': FileNotFoundError(2, 'No such file or directory'), 'date': datetime.datetime(2025, 4, 12, 9, 35, 55, 1674)}
+{'module': 'student_register.py', 'function': 'register_user', 'error': "error_details() missing 1 required positional argument: 'e'", 'date': '19/04/2025, 09:18:20', 'line': 65}
+{'module': 'error_source.py', 'function': 'error_details', 'error': "'str' object has no attribute '__traceback__'", 'date': '19/04/2025, 09:21:48', 'line': 7}
+{'module': 'error_source.py', 'function': 'error_details', 'error': "'str' object has no attribute '__traceback__'", 'date': '19/04/2025, 09:23:34', 'line': 7}
+{'module': 'error_source.py', 'function': 'error_details', 'error': "'int' object has no attribute '__traceback__'", 'date': '19/04/2025, 09:24:33', 'line': 7}
+{'module': 'error_source.py', 'function': 'error_details', 'error': AttributeError("'int' object has no attribute '__traceback__'"), 'date': '19/04/2025, 09:27:20', 'line': 7}
+{'module': 'error_source.py', 'function': 'error_details', 'error': "'NoneType' object has no attribute '__traceback__'", 'date': '19/04/2025, 09:40:16', 'line': 7}
+{'module': 'error_source.py', 'function': 'error_details', 'error': "'str' object has no attribute '__traceback__'", 'date': '19/04/2025, 09:42:47', 'line': 7}
+{'module': 'student_register.py', 'function': 'register_user', 'error': "'str' object has no attribute 'append'", 'date': '19/04/2025, 10:16:58', 'line': 66}

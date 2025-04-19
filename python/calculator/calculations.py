@@ -1,7 +1,9 @@
 import inputnumbers
 import sys,os
 sys.path.append(os.getcwd())
-from python import get_currentdate,create_log
+import python
+
+err_log = r"D:\Repositories\2025\python\Programs\errordetails.txt"
 
 def addition():
     firstnum,secondnum = inputnumbers.numbers_input()
@@ -15,9 +17,7 @@ def divide():
         return div
     except Exception as e:
         print("Second number should not be Zero")
-        date = get_currentdate()
-        errordetails = str({"mod":"calculations.py","func":"divide()","error":e,"date":date})
-        create_log(errordetails)
+        python.update_errorslog(python.error_details(e),err_log)
         return divide()
 
 def subtraction():

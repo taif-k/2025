@@ -1,4 +1,3 @@
-import error_log
 import error_source
 
 def menu():
@@ -13,12 +12,8 @@ def numbers_input():
             first_number = int(input("Enter first number"))
             second_number = int(input("Enter second number"))
             return first_number,second_number
-        except Exception as e:
+        except:
             print("Numbers should be in digits only")    
-            date = error_log.get_currentdate()
-            errordict = str({"module":"calculator_func.py","function":"numbers_input()","Error":e,"date":date})
-            errordict = error_source.err_source(e)
-            error_log.create_log(errordict)
             return numbers_input()
 
 def addition():
@@ -34,13 +29,12 @@ def multiplication():
     return first_num * second_num
 
 def division():
-    first_num,second_num = numbers_input()
-    if second_num !=0:
-        return first_num / second_num
-    else:
-        print("Second number should not be zero")
+    try:
         first_num,second_num = numbers_input()
         return first_num / second_num
+    except:
+        print("Second Number(Denominator) should not be zero")
+        return division()
     
 def main():    
     menu()

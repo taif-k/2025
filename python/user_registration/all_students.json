@@ -1,42 +1,19 @@
+
 [
    {
-      "id": 123,
-      "name": "taif",
-      "email": "taif@gmail.com",
-      "address": "delhi",
-      "contact": 1234567890,
-      "joneddate": "12/04/2025, 08:54:28"
-   },
-   {
-      "id": 111,
-      "name": "test",
-      "email": "test@gmail.com",
+      "id": 963,
+      "name": "rohitshana",
+      "email": "shana@gmail.com",
       "address": "mumbai",
-      "contact": 1111111111,
-      "joneddate": "12/04/2025, 08:54:53"
+      "contact": 9639639639,
+      "joineddate": "19/04/2025, 10:20:33"
    },
    {
-      "id": 222,
-      "name": "akash",
-      "email": "akash@gmail.com",
-      "address": "goa",
-      "contact": 2222222222,
-      "joneddate": "12/04/2025, 08:55:19"
-   },
-   {
-      "id": 333,
-      "name": "rishabh",
-      "email": "pant@gmail.com",
-      "address": "uttrakhand",
-      "contact": 3333333333,
-      "joneddate": "12/04/2025, 08:56:48"
-   },
-   {
-      "id": 444,
-      "name": "kholi",
-      "email": "kholi@gmail.com",
-      "address": "bangalore",
-      "contact": 4444444444,
-      "joneddate": "12/04/2025, 08:57:22"
+      "id": 123,
+      "name": "test",
+      "email": "test@mail.com",
+      "address": "test",
+      "contact": 1234567890,
+      "joineddate": "19/04/2025, 10:21:59"
    }
 ]

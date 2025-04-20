@@ -18,11 +18,9 @@ def menu_option():
             if task_input == 1: 
                 Domain.register_user()
             elif task_input == 2:
-                pass
                 data = Domain.read_allrecords()
                 print(json.dumps(data,indent=4))
             elif task_input == 3:
-                pass
                 Report.get_data()
             elif task_input == 0:
                 break
@@ -31,7 +29,5 @@ def menu_option():
         else:
             print("Task number should be in digit only\n")     
 
-if __name__ == "__main__":
-    menu_option()
  
             

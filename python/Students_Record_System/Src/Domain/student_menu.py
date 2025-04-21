@@ -18,8 +18,7 @@ def menu_option():
             if task_input == 1: 
                 Domain.register_user()
             elif task_input == 2:
-                data = Domain.read_allrecords()
-                print(json.dumps(data,indent=4))
+                print(json.dumps(Domain.read_allrecords(),indent=4))
             elif task_input == 3:
                 Report.get_data()
             elif task_input == 0:

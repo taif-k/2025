@@ -12,14 +12,17 @@ def get_data():
     ask_report = int(input("Enter option: "))
     
     if ask_report == 1:
-        activedata = Report.active_student()
-        print(json.dumps(activedata,indent=3))
-        print("\n-----Above is the List of Active Students-----\n")
+        data = Report.active_student()
 
     elif ask_report == 2:
-        inactivedata = Report.inactive_student()
-        print(json.dumps(inactivedata,indent=3))
-        print("\n-----Above is the List of Inactive Students-----\n")
+        data = Report.inactive_student()
+
+    else:
+        data = None
+        print("Invalid option")    
+
+    if data:
+        print(json.dumps(data,indent=3)) 
         
 
  

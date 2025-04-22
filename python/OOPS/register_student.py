@@ -19,7 +19,8 @@ class student:
             elif ask_option == 2:
                 self.display_info()       
             elif ask_option == 3:
-                self.search_student()
+                pass
+                # self.search_student()
             elif ask_option == 0:
                 break
 

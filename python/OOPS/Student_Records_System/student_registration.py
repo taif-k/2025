@@ -9,7 +9,7 @@ import python
 class student:
     def __init__(self,datapath,errorlog_path):
         self.recordspath = datapath
-        self.studentlist = []
+        self.studentlist = self.read_alldata()
         self.err_path = errorlog_path
 
     def menu(self):
@@ -25,7 +25,7 @@ class student:
             if ask_menu == 1:
                 self.ask_details()  
             elif ask_menu == 2:
-                print(json.dumps(self.read_alldata(),indent=4))
+                print(json.dumps(self.studentlist,indent=4))
                 print()
             elif ask_menu ==3:
                 self.search_student()
@@ -60,7 +60,7 @@ class student:
     def search_student(self):
         search_name = input("Enter name to serach: ")
         isPresent = 0
-        for data in self.read_alldata():
+        for data in self.studentlist:
             for key,value in data.items():
                 if key == "name":
                     if value == search_name:
@@ -79,8 +79,8 @@ class student:
     def read_alldata(self):
         try:
             with open(self.recordspath, "r") as file:
-                self.studentrecords = json.load(file)
-                return self.studentrecords
+                studentrecords = json.load(file)
+                return studentrecords
         except Exception as e:
             print("Student Records are blank")
             python.update_errorslog(python.error_details(e),self.err_path)

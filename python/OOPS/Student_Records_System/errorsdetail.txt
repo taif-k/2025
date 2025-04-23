@@ -1,0 +1,4 @@
+
+{'module': 'decoder.py', 'function': 'raw_decode', 'error': 'Expecting value: line 1 column 1 (char 0)', 'date': '23/04/2025, 18:28:24', 'line': 363}
+{'module': 'student_registration.py', 'function': 'read_alldata', 'error': "invalid mode: 'f'", 'date': '23/04/2025, 18:29:44', 'line': 76}
+{'module': 'student_registration.py', 'function': 'ask_details', 'error': "invalid literal for int() with base 10: 'abc'", 'date': '23/04/2025, 18:37:01', 'line': 39}

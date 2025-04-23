@@ -1,11 +1,16 @@
 import json
 datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\studentdata.json"
+errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\errorsdetail.txt"
+import sys,os
+sys.path.append(os.getcwd())
+import python
+
 
 class student:
-
-    def __init__(self,datapath):
+    def __init__(self,datapath,errorlog_path):
         self.recordspath = datapath
         self.studentlist = []
+        self.err_path = errorlog_path
 
     def menu(self):
         print("1 - Students Registration")
@@ -28,23 +33,29 @@ class student:
                 break
 
     def ask_details(self):
-        while True:
-            self.name = input("Enter Name: ")
-            self.age = int(input("Enter Age: "))
-            self.grade = input("Enter Grade: ")
-            studentdict = {}
-            studentdict["name"] = self.name
-            studentdict["age"] = self.age
-            studentdict["grade"] = self.grade
-            self.studentlist.append(studentdict)
+        try:
+            while True:
+                self.name = input("Enter Name: ")
+                self.age = int(input("Enter Age: "))
+                self.grade = input("Enter Grade: ")
+                studentdict = {}
+                studentdict["name"] = self.name
+                studentdict["age"] = self.age
+                studentdict["grade"] = self.grade
+                self.studentlist.append(studentdict)
 
-            regsiter_student = input("Add More Students y/n: ")
-            if regsiter_student == "y":
-                continue
-            else:
-                self.menu_option()
-                break
-        self.write_data()
+                regsiter_student = input("Add More Students y/n: ")
+                if regsiter_student == "y":
+                    continue
+                else:
+                    self.menu_option()
+                    break
+            self.write_data()
+
+        except Exception as e:
+            print("Enter valid details...")
+            python.update_errorslog(python.error_details(e),self.err_path) # error_details() using traceback module
+            self.ask_details()    
 
     def search_student(self):
         search_name = input("Enter name to serach: ")
@@ -72,8 +83,9 @@ class student:
                 return self.studentrecords
         except Exception as e:
             print("Student Records are blank")
+            python.update_errorslog(python.error_details(e),self.err_path)
             return []
-    
-studentdata = student(datapath)
+
+studentdata = student(datapath,errorlog_path)
 studentdata.menu_option()
 

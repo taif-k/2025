@@ -1,26 +1,26 @@
 import json
-datapath = r"D:\Repositories\2025\python\OOPS\studentdata.json"
+datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\studentdata.json"
 
 class student:
 
     def __init__(self,datapath):
         self.recordspath = datapath
-        self.menu()
 
     def menu(self):
         print("1 - Students Registration")
         print("2 - Display Records")
         print("3 - Search Data")
         print("0 - Exit")
-        self.menu_option()
 
     def menu_option(self):
         while True:
+            self.menu()
             ask_menu = int(input("Enter option: "))
             if ask_menu == 1:
                 self.ask_details()  
             elif ask_menu == 2:
                 print(json.dumps(self.read_alldata(),indent=4))
+                print()
             elif ask_menu ==3:
                 self.search_student()
             elif ask_menu ==0:
@@ -55,10 +55,11 @@ class student:
                     if value == search_name:
                         isPresent = 1
                         print(json.dumps(data,indent=3))
+                        print()
                         break
 
         if isPresent == 0:
-            print("Not found")
+            print("\nNot found")
 
     def write_data(self):
         with open(self.recordspath,"w") as file:
@@ -74,4 +75,5 @@ class student:
             return []
     
 studentdata = student(datapath)
+studentdata.menu_option()
 

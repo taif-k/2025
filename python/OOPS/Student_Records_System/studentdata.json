@@ -18,5 +18,10 @@
       "name": "rishabh",
       "age": 25,
       "grade": "A"
+   },
+   {
+      "name": "sahil",
+      "age": 23,
+      "grade": "B"
    }
 ]

@@ -46,9 +46,6 @@ class student:
                 break
         self.write_data()
 
-    def display_info(self):
-        print(json.dumps(self.studentlist,indent=4))
-
     def search_student(self):
         search_name = input("Enter name to serach: ")
         isPresent = 0

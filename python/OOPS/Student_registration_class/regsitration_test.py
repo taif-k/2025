@@ -48,12 +48,11 @@ class student:
 
     def display_info(self):
         print(json.dumps(self.studentlist,indent=4))
-        self.search_student()
 
     def search_student(self):
         search_name = input("Enter name to serach: ")
         isPresent = 0
-        for data in self.studentlist:
+        for data in self.read_alldata():
             for key,value in data.items():
                 if key == "name":
                     if value == search_name:
@@ -71,11 +70,11 @@ class student:
     def read_alldata(self):
         try:
             with open(self.recordspath, "r") as file:
-                studentrecords = json.load(file)
-                return studentrecords
+                self.studentrecords = json.load(file)
+                return self.studentrecords
         except Exception as e:
+            print("Student Records are blank")
             return []
     
 studentdata = student(datapath)
-# studentdata.menu_option()
-# studentdata.read_alldata()
+

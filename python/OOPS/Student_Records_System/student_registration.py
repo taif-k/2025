@@ -5,6 +5,7 @@ class student:
 
     def __init__(self,datapath):
         self.recordspath = datapath
+        self.studentlist = []
 
     def menu(self):
         print("1 - Students Registration")
@@ -27,7 +28,6 @@ class student:
                 break
 
     def ask_details(self):
-        self.studentlist = self.read_alldata()
         while True:
             self.name = input("Enter Name: ")
             self.age = int(input("Enter Age: "))

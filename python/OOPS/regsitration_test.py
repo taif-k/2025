@@ -1,5 +1,5 @@
 import json
-datapath = r"D:\Repositories\2025\python\OOPS\Student_registration_class\studentdata.json"
+datapath = r"D:\Repositories\2025\python\OOPS\studentdata.json"
 
 class student:
 

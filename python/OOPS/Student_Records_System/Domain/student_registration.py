@@ -1,15 +1,15 @@
 import json
-datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\studentdata.json"
-errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\errorsdetail.txt"
 import sys,os
 sys.path.append(os.getcwd())
 import python
 
+datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Database\studentdata.json"
+errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Log\errorsdetail.txt"
 
 class student:
     def __init__(self,datapath,errorlog_path):
         self.recordspath = datapath
-        self.studentlist = self.read_alldata()
+        self.__studentlist = self.read_alldata()
         self.err_path = errorlog_path
 
     def menu(self):
@@ -25,7 +25,7 @@ class student:
             if ask_menu == 1:
                 self.ask_details()  
             elif ask_menu == 2:
-                print(json.dumps(self.studentlist,indent=4))
+                print(json.dumps(self.__studentlist,indent=4))
                 print()
             elif ask_menu ==3:
                 self.search_student()
@@ -44,7 +44,7 @@ class student:
                 studentdict["age"] = self.age
                 studentdict["grade"] = self.grade
                 studentdict["joineddate"] = self.joineddate
-                self.studentlist.append(studentdict)
+                self.__studentlist.append(studentdict)
 
                 regsiter_student = input("Add More Students y/n: ")
                 if regsiter_student == "y":
@@ -62,7 +62,7 @@ class student:
     def search_student(self):
         search_name = input("Enter name to serach: ")
         isPresent = 0
-        for data in self.studentlist:
+        for data in self.__studentlist:
             for key,value in data.items():
                 if key == "name":
                     if value == search_name:
@@ -76,7 +76,7 @@ class student:
 
     def write_data(self):
         with open(self.recordspath,"w") as file:
-            file.write(json.dumps(self.studentlist,indent=3))
+            file.write(json.dumps(self.__studentlist,indent=3))
 
     def read_alldata(self):
         try:
@@ -90,4 +90,3 @@ class student:
 
 studentdata = student(datapath,errorlog_path)
 studentdata.menu_option()
-

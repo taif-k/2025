@@ -3,9 +3,6 @@ import sys,os
 sys.path.append(os.getcwd())
 import python
 
-datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Database\studentdata.json"
-errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Log\errorsdetail.txt"
-
 class student:
     def __init__(self,datapath,errorlog_path):
         self.recordspath = datapath
@@ -88,5 +85,3 @@ class student:
             python.update_errorslog(python.error_details(e),self.err_path)
             return []
 
-studentdata = student(datapath,errorlog_path)
-studentdata.menu_option()

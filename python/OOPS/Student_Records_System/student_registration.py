@@ -76,7 +76,7 @@ class student:
 
     def write_data(self):
         with open(self.recordspath,"w") as file:
-            file.write(str(json.dumps(self.studentlist,indent=3)))
+            file.write(json.dumps(self.studentlist,indent=3))
 
     def read_alldata(self):
         try:

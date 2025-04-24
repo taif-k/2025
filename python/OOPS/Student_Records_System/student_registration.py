@@ -38,10 +38,12 @@ class student:
                 self.name = input("Enter Name: ")
                 self.age = int(input("Enter Age: "))
                 self.grade = input("Enter Grade: ")
+                self.joineddate = python.error_details(get_onlydate=True)
                 studentdict = {}
                 studentdict["name"] = self.name
                 studentdict["age"] = self.age
                 studentdict["grade"] = self.grade
+                studentdict["joineddate"] = self.joineddate
                 self.studentlist.append(studentdict)
 
                 regsiter_student = input("Add More Students y/n: ")

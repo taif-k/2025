@@ -2,30 +2,34 @@ class BankAccout:
     def __init__(self):
         self.__account_no = 1234567890
         self.__totalbalance = 500
-        
+        self.__pin = 123
+
     def task_option(self):
         print("1-withdraw")
         print("2-Deposit")
         print("3-check balance")
 
     def verifyaccount(self):
-        self.__pin = 123
-        enter_pin = int(input("Enter pin to verify: "))
-        if enter_pin == self.__pin:
-            while True:
-                self.task_option()
-                ask_option = int(input("Enter option: "))
-                if ask_option == 1:
-                    self.withdrawl()
-                elif ask_option == 2:
-                    self.deposit()
-                elif ask_option == 3:
-                    balance = self.__totalbalance
-                    print(f"Total balance is {balance}")
-                else:
-                    break
+        enter_accountno = int(input("Enter account no: "))
+        if enter_accountno == self.__account_no:
+            enter_pin = int(input("Enter pin to verify: "))
+            if enter_pin == self.__pin:
+                while True:
+                    self.task_option()
+                    ask_option = int(input("Enter option: "))
+                    if ask_option == 1:
+                        self.withdrawl()
+                    elif ask_option == 2:
+                        self.deposit()
+                    elif ask_option == 3:
+                        balance = self.__totalbalance
+                        print(f"Total balance is {balance}")
+                    else:
+                        break
+            else:
+                print("Incorrect pin")
         else:
-            print("Incorrect pin")                
+            print("Enter valif account number to proceed further")                        
 
     def withdrawl(self):
         self.withdraw_amount = int(input("Enter amount to withdrawl: "))

@@ -55,6 +55,8 @@ class BookOption(Book):
                 self.write_data()
                 self.borrowed_book.append(bookdict)
                 print("Book Borrowed")
+                return None
+        print("Book not available in Library")
 
     def return_book(self):
         enter_book  = input("Enter book name To Return: ").lower()
@@ -64,8 +66,9 @@ class BookOption(Book):
                 self.booklist.append(bookdict)
                 self.write_data()
                 print("Book Returned")
-                break
-
+                return None
+        print("Book Cannot be Returned")    
+        
 class BookMenu(BookOption): 
     def __init__(self,path):
         BookOption.__init__(self,path)
@@ -93,9 +96,8 @@ class BookMenu(BookOption):
                         self.borrow_book()
                     elif ask_option == 3:
                         self.return_book()
-                        pass
                     elif ask_option == 4:
-                        print(json.dumps(self.booklist,indent=4))
+                        print(json.dumps(self.booklist,indent=4)) #remove after test
                     elif ask_option == 5:
                         break
             else:

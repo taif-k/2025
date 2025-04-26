@@ -16,11 +16,11 @@ class Book:
             with open(self.jsonpath,"r") as file:
                 data = json.load(file)
                 return data
-        except Exception as e:
+        except:
             print("Book data unavailable")
             return [] 
 
-class AddBook(Book):
+class BookOption(Book):
     def __init__(self, path):
         Book.__init__(self,path)
 
@@ -46,32 +46,15 @@ class AddBook(Book):
                 self.write_data()
             elif ask_addbook.lower() == "n":
                 break
- 
-class BorrowBook(AddBook):
-    def __init__(self,path):
-        AddBook.__init__(self,path)
 
     def borrow_book(self):
-        already_borrow = 0
         enter_book = input("Enter book name to borrow: ").lower()
         for bookdict in self.booklist:
-            for key,value in bookdict.items():
-                if key == "book_name":
-                    if value.lower() == enter_book:
-                        self.booklist.remove(bookdict)                        
-                        self.write_data()
-                        self.borrowed_book.append(bookdict)
-                        print("Book Borrowed")
-                        already_borrow = 1
-                        break
-
-        if already_borrow == 0:
-            print("Book not found")
-
-
-class ReturnBook(BorrowBook):
-    def __init__(self,path):
-        BorrowBook.__init__(self,path)
+            if bookdict["book_name"].lower() == enter_book:
+                self.booklist.remove(bookdict)                        
+                self.write_data()
+                self.borrowed_book.append(bookdict)
+                print("Book Borrowed")
 
     def return_book(self):
         enter_book  = input("Enter book name To Return: ").lower()
@@ -83,9 +66,9 @@ class ReturnBook(BorrowBook):
                 print("Book Returned")
                 break
 
-class BookMenu(ReturnBook): 
+class BookMenu(BookOption): 
     def __init__(self,path):
-        ReturnBook.__init__(self,path)
+        BookOption.__init__(self,path)
         self.__pin = 123
 
     def menu(self):

@@ -5,6 +5,7 @@ class Book:
     def __init__(self,path):
         self.jsonpath = path
         self.booklist = self.read_bookdata()
+        self.borrowed_book = []
 
     def write_data(self):
         with open(self.jsonpath,"w") as file:
@@ -16,6 +17,7 @@ class Book:
                 data = json.load(file)
                 return data
         except Exception as e:
+            print("Book data unavailable")
             return [] 
 
 class AddBook(Book):
@@ -26,12 +28,12 @@ class AddBook(Book):
         while True:
             ask_addbook = input("Want to add a new book y/n: ")
             if ask_addbook.lower() == "y":
-                self.enter_book = input("Enter Book name to Add: ").lower()
-                self.author_name = input("Enter Author name: ")
+                enter_book = input("Enter Book name to Add: ").lower()
+                author_name = input("Enter Author name: ")
 
                 alreadypresent = False
                 for bookdict in self.booklist:
-                    if bookdict["book_name"].lower() == self.enter_book:
+                    if bookdict["book_name"].lower() == enter_book:
                         alreadypresent = True
                         break
 
@@ -39,7 +41,7 @@ class AddBook(Book):
                     print("Already added in database")
                     continue
 
-                bookdict = {"book_name":self.enter_book,"author_name":self.author_name}
+                bookdict = {"book_name":enter_book,"author_name":author_name}
                 self.booklist.append(bookdict)
                 self.write_data()
             elif ask_addbook.lower() == "n":
@@ -51,13 +53,14 @@ class BorrowBook(AddBook):
 
     def borrow_book(self):
         already_borrow = 0
-        self.enter_book = input("Enter book name to borrow: ").lower()
+        enter_book = input("Enter book name to borrow: ").lower()
         for bookdict in self.booklist:
             for key,value in bookdict.items():
                 if key == "book_name":
-                    if value.lower() == self.enter_book:
+                    if value.lower() == enter_book:
                         self.booklist.remove(bookdict)                        
                         self.write_data()
+                        self.borrowed_book.append(bookdict)
                         print("Book Borrowed")
                         already_borrow = 1
                         break
@@ -71,22 +74,16 @@ class ReturnBook(BorrowBook):
         BorrowBook.__init__(self,path)
 
     def return_book(self):
-        self.enter_book  = input("Enter book name To Return: ").lower()
-        already_return = 0 
-        for bookdict in self.booklist:
-            for key,value in bookdict.items():
-                if key == "book_name":
-                    if value.lower() == self.enter_book:
-                        print("Book already present in database")
-                        already_return = 1
-                        break
+        enter_book  = input("Enter book name To Return: ").lower()
+        for bookdict in self.borrowed_book:
+            if bookdict["book_name"].lower() == enter_book:
+                self.borrowed_book.remove(bookdict)
+                self.booklist.append(bookdict)
+                self.write_data()
+                print("Book Returned")
+                break
 
-        if already_return == 0:
-            self.add_book()
-            print("Book Returned ")
-
-
-class BookMenu(ReturnBook): #
+class BookMenu(ReturnBook): 
     def __init__(self,path):
         ReturnBook.__init__(self,path)
         self.__pin = 123

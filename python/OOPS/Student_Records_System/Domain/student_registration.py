@@ -1,6 +1,4 @@
 import json
-import sys,os
-sys.path.append(os.getcwd())
 import python
 
 class Student:
@@ -46,14 +44,6 @@ class Student:
                     python.update_errorslog(python.error_details(e),self.err_path) # error_details() using traceback module
             self.write_data()            
 
-    def search_student(self):
-        search_name = input("Enter name to search: ")
-        for data in self.studentlist:
-            if data["name"] == search_name:
-                print(json.dumps(data,indent=3))
-                print()
-                return None
-        print("\nNot found")
         
 class StudentMenu(Student):
     def menu(self):
@@ -72,7 +62,8 @@ class StudentMenu(Student):
                 print(json.dumps(self.studentlist,indent=4))
                 print()
             elif ask_menu ==3:
-                self.search_student()
+                searchobj = python.StudentSearch(self.recordspath, self.err_path)
+                searchobj.search_student()
             elif ask_menu ==0:
                 break 
 

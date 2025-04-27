@@ -21,8 +21,8 @@ class Book:
             return [] 
 
 class BookOption(Book):
-    def __init__(self, path):
-        Book.__init__(self,path)
+    def __init__(self):
+        pass
 
     def add_book(self):
         while True:
@@ -30,22 +30,26 @@ class BookOption(Book):
             if ask_addbook.lower() == "y":
                 enter_book = input("Enter Book name to Add: ").lower()
                 author_name = input("Enter Author name: ")
+                if author_name.isalpha():
+                    alreadypresent = False
+                    for bookdict in self.booklist:
+                        if bookdict["book_name"].lower() == enter_book:
+                            alreadypresent = True
+                            break
 
-                alreadypresent = False
-                for bookdict in self.booklist:
-                    if bookdict["book_name"].lower() == enter_book:
-                        alreadypresent = True
-                        break
+                    if alreadypresent == True:
+                        print("Already added in database")
+                        continue
 
-                if alreadypresent == True:
-                    print("Already added in database")
-                    continue
-
-                bookdict = {"book_name":enter_book,"author_name":author_name}
-                self.booklist.append(bookdict)
-                self.write_data()
+                    bookdict = {"book_name":enter_book,"author_name":author_name}
+                    self.booklist.append(bookdict)
+                    self.write_data()
+                else:
+                    print("Author Name should be in Alphabets")    
             elif ask_addbook.lower() == "n":
                 break
+            else:
+                print("Choose either y or n")
 
     def borrow_book(self):
         enter_book = input("Enter book name to borrow: ").lower()
@@ -71,7 +75,7 @@ class BookOption(Book):
         
 class BookMenu(BookOption): 
     def __init__(self,path):
-        BookOption.__init__(self,path)
+        Book.__init__(self,path)
         self.__pin = 123
 
     def menu(self):
@@ -103,7 +107,7 @@ class BookMenu(BookOption):
             else:
                 print("Incorrect pin")     
         except:
-            print("Enter correct details..")
+            print("Invalid option")
 
 book_one = BookMenu(jsonpath)
 book_one.menu_option()

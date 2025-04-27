@@ -57,19 +57,13 @@ class student:
             self.ask_details()    
 
     def search_student(self):
-        search_name = input("Enter name to serach: ")
-        isPresent = 0
+        search_name = input("Enter name to search: ")
         for data in self.__studentlist:
-            for key,value in data.items():
-                if key == "name":
-                    if value == search_name:
-                        isPresent = 1
-                        print(json.dumps(data,indent=3))
-                        print()
-                        break
-
-        if isPresent == 0:
-            print("\nNot found")
+            if data["name"] == search_name:
+                print(json.dumps(data,indent=3))
+                print()
+                return None
+        print("\nNot found")
 
     def write_data(self):
         with open(self.recordspath,"w") as file:

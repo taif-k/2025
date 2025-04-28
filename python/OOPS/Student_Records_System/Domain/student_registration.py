@@ -1,5 +1,5 @@
 import json
-import python
+import python as py_lang
 
 class Student:
     def __init__(self,datapath,errorlog_path):
@@ -18,22 +18,18 @@ class Student:
                 return studentrecords
         except Exception as e:
             print("Student Records are blank")
-            python.update_errorslog(python.error_details(e),self.err_path)
+            py_lang.update_errorslog(py_lang.error_details(e),self.err_path)
             return []   
 
     def ask_details(self):
         
             while True:
                 try:
-                    self.name = input("Enter Name: ")
-                    self.age = int(input("Enter Age: "))
-                    self.grade = input("Enter Grade: ")
-                    self.joineddate = python.error_details(get_onlydate=True)
                     studentdict = {}
-                    studentdict["name"] = self.name
-                    studentdict["age"] = self.age
-                    studentdict["grade"] = self.grade
-                    studentdict["joineddate"] = self.joineddate
+                    studentdict["name"] = input("Enter Name: ")
+                    studentdict["age"] = int(input("Enter Age: "))
+                    studentdict["grade"] = input("Enter Grade: ")
+                    studentdict["joineddate"] = py_lang.error_details(get_onlydate=True)
                     self.studentlist.append(studentdict)
 
                     if input("Add More Students y/n: ").lower() != "y":
@@ -41,7 +37,7 @@ class Student:
 
                 except Exception as e:
                     print("Enter valid details...")
-                    python.update_errorslog(python.error_details(e),self.err_path) # error_details() using traceback module
+                    py_lang.update_errorslog(py_lang.error_details(e),self.err_path) # error_details() using traceback module
             self.write_data()            
 
         
@@ -62,7 +58,7 @@ class StudentMenu(Student):
                 print(json.dumps(self.studentlist,indent=4))
                 print()
             elif ask_menu ==3:
-                searchobj = python.StudentSearch(self.recordspath, self.err_path)
+                searchobj = py_lang.StudentSearch(self.recordspath, self.err_path)
                 searchobj.search_student()
             elif ask_menu ==0:
                 break 

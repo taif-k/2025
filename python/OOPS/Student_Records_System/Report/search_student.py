@@ -1,5 +1,5 @@
 import json
-import python
+import python as py_lang
 
 class StudentSearch:
     def __init__(self,datapath,errorlog_path):
@@ -8,7 +8,7 @@ class StudentSearch:
 
     def search_student(self):
         search_name = input("Enter name to search: ")
-        listobj = python.Student(self.recordspath, self.err_path)
+        listobj = py_lang.Student(self.recordspath, self.err_path)
         for data in listobj.studentlist:
             if data["name"] == search_name:
                 print(json.dumps(data,indent=3))

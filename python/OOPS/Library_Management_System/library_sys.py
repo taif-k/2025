@@ -83,8 +83,7 @@ class BookMenu(BookOption):
         print("1- Add Book")
         print("2- Borrow Book")
         print("3- Return Book")
-        print("4- See All Books")
-        print("5- Exit")
+        print("4- Exit")
 
     def menu_option(self):
         print("\n---Library Management System---\n")
@@ -100,9 +99,7 @@ class BookMenu(BookOption):
                         self.borrow_book()
                     elif ask_option == 3:
                         self.return_book()
-                    elif ask_option == 4:
-                        print(json.dumps(self.booklist,indent=4)) #remove after test
-                    elif ask_option == 5:
+                    elif ask_option == 4    :
                         break
             else:
                 print("Incorrect pin")     

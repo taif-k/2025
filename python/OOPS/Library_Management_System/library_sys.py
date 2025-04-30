@@ -1,5 +1,6 @@
 import json
 jsonpath = r"D:\Repositories\2025\python\OOPS\Library_Management_System\bookdata.json"
+import uuid
 
 class Book:
     def __init__(self,path):
@@ -30,7 +31,8 @@ class BookOption(Book):
             if ask_addbook.lower() == "y":
                 enter_book = input("Enter Book name to Add: ").lower()
                 author_name = input("Enter Author name: ")
-                if author_name.isalpha():
+                book_id = str(uuid.uuid4())[:5]
+                if all(word.isalnum() for word in author_name.split()):
                     alreadypresent = False
                     for bookdict in self.booklist:
                         if bookdict["book_name"].lower() == enter_book:
@@ -41,7 +43,7 @@ class BookOption(Book):
                         print("Already added in database")
                         continue
 
-                    bookdict = {"book_name":enter_book,"author_name":author_name}
+                    bookdict = {"book_name":enter_book,"author_name":author_name,"book_id":book_id}
                     self.booklist.append(bookdict)
                     self.write_data()
                 else:

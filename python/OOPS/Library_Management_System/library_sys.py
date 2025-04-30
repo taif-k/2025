@@ -21,8 +21,8 @@ class Book:
             return [] 
 
 class BookOption(Book):
-    def __init__(self):
-        pass
+    def __init__(self,path):
+        super().__init__(path)
 
     def add_book(self):
         while True:
@@ -74,8 +74,8 @@ class BookOption(Book):
         print("Book Cannot be Returned")    
         
 class BookMenu(BookOption): 
-    def __init__(self,path):
-        Book.__init__(self,path)
+    def __init__(self, path):
+        super().__init__(path)
         self.__pin = 123
 
     def menu(self):

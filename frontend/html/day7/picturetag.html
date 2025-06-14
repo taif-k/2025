@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Tag</title>
+</head>
+<body>
+    <main>
+    <picture>
+        <source srcset="https://wallpapers.com/images/featured/tumblr-photography-js1ufm7cmluuj8po.jpg" media="(max-width: 600px)"> <!--this image loads if viewport is 600px wide or less-->
+        <source srcset="https://64.media.tumblr.com/c9cac66ee280cdcb3a4f0cee5bf3ab48/tumblr_ph8whqmcvL1upcvga_640.jpg" media="(max-width: 1200px)"> <!--this image loads if viewport is between 601px and 1200px-->
+        <img src="./admin_update_item.PNG" alt="alternative image"> <!--this is fallback image, loads if none of the above conditions matches-->
+    </picture>
+    </main>
+
+</body>
+</html>

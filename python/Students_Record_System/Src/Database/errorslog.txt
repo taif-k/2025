@@ -1,0 +1,11 @@
+
+{'module': 'student_register.py', 'function': 'get_qualification', 'error': ValueError("invalid literal for int() with base 10: 'mca'"), 'date': '17/04/2025, 11:01:43'}
+{'module': 'search_data.py', 'function': 'get_data', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 11:50:44'}
+{'module': 'active_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 11:55:38'}
+{'module': 'active_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 11:56:15'}
+{'module': 'inactive_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 12:06:58'}
+{'module': 'active_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 12:07:02'}
+{'module': 'active_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 12:08:08'}
+{'module': 'active_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 12:09:39'}
+{'module': 'active_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 12:18:43'}
+{'module': 'inactive_studentdetails.py', 'error': TypeError("'list' object is not callable"), 'date': '17/04/2025, 12:18:51'}

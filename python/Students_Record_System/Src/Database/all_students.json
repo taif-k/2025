@@ -1,0 +1,143 @@
+
+[
+   {
+      "id": 123,
+      "name": "taif",
+      "qualification": [
+         {
+            "qualification_name": "mca",
+            "passing_year": 2025
+         },
+         {
+            "qualification_name": "bca",
+            "passing_year": 2021
+         }
+      ],
+      "email": "taifk817@gmail.com",
+      "address": "delhi",
+      "contact": 1234567890,
+      "joneddate": "15/04/2025, 09:35:27"
+   },
+   {
+      "id": 111,
+      "name": "test",
+      "qualification": [
+         {
+            "qualification_name": "mca",
+            "passing_year": 2025
+         },
+         {
+            "qualification_name": "bca",
+            "passing_year": 2021
+         }
+      ],
+      "email": "test@gmail.com",
+      "address": "test",
+      "contact": 1111111111,
+      "joneddate": "15/04/2025, 09:36:19"
+   },
+   {
+      "id": 222,
+      "name": "akshay",
+      "qualification": [
+         {
+            "qualification_name": "ma",
+            "passing_year": 2025
+         },
+         {
+            "qualification_name": "ba",
+            "passing_year": 2021
+         },
+         {
+            "qualification_name": "12",
+            "passing_year": 2020
+         }
+      ],
+      "email": "akshay@gmail.com",
+      "address": "punjab",
+      "contact": 2222222222,
+      "joneddate": "15/04/2025, 09:37:29"
+   },
+   {
+      "id": 444,
+      "name": "himesh",
+      "qualification": [
+         {
+            "qualification_name": "bba",
+            "passing_year": 2020
+         }
+      ],
+      "email": "himesh@gmail.com",
+      "address": "mumbai",
+      "contact": 4444444444,
+      "joneddate": "15/04/2025, 09:38:13"
+   },
+   {
+      "id": 951,
+      "name": "sahill",
+      "qualification": [],
+      "email": "sahill@gmail.com",
+      "address": "packages",
+      "contact": 9519519511,
+      "joneddate": "17/04/2025, 08:28:14"
+   },
+   {
+      "id": 9797,
+      "name": "db",
+      "qualification": [
+         {
+            "qualification_name": "hons",
+            "passing_year": 2020
+         }
+      ],
+      "email": "db@gmail.com",
+      "address": "college",
+      "contact": 9797979797,
+      "joneddate": "17/04/2025, 11:05:12"
+   },
+   {
+      "id": 9696,
+      "name": "check",
+      "qualification": [],
+      "email": "check@gmail.com",
+      "address": "checking",
+      "contact": 9999988888,
+      "isActive": "False",
+      "joneddate": "17/04/2025, 11:24:59"
+   },
+   {
+      "id": 921,
+      "name": "arjun",
+      "qualification": [
+         {
+            "qualification_name": "ba",
+            "passing_year": 2025
+         }
+      ],
+      "email": "arjun@gmail.com",
+      "address": "arjun",
+      "contact": 9111122222,
+      "isActive": "True",
+      "joneddate": "17/04/2025, 12:35:46"
+   },
+   {
+      "id": 99887,
+      "name": "rajroa",
+      "qualification": [],
+      "email": "rajkumar@gmail.com",
+      "address": "bombay",
+      "contact": 9633697458,
+      "isActive": "True",
+      "joneddate": "17/04/2025, 12:36:54"
+   },
+   {
+      "id": 211,
+      "name": "ameet",
+      "qualification": [],
+      "email": "ameet@gmail.com",
+      "address": "amethi",
+      "contact": 2112112111,
+      "isActive": "True",
+      "joneddate": "18/04/2025, 15:04:01"
+   }
+]

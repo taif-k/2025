@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="html form and its element">
+    <meta name="keywords" content="html, html form, form element registration">
+    <meta name="author" content="taif">
+    <meta name="robots" content="index, follow">
     <title>Html Regsitarion Form</title>
 </head>
 
@@ -16,20 +21,20 @@
         <input type="text" id="name" name="name" required /><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br><br>
+        <input type="email" id="email" name="email"  required /><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}" minlength="8" required /><br><br>
+        <input type="password" id="password" name="password" minlength="8" required /><br><br>
 
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" required /><br><br>
 
         <label>Select Gender: </label>
-        <input type="radio" id="male" name="gender" value="Male" />
+        <input type="radio" id="male" name="gender" value="ml" />
         <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="Female" />
+        <input type="radio" id="female" name="gender" value="fml" />
         <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="Other" />
+        <input type="radio" id="other" name="gender" value="oth" />
         <label for="other">Other</label><br>
 
         <label>Interests: </label>

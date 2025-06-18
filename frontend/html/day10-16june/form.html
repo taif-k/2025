@@ -13,27 +13,47 @@
         <form action="#" method="get">
             <!--forms elements/fields (These are all inline elements)--> 
             <label for="name1">Name: </label> <!--for is mostly used on lable tag-->
-            <input type="text" name="u_name" id="name1" placeholder="here"><br> <!--name attr works for form tag only, type attr works for forma and buttons-->
-            <label for="email1">Email: </label>
-            <input type="email" name="u_email" id="email1"><br>
+            <input type="text" disabled value="xyz"  name="u_name" id="name1" placeholder="here"><br> <!--name attr works for form tag only, type attr works for forma and buttons-->
+            <label for="email1" >Email: </label>
+            <input type="email" name="u_email" id="email1" autofocus><br>
             <label for="password1">password: </label>
-            <input type="password" name="password" id="password1"><br>
+            <input type="password" minlength="8" name="password" id="password1"><br>
             <label for="number1">Age: </label>
             <input type="number" name="number" id="number1"><br>
             <label for="date1">Enter joined date: </label>
-            <input type="date" name="date" id="date1"><br>
+            <input type="date"  max="2007-06-18" name="date" id="date1"><br>
+            <label for="color1">Choose color: </label>
+            <input type="color" name="color" id="color1"><br>
+            <!--
+            disabled -> no edit, no submit, no select
+            readonly -> no edit, submit, no select
+            minlength, maxlength usually worls in text, email, password
+            min, max works on numbers usally like date etc
+            -->
             
             <!--radio-->
             <label>Choose Gender</label>
-            <label for="male1"><input type="radio" name="gender" id="male1" value="ml">Male</label>
+            <label for="male1"><input type="radio" name="gender" id="male1" value="ml" checked>Male</label>
             <label for="female1"><input type="radio" name="gender" id="female1" value="fml">Female</label>
             <label for="other1"><input type="radio" name="gender" id="other1" value="Oth">Other</label><br>
             <!--Checkbox-->
             <label>Select Skills</label>
-            <label for="cLang"><input type="checkbox" name="skill" id="cLang" value="skl1">c</label>
-            <label for="pyLang"><input type="checkbox" name="skill" id="pyLang" value="skl2">python</label>
+            <label for="cLang"><input type="checkbox" name="skill" id="cLang" value="skl1" checked>c</label>
+            <label for="pyLang"><input type="checkbox" name="skill" id="pyLang" value="skl2" checked>python</label>
             <label for="versiontool"><input type="checkbox" name="skill" id="versiontool" value="skl3">github</label>
             <label for="markup"><input type="checkbox" name="skill" id="markup" value="skl4">html</label><br>
+            <!--Select-->
+            <label for="country1">Select Country: </label>
+            <select name="country" id="country1"> <!--'multiple' is used for selecting more than one country-->
+                <option value="In" selected>India</option>
+                <option value="Npl">Nepal</option>
+                <option value="Bht">Bhutan</option>
+            </select><br><br>
+            <!--TextArea-->
+            <label for="textarea1">Write a comment</label>
+            <textarea name="textarea" id="textarea1" rows="2" cols="100"></textarea><br>
+            <!--Reset button-->
+            <input type="reset" value="reset">
             <button>Submit</button>     
         </form>
     </main>

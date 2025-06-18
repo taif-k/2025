@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Regsitarion Form</title>
+</head>
+
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="#" method="get">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required /><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required /><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required /><br><br>
+
+        <label>Select Gender: </label>
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other" />
+        <label for="other">Other</label><br>
+
+        <label>Interests: </label>
+        <label for="code">Coding</label>
+        <input type="checkbox" id="code" name="interest" value="code" />
+        <label for="music">Music</label>
+        <input type="checkbox" id="music" name="interest" value="Music" />
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="sports" name="interest" value="Sports" />
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="reading" name="interest" value="Reading" /><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="Ind" selected>India</option>
+            <option value="Npl">Nepal</option>
+            <option value="Bht">Bhutan</option>
+            <option value="sl">Sri Lanka</option>
+        </select><br><br>
+
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="here"></textarea><br><br>
+
+        <label for="t&c">I agree to the Terms & Conditions</label>
+        <input type="checkbox" id="t&c" name="terms" checked /><br><br>
+
+        <button type="submit">Submit Form</button>
+
+    </form>
+</body>
+</html>

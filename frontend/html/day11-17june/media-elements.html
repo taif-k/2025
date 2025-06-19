@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Elements</title>
+</head>
+
+<body>
+    <header>
+        <h1>Html Media Elements</h1>
+    </header>
+    <main>
+        <h2>Audio tag</h2>
+        <audio controls loop>
+            <source src="./audio/CivilianWykOak.mp"> <!--incorrect link for audio-->
+            <source src="./audio/CivilianWykOak.mp3"> <!--source is also used in audio for fallback-->
+            <!-- <track kind="subtitles" src="" srclang="en" label="English"> subtitlle (caption) url-->
+            <!-- <track kind="subtitles" src="" srclang="fr" label="French"> subtitle (caption) url-->
+        </audio>
+        <!--use 'autoplay' in audio tag to auto play audio everytime-->
+        <h2>Video Tag</h2>
+        <video controls loop
+            poster="https://static.vecteezy.com/system/resources/thumbnails/007/654/240/small/poster-font-3d-bold-style-vector.jpg"
+            height="200px">
+            <source src="./video/highway_and_sunset.mp"> <!--incorrect link-->
+            <source src="./video/highway_and_sunset.mp4"> <!--fallback link for video-->
+        </video>
+    </main>
+</body>
+
+</html>

@@ -89,7 +89,7 @@ body {
     background: #00df9a;
     color: white;
     padding: 12px 30px;
-    border-radius: 25px;
+    border-radius: 3rem;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -138,6 +138,9 @@ body {
     margin-bottom: 20px;
 }
 
+.choice {
+  display: block;
+}
 
 .get-started {
     background: linear-gradient(to right, #4f46e5, #6366f1);

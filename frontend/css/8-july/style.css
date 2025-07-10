@@ -27,8 +27,7 @@ body {
     gap: 20px;
 }
 
-.footer-col {
-    flex: 1 1 200px;
+.footer-left {
     min-width: 150px;
 }
 

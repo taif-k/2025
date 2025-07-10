@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+
+  background-color: #4f46e5;
+  background-image:
+    linear-gradient(to right, rgba(79, 70, 229, 0.9), rgba(99, 102, 241, 0.9)),
+    url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: #00df9a;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Section Styles */
+.section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section img {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #666;
+}
+
+.gray {
+  background-color: #f8f8f8;
+}
+
+.who .card {
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.who .card img {
+  max-height: 120px;
+  margin-bottom: 20px;
+}
+
+
+.cta {
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+}
+
+.cta p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}

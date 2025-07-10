@@ -5,17 +5,17 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: sans-serif;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.5;
   background: #fff;
 }
 
-.hero {
+.first-page {
   position: relative;
   text-align: center;
   color: white;
-  padding: 100px 20px;
+  padding: 250px 20px;
 
   background-color: #4f46e5;
   background-image:
@@ -26,12 +26,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.hero-content h1 {
+.first-page-content h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.hero-content p {
+.first-page-content p {
   max-width: 600px;
   margin: 0 auto 30px;
   font-size: 1.1rem;
@@ -42,28 +42,28 @@ body {
   color: white;
   padding: 12px 30px;
   border-radius: 25px;
-  text-decoration: none;
+  text-decoration:none;
   font-weight: bold;
   display: inline-block;
 }
 
 
-.section {
+.features {
   text-align: center;
   padding: 60px 20px;
 }
 
-.section img {
+.features img {
   max-width: 300px;
   margin-bottom: 20px;
 }
 
-.section h2 {
-  font-size: 1.6rem;
+.features h2 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-.section p {
+.features p {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
@@ -74,30 +74,35 @@ body {
   background-color: #f8f8f8;
 }
 
-.who .card {
+.use-evie {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.use-evie .user-type {
   max-width: 500px;
   margin: 40px auto;
   text-align: center;
 }
 
-.who .card img {
+.use-evie .user-type img {
   max-height: 120px;
   margin-bottom: 20px;
 }
 
 
-.cta {
+.get-started {
   background: linear-gradient(to right, #4f46e5, #6366f1);
   color: white;
   text-align: center;
   padding: 80px 20px;
 }
 
-.cta h2 {
+.get-started h2 {
   margin-bottom: 15px;
 }
 
-.cta p {
+.get-started p {
   margin-bottom: 30px;
   font-size: 1.1rem;
 }

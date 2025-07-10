@@ -20,7 +20,7 @@ body {
   background-color: #4f46e5;
   background-image:
     linear-gradient(to right, rgba(79, 70, 229, 0.9), rgba(99, 102, 241, 0.9)),
-    url('images/hero-bg.jpg');
+    url('./assests/images/evie_default_bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@ body {
   display: inline-block;
 }
 
-/* Section Styles */
+
 .section {
   text-align: center;
   padding: 60px 20px;

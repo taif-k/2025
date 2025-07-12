@@ -1,1 +1,18 @@
 <!--  -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display property </title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <span class="display-inline">inside span - Lorem ipsum dolor sit amet.</span>    <!-- span is inline element  -->
+    <div class="display-block">inside div - Lorem ipsum dolor sit amet.</div>
+    <div class="display-none" aria-hidden="true"><p>when using display-none it hides from user but not from screen reader but to hide for that to use aria-hidden = 'true'</p></div>
+    <span class="display-inline-block">inside span - Lorem ipsum dolor sit amet consectetur.</span> <!--inline gives same line and required widthn and block gives option to add width to inline levele elememt-->
+</body>
+  </html>
+
+  <!--padding and margin doesnt work on inline element at block level, to make them work we use display-block for inline elemet -->

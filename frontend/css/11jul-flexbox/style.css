@@ -10,11 +10,14 @@ body{
 }
 
 .flex-container {
+    padding: 0 10px;
+    border: solid blue;
     display: flex;
     /*  (div(block level)) comes in column(default) to  get in row wise we're using display flex */
-    flex-direction: row;
+    flex-direction: row; 
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     /* when we inspect and collapse by using mouse, without wrap ever div stays  in row (we've used row in flex-item) but when we use it it goes down in column */
     /* height: 300px; */
 }

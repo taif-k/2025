@@ -1,5 +1,12 @@
-.box {
+*{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: sans-serif;
 }
 
 .flex-container {
@@ -7,14 +14,15 @@
     /*  (div(block level)) comes in column(default) to  get in row wise we're using display flex */
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     /* when we inspect and collapse by using mouse, without wrap ever div stays  in row (we've used row in flex-item) but when we use it it goes down in column */
     /* height: 300px; */
 }
 
 .flex-item {
-
-    width: 100px;
-    height: 100px;
+    padding: 1rem;
+    /* width: 100px;
+    height: 100px; */
     border: solid red;
 }
 
@@ -24,6 +32,7 @@
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 90px;
+    justify-content: center;
 }
 
 .grid-item{

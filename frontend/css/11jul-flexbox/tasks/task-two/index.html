@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Flex</title>
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <style>
+        .name {
+            margin-left: 350px;
+        }
+
+        .container {
+            display: flex;
+            border: 2px solid rgb(223, 219, 219);
+            height: 100vh;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            border-top-left-radius: 10px;
+        }
+
+        .sidebar {
+            border: 2px solid black;
+            background: #000;
+            width: 25%;
+            border-top-left-radius: 10px;
+        }
+
+        .main-content {
+            border: 2px solid rgba(217, 218, 219, 0.5);
+            margin: 40px 0;
+            width: 80%;
+        }
+
+        .banner,
+        .footer-box {
+            border: 2px solid rgb(223, 219, 219);
+            background: #e7e2e2;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .second-div {
+            display: flex;
+            height: 40%;
+            margin: 45px 15px;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        .box-row {
+            display: flex;
+            flex-flow: row wrap;
+            border: 2px solid rgb(223, 219, 219);
+            height: 40%;
+            border-radius: 5px;
+            justify-content: space-evenly;
+        }
+
+        .box {
+            border: 2px solid rgb(223, 219, 219);
+            background: #e7e2e2;
+            border-radius: 5px;
+            width: 30%;
+            margin: 12px 0;
+        }
+
+        .Three {
+            width: 95%;
+        }
+
+        .two {
+            width: 85%;
+            margin-top: 42px;
+        }
+
+        .mid-left {
+            width: 90px;
+            margin: 5px 0;
+        }
+
+        .mid-right {
+            width: 90px;
+            margin: 12px 0;
+        }
+
+        .right-mid-main {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid rgb(223, 219, 219);
+            height: 100%;
+            margin: 0 0 0 10px;
+            border-radius: 5px;
+        }
+
+        .right-mid-upper {
+            background: #e7e2e2;
+            height: 43%;
+            width: 100%;
+        }
+
+        .right-mid-lower {
+            background: white;
+            height: 57%;
+        }
+
+        .footer-box {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .box-5 {
+            height: 13vh;
+            width: 6vw;
+            border-radius: 5px;
+        }
+
+        .footer-leftmost {
+            height: 9.5vh;
+            background: #c7c5c5;
+        }
+
+        .box-6 {
+            height: 7.5vh;
+            background: #c7c5c5;
+        }
+
+        .box-7 {
+            height: 5.5vh;
+            background: white;
+        }
+
+        .footer-mid {
+            padding-top: 1rem;
+            background: #c7c5c5;
+        }
+
+        .color-white {
+            background: white;
+        }
+
+        .footer-small-left {
+            align-self: center;
+            width: 3vw;
+            height: 9vh;
+            background: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="sidebar"></div>
+
+            <main class="main-content">
+                <section class="banner"></section>
+
+                <div class="second-div">
+                    <div class="row">
+                        <section class="box-row Three">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </section>
+
+                        <section class="box-row two">
+                            <div class="box mid-left"></div>
+                            <div class="box mid-right"></div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="right-mid-main">
+                            <div class="right-mid-upper"></div>
+                            <div class="right-mid-lower"></div>
+                        </section>
+                    </div>
+                </div>
+
+                <section class="footer-box">
+                    <div class="box-5 footer-leftmost"></div>
+                    <div class="box-5">
+                        <div class="box-6"></div>
+                        <div class="box-7"></div>
+                    </div>
+                    <div class="box-5 footer-mid"></div>
+                    <div class="box-5 color-white"></div>
+                    <div class="box-5 footer-small-left"></div>
+                </section>
+
+            </main>
+        </div>
+
+    </section>
+</body>
+
+</html>

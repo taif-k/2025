@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.5;
+    background: #fff;
+}
+
+.footer {
+    background-color: #2d2f36;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-left {
+    min-width: 150px;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+
+.first-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.first-page-outside {
+    position: absolute;
+    inset: 0;
+
+    background-color: #4f46e5;
+    background-image:
+        linear-gradient(to right, rgba(79, 70, 229, 0.9), rgba(99, 102, 241, 0.9)),
+        url('./assests/images/evie_default_bg.jpeg');
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.first-page-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.first-page-content p {
+    max-width: 600px;
+    margin: 0 20px 30px;
+    font-size: 1.1rem;
+}
+
+
+.btn {
+    background: #00df9a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+.features {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.features img {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.features p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #666;
+}
+
+.gray {
+    background-color: #f8f8f8;
+}
+
+.use-evie {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.use-evie .user-type {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.use-evie .user-type img {
+    max-height: 120px;
+    margin-bottom: 20px;
+}
+
+.choice {
+  display: block;
+}
+
+.get-started {
+    background: linear-gradient(to right, #4f46e5, #6366f1);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.get-started h2 {
+    margin-bottom: 15px;
+}
+
+.get-started p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}

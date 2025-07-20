@@ -1,0 +1,20 @@
+.span{
+    margin-block: 50px;
+}
+
+.display-inline{
+    display: block;
+}
+
+.display-block{
+    display: inline;
+}
+
+
+.display-inline-block{
+    display: inline-block;
+}
+
+.display-none{
+    display: none;
+}

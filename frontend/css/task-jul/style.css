@@ -1,0 +1,43 @@
+
+section > p:first-of-type {
+    color: blue;
+}
+
+ul > li:nth-child(3) {
+    font-weight: bold;
+}
+
+
+section > h3:first-child {
+    text-decoration: underline;
+}
+
+ul > li:nth-child(2) {
+    background-color: #f2f2f2;
+}
+
+section:has(ul) {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+:is(h2, h3) {
+    font-family: Georgia, serif;
+}
+
+:where(h3, p) {
+    text-transform: lowercase;
+}
+
+li:not(:first-child) {
+    margin-left: 15px;
+}
+
+
+p.highlight {
+    color: black;
+    text-transform: none;
+}

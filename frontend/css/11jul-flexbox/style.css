@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: sans-serif;
+}
+
+.flex-container {
+    padding: 0 10px;
+    border: solid blue;
+    display: flex;
+    /*  (div(block level)) comes in column(default) to  get in row wise we're using display flex */
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* when we inspect and collapse by using mouse, without wrap ever div stays  in row (we've used row in flex-item) but when we use it it goes down in column */
+    /* height: 300px; */
+}
+
+.flex-item {
+    padding: 1rem;
+    /* width: 100px;
+    height: 100px; */
+    border: solid red;
+}
+
+
+.grid-container {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 90px;
+    justify-content: center;
+}
+
+.grid-item{
+    border: solid green;
+
+}
+
+.grid-item:nth-child(1) {
+    grid-row: 1/span 1;
+    grid-column: 1/span 2;
+}
+
+.grid-item:nth-child(2) {
+    grid-row: 1/span 1;
+    grid-column: 3/span 1;
+}
+
+
+.grid-item:nth-child(3) {
+    grid-row: 2/span 2;
+    grid-column: 1/span 1;
+}
+
+
+.grid-item:nth-child(4) {
+    grid-row: 2/span 1;
+    grid-column: 2/span 2;
+}
+
+.grid-item:nth-child(5) {
+    grid-row: 3/span 1;
+    grid-column: 2/span 2;
+}

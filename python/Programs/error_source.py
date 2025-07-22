@@ -1,12 +1,13 @@
 import traceback
 import os
 import datetime
+import json
 err_logpath = r"D:\Repositories\2025\python\Programs\errordetails.txt"
 
 def error_details(e=None, get_onlydate = False):
 
     date = datetime.datetime.now()
-    stringdate = date.strftime("%d/%m/%Y, %H:%M:%S")
+    stringdate = date.strftime("%Y-%m-%d, %H:%M:%S") # keeping this format so that it match with datetime format(helpful in getting report)
 
     if get_onlydate == True:
         return stringdate
@@ -16,8 +17,12 @@ def error_details(e=None, get_onlydate = False):
         module_name = os.path.basename(tb.filename)
         function_name = tb.name
         lineno = tb.lineno
-        
-        err_detail = str({"module": module_name,"function": function_name,"error": str(e),"date":stringdate,"line": lineno})
+
+        # using dumps to get errors details in json double qoutes
+        err_detail = json.dumps({"module": module_name,"function": function_name,"error": str(e),"date":stringdate,"line": lineno})
+
+        # with str we're getting details in single qoute (which is not valid json format)
+        # err_detail = str({"module": module_name,"function": function_name,"error": str(e),"date":stringdate,"line": lineno})
         return err_detail
 
 def read_errors():

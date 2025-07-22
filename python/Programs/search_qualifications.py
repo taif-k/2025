@@ -32,7 +32,7 @@ while True:
         for single_student_dict in studentlist:
             for each_qualification_dict in single_student_dict["qualification"]:
                 if qualification_search.lower() == each_qualification_dict["qname"].lower():
-                    print(f"""Student Name: {single_student_dict["name"]}""")
+                    print(f"Student Name: {single_student_dict["name"]}")
                     ispresent = True
         if ispresent == False:
             print("qualification not found")

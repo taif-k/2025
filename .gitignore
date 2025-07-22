@@ -1,3 +1,6 @@
 Add-Content .gitignore "`n*.pyc`n__pycache__/`n"
 git add .gitignore
 git commit -m "Ignore .pyc files and __pycache__ folder"
+
+*.pyc
+__pycache__/

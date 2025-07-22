@@ -1,0 +1,19 @@
+import os,sys
+sys.path.append(os.getcwd())
+
+from python.student_qualification.src.Domain.register_students import student_registration
+from python.student_qualification.src.Domain.search import student_search
+
+def menu_option():
+    print("1 - Register Student")
+    print("2 - Search Student by Qualification")
+
+def main_menu():
+    menu_option()
+    ask_menu = int(input("Enter Mmenu options: "))
+    if ask_menu == 1:
+        student_registration()
+    elif ask_menu == 2:
+        student_search()
+    else:
+        print("Choose valid option")

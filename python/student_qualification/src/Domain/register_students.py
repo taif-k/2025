@@ -1,7 +1,7 @@
 import json
 
 
-class Registartion:
+class Registration:
     def __init__(self):
         pass
 
@@ -29,4 +29,4 @@ class Registartion:
             print(json.dumps(self.studentlist, indent=4))
 
 
-student_obj = Registartion()
+student_obj = Registration()

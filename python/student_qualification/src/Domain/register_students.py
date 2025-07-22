@@ -1,24 +1,32 @@
 import json
 
-def student_registration():
-    studentlist = []
-    for num in range(1, 4):
-        studentdata = {}
-        qualificationlist = []
-        studentdata["id"] = num
-        studentdata["name"] = input("Enter name: ")
-        studentdata["qualification"] = qualificationlist
 
-        while True:
-            qualificationdict = {}
-            qualificationdict["qname"] = input("Enter qualification: ")
-            qualificationdict["passingyear"] = input("Enter passing year")
-            qualificationlist.append(qualificationdict)
+class Registartion:
+    def __init__(self):
+        pass
 
-            ask_qualification = input("Add More qualification - y or n: ")
+    def student_registration(self):
+        self.studentlist = []
+        for num in range(1, 4):
+            studentdata = {}
+            qualificationlist = []
+            studentdata["id"] = num
+            studentdata["name"] = input("Enter name: ")
+            studentdata["qualification"] = qualificationlist
 
-            if ask_qualification.lower() != "y":
-                break
+            while True:
+                qualificationdict = {}
+                qualificationdict["qname"] = input("Enter qualification: ")
+                qualificationdict["passingyear"] = input("Enter passing year")
+                qualificationlist.append(qualificationdict)
 
-        studentlist.append(studentdata)
-        print(json.dumps(studentlist, indent=4))
+                ask_qualification = input("Add More qualification - y or n: ")
+
+                if ask_qualification.lower() != "y":
+                    break
+
+            self.studentlist.append(studentdata)
+            print(json.dumps(self.studentlist, indent=4))
+
+
+student_obj = Registartion()

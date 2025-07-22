@@ -1,4 +1,5 @@
 from python.student_qualification.src.Domain.register_students import student_obj
+from python.student_qualification.src.Domain.search import search_obj
 
 class Homepage:
     def __init__(self):
@@ -14,7 +15,7 @@ class Homepage:
         if ask_menu == 1:
             student_obj.student_registration()
         elif ask_menu == 2:
-            student_obj.student_search()
+            search_obj.student_search()
         else:
             print("Choose valid option")
 

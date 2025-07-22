@@ -1,1 +1,1 @@
-test
+{"module": "search.py", "function": "student_search", "error": "'Registration' object has no attribute 'studentlist'", "date": "2025-07-22, 16:44:03", "line": 17}

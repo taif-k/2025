@@ -1,7 +1,10 @@
 from python.student_qualification.src.Domain.register_students import student_obj
 
 class Search:
-    def student_search():
+    def __init__(self):
+        pass
+    
+    def student_search(self):
         print("Searching......")
         while True:
             qualification_search = input("Enter qualification to search: ")
@@ -20,3 +23,5 @@ class Search:
                 break
             else:
                 print("Enter valid qualification: ")
+
+search_obj = Search()

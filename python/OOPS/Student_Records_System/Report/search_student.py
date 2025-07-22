@@ -1,5 +1,5 @@
 import json
-import python as py_lang
+from python.OOPS.Student_Records_System.Utils.read_writedata import DataOperations
 
 class StudentSearch:
     def __init__(self,datapath,errorlog_path):
@@ -8,7 +8,7 @@ class StudentSearch:
 
     def search_student(self):
         search_name = input("Enter name to search: ")
-        listobj = py_lang.DataOperations(self.recordspath, self.err_path)
+        listobj = DataOperations(self.recordspath, self.err_path)
         for data in listobj.studentlist:
             if data["name"] == search_name:
                 print(json.dumps(data,indent=3))

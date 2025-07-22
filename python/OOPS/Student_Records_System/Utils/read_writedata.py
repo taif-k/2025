@@ -1,8 +1,5 @@
 import json
-import python as py_lang
-
-datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Database\studentdata.json"
-errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Log\errorsdetail.txt"
+from python.Programs.error_source import update_errorslog,error_details
 
 class DataOperations:
         def __init__(self,datapath,errorlog_path):
@@ -21,6 +18,6 @@ class DataOperations:
                     return studentrecords
             except Exception as e:
                 print("Student Records are blank")
-                py_lang.update_errorslog(py_lang.error_details(e),self.err_path)
+                update_errorslog(error_details(e),self.err_path)
                 return []   
             

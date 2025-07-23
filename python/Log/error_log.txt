@@ -1,0 +1,17 @@
+
+{"module": "calculations.py", "function": "subtraction", "error": "Number.numbers_input() takes 0 positional arguments but 1 was given", "date": "2025-07-23 09:48:40", "line": 25}
+{"module": "calculations.py", "function": "addition", "error": "Number.numbers_input() takes 0 positional arguments but 1 was given", "date": "2025-07-23 09:49:19", "line": 10}
+{"module": "inputnumbers.py", "function": "numbers_input", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 09:51:37", "line": 10}
+{"module": "calculations.py", "function": "divide", "error": "cannot unpack non-iterable NoneType object", "date": "2025-07-23 09:51:37", "line": 16}
+{"module": "inputnumbers.py", "function": "numbers_input", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 09:51:39", "line": 10}
+{"module": "calculations.py", "function": "divide", "error": "cannot unpack non-iterable NoneType object", "date": "2025-07-23 09:51:39", "line": 16}
+{"module": "inputnumbers.py", "function": "numbers_input", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 09:51:43", "line": 11}
+{"module": "calculations.py", "function": "divide", "error": "cannot unpack non-iterable NoneType object", "date": "2025-07-23 09:51:43", "line": 16}
+{"module": "calculations.py", "function": "divide", "error": "division by zero", "date": "2025-07-23 09:51:47", "line": 17}
+{"module": "calculations.py", "function": "divide", "error": "division by zero", "date": "2025-07-23 09:51:49", "line": 17}
+{"module": "inputnumbers.py", "function": "numbers_input", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 09:52:21", "line": 10}
+{"module": "calculations.py", "function": "addition", "error": "cannot unpack non-iterable NoneType object", "date": "2025-07-23 09:52:21", "line": 10}
+{"module": "inputnumbers.py", "function": "numbers_input", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 09:52:32", "line": 11}
+{"module": "calculations.py", "function": "divide", "error": "cannot unpack non-iterable NoneType object", "date": "2025-07-23 09:52:32", "line": 16}
+{"module": "inputnumbers.py", "function": "numbers_input", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 09:55:49", "line": 10}
+{"module": "calculations.py", "function": "divide", "error": "cannot unpack non-iterable NoneType object", "date": "2025-07-23 09:55:49", "line": 16}

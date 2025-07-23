@@ -1,28 +1,14 @@
-import json
 import uuid
 from python.Utils.file_io import file_io_obj
-
+bookdata = r"D:\Repositories\2025\python\OOPS\Library_Management_System\src\Database\bookdata.json"
 
 class Book:
     def __init__(self, path):
-        self.jsonpath = path
-        self.booklist = self.read_bookdata()
+        self.bookpath = path
+        self.booklist = file_io_obj.read_alldata(self.bookpath)
         self.borrowed_book = []
-
-    def write_data(self):
-        with open(self.jsonpath, "w") as file:
-            file.write(json.dumps(self.booklist, indent=4))
-
-    def read_bookdata(self):
-        try:
-            with open(self.jsonpath, "r") as file:
-                data = json.load(file)
-                return data
-        except Exception as e:
-            print("Book data unavailable")
-            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
-            return []
-
+        
+book_obj = Book(bookdata)
 
 class BookOption(Book):
     def __init__(self, path):
@@ -50,7 +36,7 @@ class BookOption(Book):
                         bookdict = {"book_name": enter_book,
                                     "author_name": author_name, "book_id": book_id}
                         self.booklist.append(bookdict)
-                        self.write_data()
+                        file_io_obj.write_data(data=self.booklist,path=self.bookpath) #####
                     else:
                         print("Author Name should be in Alphabets")
                 elif ask_addbook.lower() == "n":
@@ -66,7 +52,7 @@ class BookOption(Book):
             for bookdict in self.booklist:
                 if bookdict["book_name"].lower() == enter_book:
                     self.booklist.remove(bookdict)
-                    self.write_data()
+                    file_io_obj.write_data(data=self.booklist,path=self.bookpath) ########
                     self.borrowed_book.append(bookdict)
                     print("Book Borrowed")
                     return None
@@ -81,7 +67,7 @@ class BookOption(Book):
                 if bookdict["book_name"].lower() == enter_book:
                     self.borrowed_book.remove(bookdict)
                     self.booklist.append(bookdict)
-                    self.write_data()
+                    file_io_obj.write_data(data=self.booklist,path=self.bookpath) #########
                     print("Book Returned")
                     return None
             print("Book Cannot be Returned")

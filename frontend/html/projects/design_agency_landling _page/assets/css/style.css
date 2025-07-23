@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary: #20B15A;
+    --primary-light: #D7F5DC;
+    --primary-100: #FAFFFB;
+    --accent: #F55F1D;
+    --white: #fff;
+    --black: #000;
+    
+    --nav-link-color: var(--black, #000);
+    --text-color: var(--black, #000);
+    --heading-color: var(--black, #000);
+    --text-gray: #8B8B8B;
+
+
+    --border-radius-input: .89rem;
+    --border-radius: 1.25rem;
+    --border-radius-btn: .73em;
+
+    --family-primary: 'Mulish', sans-serif;
+    --family-heading: 'Poppins', sans-serif;
+
+    --fs-1: 1.875rem;
+    --fs-2: 1.5rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.13rem;
+    --fs-5: 1rem;
+}
+
+
+body{
+    font-family: var(--family-primary, sans-serif);
+    font-size: 1.13rem;
+    line-height: 1.4;
+}
+
+a{
+    text-decoration: none;
+    transition: .4s all;
+}
+
+:where(h1, h2, h3):not(:last-child){
+    margin-bottom: 1.5rem
+}
+
+:where(p, h4, h5, h6, li, ul):not(:last-child){
+    margin-bottom: 1.25rem;
+}
+
+
+
+/* Typography */
+/* Fontfamily   */
+
+.ff-primary{
+    font-family: var(--family-primary);
+}
+.ff-heading{
+    font-family: var(--family-heading);
+}
+
+/* Font sizes 16, 50, 20, 18, 24, 30, 40 */
+
+.display-1{
+    font-size: 3.13rem;
+    line-height: 1.15; 
+}   
+.display-2{
+    font-size: 2.5rem;     
+}   
+
+.h1{
+    font-size: var(--fs-1, 1.89rem);
+}
+
+.h2{
+    font-size: var(--fs-2, 1.5rem);
+}
+.h3{
+    font-size: var( --fs-3, 1.25rem);
+}
+.h4{
+    font-size: var( --fs-4, 1.13rem);
+}
+.h5{
+    font-size: var( --fs-5,1rem);
+}
+
+.fs-1{
+    font-size: var(--fs-1, 1.89rem);
+}
+.fs-2{
+    font-size: var(--fs-2, 1.5rem);;
+}
+.fs-3{
+    font-size: var( --fs-3, 1.25rem);
+}
+.fs-4{
+    font-size: var( --fs-4, 1.13rem);
+}
+.fs-5{
+    font-size: var( --fs-5, 1rem);;
+}
+
+
+/* Utility Classes */
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+.d-flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.align-end{
+    align-items: flex-end;
+}
+.align-start{
+    align-items: flex-start;
+}
+
+/* Utility Position */
+.fixed{
+    position: fixed;
+    z-index: 10;
+}
+.sticky{
+    position: sticky;
+    z-index: 10;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.top-0{
+    top:0
+}
+.left-0{
+    left:0
+}
+.right-0{
+    right:0
+}
+.bottom-0{
+    bottom:0
+}
+.inset-0{
+    inset: 0
+}
+.top-100{
+    top: 100%
+}
+
+/* Width */
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+}
+.w-25{
+    width: 25%;
+}
+
+/* CSS List */
+.list-unstyled{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+
+
+/* Header */
+header {
+    padding-block: var(--fs-4)
+}
+header nav>ul{
+    column-gap: 1.875rem 
+}
+.header li{margin-bottom: 0;}
+header li a{
+    padding: .67rem;
+    font-size: var(--fs-5, 1rem);
+    display: block;
+    color: var(--nav-link-color);
+}
+
+.submenu{
+    background-color: var(--white);
+    min-width: 220px;
+    padding-block: .5rem;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.34);
+    display: none;
+    border-radius: .5em;
+}
+.submenu a{
+    display: block;
+    padding: .5rem 1rem
+}
+
+.header li:hover>.submenu{
+    display: block;
+} 

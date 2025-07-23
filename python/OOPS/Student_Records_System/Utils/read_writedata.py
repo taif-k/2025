@@ -9,6 +9,6 @@ class DataOperations:
             self.studentlist = file_io_obj.read_alldata(self.recordspath)
         except Exception as e:
             print("Error logged...Try again after some time")
-            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),paths_obj.err_log_path)
 
 file_obj = DataOperations(paths_obj.datapath)

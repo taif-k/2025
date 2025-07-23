@@ -26,8 +26,9 @@ class FileIO:
             with open(path, "r") as file:
                 data = json.load(file)
                 return data
-        except:
-            print("Book data unavailable")
+        except Exception as e:
+            print("check error log..")
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
             return []
 
     def get_errdetails(self,error = None, get_date = False):

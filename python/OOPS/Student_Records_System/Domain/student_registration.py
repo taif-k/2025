@@ -7,7 +7,7 @@ import json
 class Student:
     def __init__(self, datapath):
         self.recordspath = datapath
-
+        
     def ask_details(self):
         while True:
             try:
@@ -15,7 +15,7 @@ class Student:
                 studentdict["name"] = input("Enter Name: ")
                 studentdict["age"] = int(input("Enter Age: "))
                 studentdict["grade"] = input("Enter Grade: ")
-                studentdict["joineddate"] = file_io_obj.get_errdetails(get_onlydate=True)
+                studentdict["joineddate"] = file_io_obj.get_errdetails(get_date=True)
                 file_obj.studentlist.append(studentdict)
 
                 if input("Add More Students y/n: ").lower() != "y":
@@ -23,8 +23,8 @@ class Student:
 
             except Exception as e:
                 print("Enter valid details...")
-                file_io_obj.update_errorslog(file_io_obj.get_errdetails(e)) # traceback module to dyn. get err details
-        file_obj.write_data()
+                file_io_obj.update_errorslog(file_io_obj.get_errdetails(e)) # traceback module to get dyn. err details
+        file_io_obj.write_data(data=file_obj.studentlist,path=self.recordspath)
 
 
 class StudentMenu(Student):

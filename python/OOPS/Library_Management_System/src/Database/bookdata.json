@@ -1,33 +1,12 @@
 [
     {
-        "book_name": "python",
-        "author_name": "van rossum"
+        "book_name": "new book",
+        "author_name": "new author",
+        "book_id": "71caf"
     },
     {
-        "book_name": "c",
-        "author_name": "dennis"
-    },
-    {
-        "book_name": "js",
-        "author_name": "brendon"
-    },
-    {
-        "book_name": "gulliver's travel",
-        "author_name": "Jonathan Swift",
-        "book_id": "bb29f"
-    },
-    {
-        "book_name": "three men in a boat",
-        "author_name": "William 4th the king",
-        "book_id": "e6856"
-    },
-    {
-        "book_name": "let us c",
-        "author_name": "yashwant kanetkar",
-        "book_id": "423c2"
-    },
-    {
-        "book_name": "cpp",
-        "author_name": "bjarne"
+        "book_name": "another book",
+        "author_name": "another author",
+        "book_id": "30037"
     }
 ]

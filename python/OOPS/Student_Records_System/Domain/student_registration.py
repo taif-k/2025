@@ -1,12 +1,12 @@
-from python.Programs.error_source import error_details, update_errorslog
+from python.Utils.file_io import file_io_obj
 from python.OOPS.Student_Records_System.Report.search_student import StudentSearch
-from python.OOPS.Student_Records_System.Utils.read_writedata import DataOperations
+from python.OOPS.Student_Records_System.Utils.read_writedata import file_obj
 import json
 
+
 class Student:
-    def __init__(self, datapath, errorlog_path):
+    def __init__(self, datapath):
         self.recordspath = datapath
-        self.err_path = errorlog_path
 
     def ask_details(self):
         while True:
@@ -15,20 +15,22 @@ class Student:
                 studentdict["name"] = input("Enter Name: ")
                 studentdict["age"] = int(input("Enter Age: "))
                 studentdict["grade"] = input("Enter Grade: ")
-                studentdict["joineddate"] = error_details(get_onlydate=True)
-                self.listobj = DataOperations(self.recordspath, self.err_path)
-                self.listobj.studentlist.append(studentdict)
+                studentdict["joineddate"] = file_io_obj.get_errdetails(get_onlydate=True)
+                file_obj.studentlist.append(studentdict)
 
                 if input("Add More Students y/n: ").lower() != "y":
                     break
 
             except Exception as e:
                 print("Enter valid details...")
-                update_errorslog(error_details(e), self.err_path) # error_details() using traceback module
-        self.listobj.write_data()
+                file_io_obj.update_errorslog(file_io_obj.get_errdetails(e)) # traceback module to dyn. get err details
+        file_obj.write_data()
 
 
 class StudentMenu(Student):
+    def __init__(self, datapath):
+        super().__init__(datapath)
+
     def menu(self):
         print("1 - Students Registration")
         print("2 - Display Records")
@@ -36,17 +38,19 @@ class StudentMenu(Student):
         print("0 - Exit")
 
     def menu_option(self):
-        while True:
-            self.menu()
-            ask_menu = int(input("Enter option: "))
-            if ask_menu == 1:
-                self.ask_details()
-            elif ask_menu == 2:
-                listobj = DataOperations(self.recordspath, self.err_path)
-                print(json.dumps(listobj.studentlist, indent=4))
-                print()
-            elif ask_menu == 3:
-                searchobj = StudentSearch(self.recordspath, self.err_path)
-                searchobj.search_student()
-            elif ask_menu == 0:
-                break
+        try:
+            while True:
+                self.menu()
+                ask_menu = int(input("Enter option: "))
+                if ask_menu == 1:
+                    self.ask_details()
+                elif ask_menu == 2:
+                    print(json.dumps(file_obj.studentlist, indent=4))
+                    print()
+                elif ask_menu == 3:
+                    searchobj = StudentSearch(self.recordspath)
+                    searchobj.search_student()
+                elif ask_menu == 0:
+                    break
+        except Exception as e:
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))

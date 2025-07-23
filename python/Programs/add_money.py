@@ -1,4 +1,6 @@
-import error_source
+import sys,os
+sys.path.append(os.getcwd())
+from python.Utils.file_io import file_io_obj
 
 def input_details():
 
@@ -11,6 +13,6 @@ def input_details():
         print(userdict) 
     except Exception as e:
         print("Unable to add money...")
-        error_source.update_errorslog(error_source.error_details(e))    
+        file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),file_io_obj.error_path)
 
 input_details()

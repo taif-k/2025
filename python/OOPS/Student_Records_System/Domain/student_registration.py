@@ -1,6 +1,7 @@
 from python.Utils.file_io import file_io_obj
 from python.OOPS.Student_Records_System.Report.search_student import StudentSearch
 from python.OOPS.Student_Records_System.Utils.read_writedata import file_obj
+from python.OOPS.Student_Records_System.Domain.all_paths import paths_obj
 import json
 
 
@@ -23,7 +24,7 @@ class Student:
 
             except Exception as e:
                 print("Enter valid details...")
-                file_io_obj.update_errorslog(file_io_obj.get_errdetails(e)) # traceback module to get dyn. err details
+                file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),paths_obj.err_log_path) # traceback module to get dyn. err details
         file_io_obj.write_data(data=file_obj.studentlist,path=self.recordspath)
 
 
@@ -53,4 +54,4 @@ class StudentMenu(Student):
                 elif ask_menu == 0:
                     break
         except Exception as e:
-            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),paths_obj.err_log_path)

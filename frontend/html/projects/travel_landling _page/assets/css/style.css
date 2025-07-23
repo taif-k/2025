@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  --clr-text: #000;
+  --clr-bg: #fff;
+  --clr-outline-hover: #000;
+  --clr-outline-hover-text: #fff;
+
+  --ff-primary: 'Poppins', sans-serif;
+
+  --fs-nav: 1rem;
+  --fw-nav: 500;
+  --fw-btn: 600;
+
+  --spacing-container-inline: 2rem;
+  --spacing-nav-gap: 2rem;
+  --spacing-btn-padding: 0.5rem 1.2rem;
+
+  --br-btn: 6px;
+  --transition-fast: 0.3s ease;
+  --max-container: 1200px;
+}
+
+
+header {
+  padding-block: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-nav-gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-nav);
+  font-size: var(--fs-nav);
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+.nav-links .outline-btn a {
+  padding: var(--spacing-btn-padding);
+  border: 1px solid var(--clr-outline-hover);
+  border-radius: var(--br-btn);
+  font-weight: var(--fw-btn);
+  transition: var(--transition-fast);
+}
+
+.nav-links .outline-btn a:hover {
+  background-color: var(--clr-outline-hover);
+  color: var(--clr-outline-hover-text);
+}
+
+.nav-links select {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-nav);
+  font-size: var(--fs-nav);
+  border: none;
+  background: transparent;
+}
+
+.container {
+  max-width: var(--max-container);
+  margin-inline: auto;
+  padding-inline: var(--spacing-container-inline);
+}

@@ -10,54 +10,25 @@ class FileIO:
     #     with open(path, "w") as file:
     #         file.write(f"\n{data}")
 
-    # def write_data(self):
-    #     with open(self.jsonpath, "w") as file:
-    #         file.write(json.dumps(self.booklist, indent=4))
     def __init__(self,error_path):
-        self.error_path = error_path
+        self.error_path = error_path 
+
+    def write_data(self,data,path):
+        with open(path, "w") as file:
+            file.write(json.dumps(data, indent=4))
 
     def update_errorslog(self,data):
         with open(self.error_path, "a") as file:
             file.write(f"\n{data}")    
 
-    # def write_data(self):
-    #     with open(self.recordspath, "w") as file:
-    #         file.write(json.dumps(self.studentlist, indent=3))
-
-    # def read_allrecords(path=records_path):
-    #     try:
-    #         with open(path, "r") as file:
-    #             data = json.load(file)  # or data = json.loads(file.read())
-    #         return data
-    #     except Exception as e:
-    #         print("Register students to search data")
-    #         python.update_errorslog(python.error_details(e), log_path)
-    #         return []
-
-
-    # def read_alldata(self):
-    #     try:
-    #         with open(self.recordspath, "r") as file:
-    #             studentrecords = json.load(file)
-    #             return studentrecords
-    #     except Exception as e:
-    #         print("Student Records are blank")
-    #         update_errorslog(error_details(e), self.err_path)
-    #         return []
-
-        # def read_errors():
-    #     with open(err_logpath, "r") as file:
-    #         data = file.read()
-    #         print(data)
-
-    # def read_bookdata(self):
-    #     try:
-    #         with open(self.jsonpath, "r") as file:
-    #             data = json.load(file)
-    #             return data
-    #     except:
-    #         print("Book data unavailable")
-    #         return []
+    def read_alldata(self,path):
+        try:
+            with open(path, "r") as file:
+                data = json.load(file)
+                return data
+        except:
+            print("Book data unavailable")
+            return []
 
     def get_errdetails(self,error = None, get_date = False):
         date = datetime.datetime.now()

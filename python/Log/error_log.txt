@@ -25,3 +25,4 @@
 {"module": "book_options.py", "function": "read_bookdata", "error": "'BookMenu' object has no attribute 'jsonpath'", "date": "2025-07-23 12:00:50", "line": 18}
 {"module": "book_options.py", "function": "read_bookdata", "error": "'Book' object has no attribute 'jsonpath'", "date": "2025-07-23 12:00:59", "line": 18}
 {"module": "book_options.py", "function": "read_bookdata", "error": "'BookMenu' object has no attribute 'jsonpath'", "date": "2025-07-23 12:00:59", "line": 18}
+{"module": "student_registration.py", "function": "menu_option", "error": "invalid literal for int() with base 10: 'a'", "date": "2025-07-23 16:27:52", "line": 45}

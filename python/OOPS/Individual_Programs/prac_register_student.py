@@ -1,27 +1,33 @@
 import json
+import sys,os
+sys.path.append(os.getcwd())
+from python.Utils.file_io import file_io_obj
 
 class student:
     def __init__(self):
         self.ask_details()
 
     def ask_details(self):
-        self.studentlist = []
-        while True:
-            self.name = input("Enter Name: ")
-            self.age = int(input("Enter Age: "))
-            self.grade = input("Enter Grade: ")
-            studentdict = {}
-            studentdict["name"] = self.name
-            studentdict["age"] = self.age
-            studentdict["grade"] = self.grade
-            self.studentlist.append(studentdict)
+        try:
+            self.studentlist = []
+            while True:
+                self.name = input("Enter Name: ")
+                self.age = int(input("Enter Age: "))
+                self.grade = input("Enter Grade: ")
+                studentdict = {}
+                studentdict["name"] = self.name
+                studentdict["age"] = self.age
+                studentdict["grade"] = self.grade
+                self.studentlist.append(studentdict)
 
-            regsiter_student = input("Add More Students y/n: ")
-            if regsiter_student == "y":
-                continue
-            else:
-                break
-        self.display_info()
+                regsiter_student = input("Add More Students y/n: ")
+                if regsiter_student == "y":
+                    continue
+                else:
+                    break
+            self.display_info()
+        except Exception as e:
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
 
     def display_info(self):
         print(json.dumps(self.studentlist,indent=4))

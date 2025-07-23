@@ -1,19 +1,18 @@
-import json
-from python.Programs.error_source import error_details,update_errorslog
+from python.Utils.file_io import file_io_obj
 from python.student_qualification.src.Domain.paths import diff_path_obj
 
 class Registration:
     def __init__(self):
-        pass
+        self.studentlist = file_io_obj.read_alldata(diff_path_obj.records_path)
 
     def student_registration(self):
         try:
-            self.studentlist = []
             for num in range(1, 4):
                 studentdata = {}
                 qualificationlist = []
                 studentdata["id"] = num
                 studentdata["name"] = input("Enter name: ")
+                studentdata["joined_date"] = file_io_obj.get_errdetails(get_date=True)
                 studentdata["qualification"] = qualificationlist
 
                 while True:
@@ -28,8 +27,8 @@ class Registration:
                         break
 
                 self.studentlist.append(studentdata)
-                print(json.dumps(self.studentlist, indent=4))
+                file_io_obj.write_data(self.studentlist,diff_path_obj.records_path)
         except Exception as e:
-            update_errorslog(error_details(e),diff_path_obj.errorlog_path)
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),diff_path_obj.errorlog_path)
 
 student_obj = Registration()

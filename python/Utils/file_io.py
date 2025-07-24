@@ -2,7 +2,7 @@ import json
 import datetime
 import traceback
 import os
-
+from python.web_scrap_concepts.src.Domain.scrap_paths import path_obj
 error_path = r"D:\Repositories\2025\python\Log\error_log.txt"
 
 
@@ -17,8 +17,13 @@ class FileIO:
 
     # logging errors details
     def update_errorslog(self, data, path=error_path):
-        with open(path, "a") as file:
-            file.write(f"\n{data}")
+        if path == path_obj.program_run_capture:
+            with open(path, "a") as file:
+                file.write(f"\nProgram ran at {data}")
+        else:
+            with open(path, "a") as file:
+                file.write(f"\n{data}")
+
 
     # read file data
     def read_alldata(self, path):

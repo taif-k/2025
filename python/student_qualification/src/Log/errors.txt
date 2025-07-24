@@ -1,1 +1,5 @@
 {"module": "search.py", "function": "student_search", "error": "'Registration' object has no attribute 'studentlist'", "date": "2025-07-22, 16:44:03", "line": 17}
+{"module": "search.py", "function": "student_search", "error": "'Registration' object has no attribute 'studentlist'", "date": "2025-07-23 20:27:18", "line": 17}
+{"module": "search.py", "function": "student_search", "error": "'Registration' object has no attribute 'studentlist'", "date": "2025-07-23 20:31:04", "line": 17}
+None
+

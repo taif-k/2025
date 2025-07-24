@@ -54,10 +54,5 @@ class BankAccout:
         else:
             print("Enter valid amount")
 
-if __name__ == "__main__":
-    try:
-        account1 = BankAccout()
-        account1.verifyaccount()
-    except BaseException as e:
-        print("\nBase Exception error logged in error file")
-        file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
+account1 = BankAccout()
+account1.verifyaccount()

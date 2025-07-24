@@ -18,11 +18,12 @@ class FileIO:
     # logging errors details
     def update_errorslog(self, data, path=error_path):
         if path == path_obj.program_run_capture:
-            with open(path, "a") as file:
-                file.write(f"\nProgram ran at {data}")
+            write_arg = f"\nProgram ran at {data}"
         else:
-            with open(path, "a") as file:
-                file.write(f"\n{data}")
+            write_arg = f"\n{data}"
+
+        with open(path, "a") as file:
+            file.write(write_arg)
 
 
     # read file data

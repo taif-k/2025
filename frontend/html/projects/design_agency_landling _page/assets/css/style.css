@@ -390,10 +390,18 @@ img {
 }
 
 .section-heading {
-    /* max-width: 50%; */
     margin-bottom: 5.6rem;
     margin-inline: auto;
     text-align: center;
+}
+
+.section-heading span{
+    font-size: var(--fs-3);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #00CA72;
+    display: block;
+    margin-bottom: 1rem;    
 }
 
 .section-default-padding {
@@ -413,6 +421,14 @@ img {
         text-align: left;
         margin-left: 0;
         width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-heading {
+        text-align: left;
+        margin-left: 0;
+        width: 50%;
     }
 }
 
@@ -842,6 +858,50 @@ header li a {
     }
 }
 
+.work-panel{
+     --gap: 5.5rem;
+    --columns: 2;
+    columns: var(--columns);
+    margin-inline: calc(var(--gap) * -.5);
+}
+
+
+.work{ 
+    margin-bottom: 2.5rem;
+}
+
+.work .container{ 
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px){
+        .work-panel{
+        --gap: 2.5rem;
+        --columns: 2;
+        columns: var(--columns);
+        margin-inline: calc(var(--gap) * -.5);
+    }
+
+
+    .work{ 
+        padding-inline: calc(var(--gap) * .5);
+        margin-bottom: 3.5rem;
+    }
+
+    
+}
+
+@media (min-width: 1200px){
+        .work-panel{
+        --gap: 5.5rem;
+    }
+    .work{ 
+        margin-bottom: 5.5rem;
+    }
+    .work .container{ 
+    margin-top: 2.5rem;
+}
+}
 
 
 /* Footer CSS */

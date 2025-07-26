@@ -600,11 +600,18 @@ header li a {
 }
 
 
-/*Newsletter*/
+/*Newsletter(subscribe)*/
+
+.subscribe{
+    padding-block: 5.5rem  9rem;
+}
+
+
 .subscribe .section-heading{
     margin-inline: auto;
     text-align: center;
     margin-bottom: 2.5rem;
+    /* max-width: 40%; */
 }
 
 .subscribe .btn{
@@ -614,13 +621,30 @@ header li a {
 .subscribe form{
     border: 1px solid black;
     padding: .25rem;
-    max-width: fit-content;
+    max-width: 50%;
     margin-inline:auto ;
+    border-radius: var(--border-radius-input);
+    justify-content: space-between;
 }
 
-.subscribe input{
+.subscribe input:not([type="submit"]){
     padding: .4rem 1rem;
     border: none;
+    width: 100%;
+    max-width: calc(100% - 118px);
+}
+
+.subscribe :focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+@media (min-width: 992px){
+    .subscribe form{
+        max-width: 600px;
+    }
 }
 
 /* Footer CSS */

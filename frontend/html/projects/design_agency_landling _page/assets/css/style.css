@@ -76,6 +76,7 @@ a {
 
 .display-2 {
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
 @media (min-width: 1199px) {
@@ -407,8 +408,8 @@ img {
     padding-bottom: 5rem;
 }
 
-@media (min-width: 992px){
-    .section-heading{
+@media (min-width: 992px) {
+    .section-heading {
         text-align: left;
         margin-left: 0;
         width: 60%;
@@ -445,7 +446,6 @@ header li a {
 }
 
 .submenu a {
-    /* white-space: nowrap; */
     display: block;
     padding: .5rem 1rem
 }
@@ -503,11 +503,6 @@ header li a {
     }
 }
 
-@media (min-width: 992px) {
-    /* header .menu-bar{
-    display: flex;
-   }  */
-}
 
 /* Banner */
 .top-banner {
@@ -523,7 +518,6 @@ header li a {
 .top-banner {
     gap: 3rem;
 }
-
 
 .top-banner .banner-heading {
     margin-bottom: .67rem;
@@ -595,7 +589,6 @@ header li a {
     right: auto;
     left: auto;
     width: 2.5rem;
-    /* aspect-ratio: 1/1; */
     height: 2.5rem;
     position: relative;
     top: 0;
@@ -723,7 +716,6 @@ header li a {
     margin-inline: auto;
     text-align: center;
     margin-bottom: 2.5rem;
-    /* max-width: 40%; */
 }
 
 .subscribe .btn {
@@ -768,7 +760,6 @@ header li a {
 /*Services*/
 .our-services {
     margin-inline: -1rem;
-    /* gap: 1.5rem; */
     flex-direction: column;
     row-gap: 2rem;
     text-align: center;
@@ -776,8 +767,6 @@ header li a {
 
 
 .service {
-    /* width: 33.33%; */
-    /* flex-grow: 1; */
     padding-inline: 1rem;
 }
 
@@ -813,8 +802,43 @@ header li a {
         width: 33.33%;
         text-align: left;
     }
-    .service .icon{
+
+    .service .icon {
         margin-left: 0;
+    }
+}
+
+.stats-wrapper {
+    flex-wrap: wrap;
+}
+
+.stats-wrapper li {
+    padding: 2.5rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .stats-wrapper li {
+        width: 50%;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .stats-wrapper li {
+        width: auto;
+    }
+
+    .stats-wrapper li:not(:last-child) {
+        border-right: 2px solid grey;
+    }
+}
+
+@media (min-width: 1200px) {
+    .stats-wrapper li {
+        padding: 2.5rem;
     }
 }
 

@@ -405,6 +405,97 @@ header li a{
 .logos ul li{margin-bottom: 0;}
 
 
+/*testimonials*/
+.swiper-buttons .swiper-button-next, .swiper-buttons .swiper-button-prev{
+    right: auto;
+    left: auto;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    top: 0;
+    margin: 0;
+    background-color: transparent;
+    border-color: 1px solid var(--black);
+    border-radius: 4rem;
+    color: var(--black);
+    --swiper-navigation-size: 30px;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.swiper-buttons .swiper-button-next:hover, .swiper-buttons .swiper-button-prev:hover{
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.swiper-buttons{
+    gap: var(--fs-3);
+}
+
+.heading-wrapper{
+      gap: var(--fs-3);
+    flex-direction: column;  
+    margin-bottom: 2.5rem;
+    align-items: center;
+}
+
+.heading-wrapper .section-heading{
+margin-bottom: 0;  
+}
+
+.testimonials .section-heading{
+    max-width: 35%;
+}
+
+.testimonial{
+    padding: 2.5rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+}
+
+
+.testimonials .swiper{
+    padding-bottom: 10px;
+    padding-left: 4px;
+
+}
+
+.testimonials{
+    padding-block: 7.5rem 7rem;
+}
+
+
+.testimonials p span{
+    display: block;
+}
+
+.testimonials .profile-icon{
+    margin-right: 0.63rem;
+}
+
+
+
+@media (min-width: 768px){
+    .testimonials .section-heading{
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px){
+    .heading-wrapper{
+        flex-direction: row;
+        margin-bottom: 5.6rem;
+    }
+        .testimonials .section-heading{
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 1200px){
+        .testimonials .section-heading{
+        max-width: 35%;
+    }
+}
 
 /* Footer CSS */
 footer{

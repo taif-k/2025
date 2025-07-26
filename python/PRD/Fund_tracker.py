@@ -11,7 +11,7 @@ while True:
     diff = actual - estimated
     
     
-    fund_data.append({"Expense Category": category,"Estimated Cost": estimated,"Actual Cost": actual,"diiference": diff})
+    fund_data.append({"expense_category": category,"estimated_cost": estimated,"actual_cost": actual,"difference": diff})
     
     another_entry = input("Add another category y/n: ")
     if another_entry != "y":

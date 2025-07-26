@@ -389,6 +389,10 @@ header li a {
     display: block;
 }
 
+.menu-bar {
+    margin-block: auto;
+}
+
 
 .menubar-toggler {
     display: none;

@@ -36,14 +36,24 @@ class Read:
 
     def pdf_read(self):
         images = convert_from_path(mix_pdf) #pdf with text also working(not accurate) because the whole page gets converted to an image. 
+        
+        text_list = [] # 
         for img in images:
-            text = pytesseract.image_to_string(img)
-            print(text) 
+            text = pytesseract.image_to_string(img) # text var is str type, which wont be accepted as arg in DataFrame, so using list 
+            text_list.append(text)
+        
+        # print(type(text))
+        # print(text) 
+
+        df = pd.DataFrame(text_list)
+        # with pd.ExcelWriter("pdf.xlsx") as writer:
+        #     df.to_excel(writer)
+        # print("saved in excel")            
 
 
 read_obj = Read()
-# read_obj.pdf_read()
-read_obj.image_scan()
+read_obj.pdf_read()
+# read_obj.image_scan()
 
 
 

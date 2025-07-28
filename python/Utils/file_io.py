@@ -2,7 +2,7 @@ import json
 import datetime
 import traceback
 import os
-from python.web_scrap_concepts.src.Domain.scrap_paths import path_obj
+from python.web_scrap_concepts.Scrap_Html.src.Domain.scrap_paths import path_obj
 error_path = r"D:\Repositories\2025\python\Log\error_log.txt"
 
 

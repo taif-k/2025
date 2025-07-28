@@ -6,7 +6,7 @@ from pdf2image import convert_from_path
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 image_path = r"C:\Users\DELL\Pictures\1.png"
 only_image_pdg = r"D:\Repositories\2025\python\web_scrap_concepts\Ocr_Pdf\pdf_with_only_images.pdf"
-mix_pdf = r"D:\Repositories\2025\python\web_scrap_concepts\Ocr_Pdf\pdf_mix__imgText.pdf" # text and image
+mix_pdf = r"D:\Repositories\2025\python\web_scrap_concepts\Ocr_Pdf\pdf_mix__imgText.pdf"
 
 class Read:
     def __init__(self):
@@ -32,7 +32,7 @@ class Read:
         print("done")
 
     def pdf_read(self):
-        images = convert_from_path(mix_pdf) #pdf with text also working because the whole page gets converted to an image. 
+        images = convert_from_path(mix_pdf) #pdf with text also working(not accurate) because the whole page gets converted to an image. 
         for img in images:
             text = pytesseract.image_to_string(img)
             print(text) 

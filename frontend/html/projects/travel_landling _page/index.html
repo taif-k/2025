@@ -151,33 +151,52 @@
                 </div>
             </div>
         </section>
+        
         <!--Booking steps-->
         <section class="booking">
             <div class="container d-flex align-start justify-between gap-4">
-                <div class="left-steps">
-                    <div class="step">
-                        <img src="./assets/images/choose_destination.svg" alt="Choose Destination" />
-                        <h4>Choose Destination</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
-                    </div>
-                    <div class="step">
-                        <img src="./assets/images/make_payment.svg" alt="Make Payment" />
-                        <h4>Make Payment</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
-                    </div>
-                    <div class="step">
-                        <img src="./assets/images/reach_airport.svg" alt="Reach Airport" />
-                        <h4>Reach Airport on selected Date</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
-                    </div>
-                </div>
+<div class="left-steps">
+    <p class="step-lead">Easy and Fast</p>
+    <h2 class="step-heading">Book Your Next Trip <br />In 3 Easy Steps</h2>
+
+    <div class="step-row">
+        <div class="step-icon yellow">
+            <img src="./assets/images/choose_destination.svg" alt="Choose Destination" />
+        </div>
+        <div>
+            <h4>Choose Destination</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+        </div>
+    </div>
+
+    <div class="step-row">
+        <div class="step-icon red">
+            <img src="./assets/images/make_payment.svg" alt="Make Payment" />
+        </div>
+        <div>
+            <h4>Make Payment</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+        </div>
+    </div>
+
+    <div class="step-row">
+        <div class="step-icon blue">
+            <img src="./assets/images/reach_airport.svg" alt="Reach Airport" />
+        </div>
+        <div>
+            <h4>Reach Airport on Selected Date</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+        </div>
+    </div>
+</div>
+
 
                 <div class="right-panel">
                     <img src="./assets/images/trip_greece.webp" alt="Trip to Greece" />
                 </div>
             </div>
-
         </section>
+
         <!--Testimonials-->
         <section class="testimonials section-default-padding">
             <div class="container">
@@ -214,7 +233,6 @@
             </div>
         </section>
 
-
         <section class="logos section-default-padding bg-primary-light">
             <div class="container">
                 <ul class="logo-list d-flex justify-between align-center list-unstyled">
@@ -229,31 +247,35 @@
         <section class="subscribe section-default-padding">
             <div class="container">
                 <div class="newsletter-box bg-primary text-white rounded">
-                    
+
                     <img src="./assets/images/side_sub_arrow.png" alt="icon" class="subscribe-icon" />
 
-                    <h4 class="fs-2 ff-heading text-center mb-4">
-                        Subscribe to get information, latest news <br />
-                        and other interesting offers about Jadoo
+                    <h4 class="subscribe-heading">
+                        <span class="line">Subscribe to get information, latest news and other</span><br />
+                        <span class="line">interesting offers about Jadoo</span>
                     </h4>
 
-                    <form class="newsletter-form d-flex align-center">
-                        <input type="email" placeholder="Your Email" name="email" required />
-                    </form>
+                    <div class="subscribe-row">
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email" name="email" required />
+                        </form>
+                        <a href="#" class="subscribe-btn">Subscribe</a>
+                    </div>
 
-                    <a href="#" class="subscribe-btn">Subscribe →</a>
                 </div>
             </div>
         </section>
-
-
-
+        </div>
+        </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container d-flex justify-between flex-wrap">
             <div class="footer-brand">
-                <h3 class="h3 text-white ff-heading mb-3">Jadoo</h3>
+                <h3 class="h3 ff-heading mb-3">
+                    Jadoo.
+                </h3>
                 <p class="text-white">Book your trip in minute, get full Control for much longer.</p>
             </div>
 
@@ -307,22 +329,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const testimonialSwiper = new Swiper(".testimonial-swiper", {
-            // direction: "vertical",
             loop: true,
             spaceBetween: 20,
-            slidesPerView: 1,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
-            },
-            scrollbar: {
-                el: ".swiper-scrollbar",
-                draggable: true,
-                hide: false,
             }
         });
 

@@ -1,5 +1,125 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --primary: #B88E2F;
+    --discount-percentage: #E97171;
+    --new: #2EC1AC;
+    --white: #fff;
+    --black: #000;
+
+    --nav-link-color: var(--black, #000);
+    --text-color: #666666;
+    --heading-title-color: #333333;
+
+    --family-h-p: 'poppins', 'sans sarif';
+}
+
+body{
+    font-family: var(--family-h-p);
+    font-size: 1rem;
+    line-height: 1.4rem;
+
+}
+
+/* font family*/
+
+.ff-all {
+    font-family: var(--family-h-p);
+}
+
+/* font size 52 40 32 24 20 18 16  */
+
+.display-1 {
+    font-size: 3.25rem;
+    line-height: 65;
+}
+
+.display-2 {
+    font-size: 2.5rem;
+    line-height: 120%;
+}
+
+.h1 {
+    font-size: 2rem;
+}
+
+.h2 {
+    font-size: 1.5rem;
+}
+
+.h3 {
+    font-size: 1.25rem;
+}
+
+.h4 {
+    font-size: 1.125rem;
+}
+
+.h5 {
+    font-size: 1rem;
+}
+
+.fs-1 {
+    font-size: 2rem;
+}
+
+.fs-2 {
+    font-size: 1.5rem;
+}
+
+.fs-3 {
+    font-size: 1.25rem;
+}
+
+.fs-4 {
+    font-size: 1.125rem;
+}
+
+.fs-5 {
+    font-size: 1rem;
+}
+
+/* UTILITY CLASSES */
+
+.dis-block{
+    display: block;
+}
+
+.dis-flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.align-start{
+    align-items: flex-start;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
+/* css List*/
+
+.list-unstyled{
+    list-style-type: none;
+    padding-left: 0;
 }

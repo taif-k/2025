@@ -31,6 +31,15 @@ body {
 
 }
 
+a{
+    text-decoration: none;
+    transition: .3s all;
+}
+
+:where(p, li, ul):not(:last-child){
+    margin-bottom: 1.25rem;
+}
+
 /* font family*/
 
 .ff-all {
@@ -198,9 +207,24 @@ body {
 
 
 /*Header*/
+header nav>ul{
+    column-gap: 4.6875rem;
+    margin-top: 2.375rem;
+}
+
+/* header .header-icons>ul{
+    column-gap: 2.8125rem;
+    margin-top: 2.375rem;
+} */
+
+/* .header-icons{
+    margin-top: 0.4rem;
+} */
+
 
 header li a{
     padding: 0.63rem;
     font-size: var(--fs-5);
     display: block;
+    color: var(--black);
 } 

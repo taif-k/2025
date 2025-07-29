@@ -270,7 +270,7 @@ header li a{
 
 /* Footer */
 footer section + p{
-    padding-block: 2.5 2rem;
+    padding-block: 2.5rem 2rem;
 }
 footer section{
     padding-block: 3rem 12rem;
@@ -292,4 +292,8 @@ footer :where(ul,address, form){
 footer address,h4{
     font-style: normal;
     color: #9F9F9F;
+}
+
+footer section ul li:not(:last-child) {
+    margin-bottom: 2.875rem;
 }

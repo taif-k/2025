@@ -16,9 +16,15 @@
     --heading-title-color: #333333;
 
     --family-h-p: 'poppins', 'sans sarif';
+
+    --fs-1: 2rem;
+    --fs-2: 1.5rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.125rem;
+    --fs-5: 1rem;
 }
 
-body{
+body {
     font-family: var(--family-h-p);
     font-size: 1rem;
     line-height: 1.4rem;
@@ -44,82 +50,157 @@ body{
 }
 
 .h1 {
-    font-size: 2rem;
+    font-size: var(--fs-1, 2rem);
 }
 
 .h2 {
-    font-size: 1.5rem;
+    font-size: var(--fs-2,1.5rem);
 }
 
 .h3 {
-    font-size: 1.25rem;
+    font-size: var(--fs-3,1.25rem);
 }
 
 .h4 {
-    font-size: 1.125rem;
+    font-size: var(--fs-4,1.125rem);
 }
 
 .h5 {
-    font-size: 1rem;
+    font-size: var(--fs-5,1rem);
 }
 
 .fs-1 {
-    font-size: 2rem;
+    font-size: var(--fs-1, 2rem);
 }
 
 .fs-2 {
-    font-size: 1.5rem;
+    font-size: var(--fs-2,1.5rem);
 }
 
 .fs-3 {
-    font-size: 1.25rem;
+    font-size: var(--fs-3,1.25rem);
 }
 
 .fs-4 {
-    font-size: 1.125rem;
+    font-size: var(--fs-4,1.125rem);
 }
 
 .fs-5 {
-    font-size: 1rem;
+    font-size: var(--fs-5,1rem);
 }
 
 /* UTILITY CLASSES */
 
-.dis-block{
+.dis-block {
     display: block;
 }
 
-.dis-flex{
+.dis-flex {
     display: flex;
 }
 
-.justify-between{
+.dis-none {
+    display: none;
+}
+
+.justify-between {
     justify-content: space-between;
 }
 
-.justify-end{
+.justify-end {
     justify-content: flex-end;
 }
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }
 
-.align-center{
+.align-center {
     align-items: center;
 }
 
-.align-start{
+.align-start {
     align-items: flex-start;
 }
 
-.align-end{
+.align-end {
     align-items: flex-end;
+}
+
+
+/*position*/
+
+.fixed {
+    position: fixed;
+    z-index: 10;
+}
+
+.sticky {
+    position: sticky;
+    /*use if doesnt want  header to be fixed*/
+    z-index: 10;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.top-100 {
+    top: 100%;
+}
+
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.inset-0 {
+    /*use if above 4 are needed together */
+    inset: 0;
+}
+
+/*width*/
+.w-100 {
+    width: 100%;
+    /* % is relative unit (it works relativly to its parent)*/
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
 }
 
 /* css List*/
 
-.list-unstyled{
+.list-unstyled {
     list-style-type: none;
     padding-left: 0;
 }
+
+
+/*Header*/
+
+header li a{
+    padding: 0.63rem;
+    font-size: var(--fs-5);
+    display: block;
+} 

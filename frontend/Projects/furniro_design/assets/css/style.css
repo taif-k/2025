@@ -356,3 +356,19 @@ h4 {
 footer section ul li:not(:last-child) {
     margin-bottom: 2.875rem;
 }
+
+@media(max-width: 991.98px) {
+    footer section{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 2rem;
+        padding-block: 1rem 3rem;
+
+    }
+
+        footer p{
+            text-align: center;
+    }
+}
+

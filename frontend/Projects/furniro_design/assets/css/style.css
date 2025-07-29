@@ -229,7 +229,7 @@ header nav>div{
 
 
 header li a{
-    padding: 0.63rem;
+    /* padding: 0.63rem; */
     font-size: var(--fs-5);
     display: block;
     color: var(--black);

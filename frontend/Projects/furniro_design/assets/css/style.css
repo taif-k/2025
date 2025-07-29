@@ -24,6 +24,15 @@
     --fs-5: 1rem;
 }
 
+.container {
+    padding-inline: 1rem;
+    width: 100%;
+    --container-width: 100%;
+    max-width: var(--container-width);
+    /* max-width: 1140px; */
+    margin-inline: auto;
+}
+
 body {
     font-family: var(--family-h-p);
     font-size: 1rem;
@@ -209,17 +218,14 @@ a{
 /*Header*/
 header nav>ul{
     column-gap: 4.6875rem;
-    margin-top: 2.375rem;
+    margin-block: 2.375rem
 }
 
-/* header .header-icons>ul{
+header nav>div{
     column-gap: 2.8125rem;
-    margin-top: 2.375rem;
-} */
-
-/* .header-icons{
-    margin-top: 0.4rem;
-} */
+    margin-block: 2.25rem;
+    margin-right: 6.25rem;
+}
 
 
 header li a{

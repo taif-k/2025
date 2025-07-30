@@ -311,6 +311,7 @@ header li a {
 }
 
 @media (min-width: 992px) {
+
     .menu-bar,
     .header-icons {
         display: flex !important;
@@ -326,7 +327,7 @@ footer section {
     padding-block: 3rem 12rem;
 }
 
-footer section + p {
+footer section+p {
     padding-block: 2.5rem 2rem;
     text-align: center;
 }
@@ -393,4 +394,32 @@ footer section ul li:not(:last-child) {
         row-gap: 2rem;
         padding-block: 1rem 3rem;
     }
+}
+
+
+/* Banner */
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-wrapper {
+    position: relative;
+    min-height: 600px;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-content {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFF3E3;
+    padding: 3rem;
+    max-width: 500px;
+    border-radius: 0.75rem;
 }

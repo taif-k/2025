@@ -353,7 +353,7 @@ header li a {
 }
 
 .browse-card img {
-  width: auto;
+  width: 100%;
   border-radius: 0.5rem;
   display: block;
 }
@@ -365,6 +365,28 @@ header li a {
   font-family: var(--family-h-p);
   font-weight: 600;
 }
+
+
+@media (max-width: 991.98px) {
+  .browse-cards {
+    padding-inline: 2rem;
+  }
+
+  .browse-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .browse-card {
+    flex: 1 1 100%;
+  }
+
+  .browse-cards {
+    padding-inline: 1rem;
+  }
+}
+
 
 
 /* Footer */

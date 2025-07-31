@@ -318,6 +318,28 @@ header li a {
     }
 }
 
+
+.browse-range {
+  margin-top: 4rem; 
+
+}
+
+.browse-range h2 {
+  font-size: 2rem; 
+  color: #333333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.browse-range p {
+  font-size: 1.25rem; 
+  color: #666666;
+
+}
+
+
+
+
 /* Footer */
 footer section {
     padding-block: 3rem 0.625rem;

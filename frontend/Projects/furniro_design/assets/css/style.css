@@ -327,7 +327,7 @@ header li a {
 .browse-range h2 {
   font-size: 2rem; 
   color: var(--heading-title-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--family-h-p);
   font-weight: 600;
 }
 
@@ -339,17 +339,32 @@ header li a {
 
 
 .browse-cards {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem; 
   margin-top: 3.89rem; 
   padding-inline: 8.2rem 7.875rem; 
 }
 
 .browse-card {
-  flex: 1;
+  flex: 1 1 calc(33.333% - 1.25rem);
+  max-width: 100%;
 }
 
+.browse-card img {
+  width: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
 
+.browse-card h3 {
+  margin-top: 1.875rem; 
+  font-size: var(--fs-2); 
+  color: var(--heading-title-color);
+  font-family: var(--family-h-p);
+  font-weight: 600;
+}
 
 
 /* Footer */

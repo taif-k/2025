@@ -27,8 +27,8 @@
 .container {
     padding-inline: 1rem;
     width: 100%;
-    --container-width: 100%;
-    max-width: var(--container-width);
+    /* --container-width: 100%; */
+    max-width: 1440px;
     margin-inline: auto;
 }
 
@@ -320,12 +320,12 @@ header li a {
 
 /* Footer */
 footer section {
-    padding-block: 3rem 12rem;
+    padding-block: 3rem 0.625rem;
 }
 
-footer section+p {
-    padding-block: 2.5rem 2rem;
-    text-align: center;
+footer p {
+    margin-bottom: 2.375rem;
+    /* padding-block: 2.5rem 2rem; */
 }
 
 footer section div {

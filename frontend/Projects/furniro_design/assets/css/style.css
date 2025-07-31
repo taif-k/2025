@@ -320,8 +320,8 @@ header li a {
 
 
 .browse-range {
-  margin-top: 4rem; 
-
+  margin-top: 3.53rem; 
+  text-align: center;
 }
 
 .browse-range h2 {
@@ -334,7 +334,7 @@ header li a {
 .browse-range p {
   font-size: 1.25rem; 
   color: #666666;
-
+  margin-top: 1rem;
 }
 
 

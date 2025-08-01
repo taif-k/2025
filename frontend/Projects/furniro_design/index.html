@@ -12,7 +12,13 @@
     <title>Furniro</title>
     <link href="./assets/css/style.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 
 
 </head>
@@ -306,42 +312,49 @@
                 <a href="#" class="show-more-btn">Show More</a>
             </div>
         </section>
+
         <section class="room-inspiration-section">
-            <div class="container room-inspiration-wrapper">
-                <div class="room-left-panel">
-                    <h2 class="room-title">
-                        <span>50+ Beautiful rooms</span><br />
+            <div class="room-inspiration-container">
+                <!-- Left panel -->
+                <div class="room-inspiration-left">
+                    <h2 class="room-heading">
+                        <span>50+ Beautiful rooms</span><br>
                         <span>inspiration</span>
                     </h2>
                     <p class="room-subtext">
                         Our designer already made a lot of beautiful prototipe of rooms that inspire you
                     </p>
-                    <button class="explore-more-btn">Explore More</button>
+                    <a href="#" class="explore-more-btn">Explore More</a>
                 </div>
 
-                <div class="room-right-panel swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide active-slide">
-                            <img src="./assets/images/room_one.webp" alt="Bedroom with inner peace" />
-                            <div class="slide-overlay-text">
-                                <h3>Inner Peace</h3>
-                                <a href="#" class="arrow-link">
-                                    <img src="./assets/icons/arrow-right.svg" alt="arrow" />
-                                </a>
+                <!-- Right panel -->
+                <div class="room-inspiration-right">
+                    <div class="swiper room-carousel">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <img src="./assets/images/room_inspiration_img.jpg" alt="Room Inspiration 1" />
                             </div>
-                        </div>
 
-                        <div class="swiper-slide">
-                            <img src="./assets/images/room_two.webp" alt="Room style" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/room_three.webp" alt="Room style" />
+                            <!-- Slide 2 (active) -->
+                            <div class="swiper-slide">
+                                <img src="./assets/images/room_inspiration_img.jpg" alt="Room Inspiration 2" />
+                                <div class="slide-caption">
+                                    <h3>Inner Peace</h3>
+                                    <p>Bedroom</p>
+                                    <a href="#"><img src="./assets/icons/right_arrow.svg" alt="Arrow" /></a>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <img src="./assets/images/room_inspiration_img.jpg" alt="Room Inspiration 3" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
     </main>
     <footer id="footer">
@@ -383,24 +396,19 @@
             <p>2023 Furniro. All rights reserved</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper(".swiper", {
             slidesPerView: 1.5,
-            spaceBetween: 20,
-            breakpoints: {
-                992: {
-                    slidesPerView: 1.5,
-                },
-                768: {
-                    slidesPerView: 1.2,
-                },
-                576: {
-                    slidesPerView: 1,
-                }
-            }
+            spaceBetween: 24,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
+
 
 </body>
 

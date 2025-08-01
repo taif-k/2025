@@ -482,17 +482,17 @@ header li a {
 
 .products-section {
     margin-top: 3.53rem;
-    
+
 }
 
 .products-section .container {
     padding-inline: 6.375rem;
-    
+
 }
 
 .products-heading {
     font-size: 2rem;
-    
+
     font-family: var(--family-h-p);
     text-align: center;
     color: var(--heading-title-color);
@@ -663,6 +663,115 @@ header li a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Room Inspiration Section */
+.room-inspiration-section {
+  background-color: #f2f2f2;
+  padding-block: 3rem;
+}
+
+.room-inspiration-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-block: 13.94rem; /* 223px */
+  display: flex;
+  gap: 2.625rem; /* 42px */
+  padding-inline: 6.25rem; /* match banner image width */
+}
+
+.left-panel {
+  margin-left: 6.25rem;
+  flex-shrink: 0;
+  max-width: 27rem;
+}
+
+.room-title {
+  font-size: 2.5rem; /* 40px */
+  color: #3a3a3a;
+  line-height: 1.2;
+}
+
+.room-desc {
+  font-size: 1rem; /* 16px */
+  color: #3a3a3a;
+  margin-top: 1rem;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 1.5625rem; /* 25px */
+  padding: 0.75rem 1.5rem;
+  background-color: #b88e2f;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Swiper Container */
+.right-panel {
+  margin-right: 0;
+  overflow: visible;
+}
+
+.roomSwiper .swiper-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.roomSwiper .swiper-slide {
+  width: 23.25rem;  /* 372px */
+  height: 30.375rem; /* 486px */
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.roomSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Active Slide */
+.roomSwiper .swiper-slide.active-slide {
+  width: 25.25rem;  /* 404px */
+  height: 36.375rem; /* 582px */
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: white;
+  padding: 1.5rem;
+  width: 26.75rem; /* 428px */
+  height: 10.1875rem; /* 163px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.slide-caption h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #3a3a3a;
+}
+
+.slide-caption .slide-arrow {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #b88e2f;
+  font-weight: bold;
+}
+
+/* Hide captions on non-active slides */
+.roomSwiper .swiper-slide:not(.active-slide) .slide-caption {
+  display: none;
+}
+
 
 /* Footer */
 footer section {

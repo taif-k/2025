@@ -666,25 +666,31 @@ header li a {
 
 
 .room-inspiration-section {
-  background-color: #f2f2f2;
   padding-block: 3rem;
   margin-top: 4.3125rem;
 }
 
 .room-inspiration-container {
+  background-color: #FCF8F3;
   max-width: 1200px;
   margin-inline: auto;
-  margin-block: 13.94rem; 
   display: flex;
   gap: 2.625rem; 
   padding-inline: 6.25rem;
 }
 
-.left-panel {
+.room-inspiration-left {
   margin-left: 6.25rem;
   flex-shrink: 0;
   max-width: 27rem;
+  margin-block: 13.93rem;
 }
+
+.room-inspiration-right {
+  margin-right: 0;
+  overflow: visible;
+}
+
 
 .room-title {
   font-size: 2.5rem; 
@@ -710,10 +716,7 @@ header li a {
 }
 
 
-.right-panel {
-  margin-right: 0;
-  overflow: visible;
-}
+
 
 .roomSwiper .swiper-wrapper {
   display: flex;

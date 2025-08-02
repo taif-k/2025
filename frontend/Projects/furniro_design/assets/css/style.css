@@ -62,6 +62,7 @@
     }
 }
 
+
 body {
     font-family: var(--family-h-p);
     font-size: 1rem;
@@ -664,7 +665,6 @@ header li a {
     }
 }
 
-
 .room-inspiration-section {
   padding-block: 3rem;
   margin-top: 4.3125rem;
@@ -715,6 +715,9 @@ header li a {
   border-radius: 4px;
 }
 
+.room-carousel{
+    overflow: hidden;
+}
 
 .room-carousel .swiper-wrapper {
   display: flex;
@@ -774,6 +777,9 @@ header li a {
   display: none;
 }
 
+.room-carousel .swiper-slide.active-slide .slide-caption {
+  display: flex;
+}
 
 /* Footer */
 footer section {

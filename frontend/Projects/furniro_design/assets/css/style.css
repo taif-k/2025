@@ -688,23 +688,23 @@ header li a {
 
 .room-inspiration-right {
   margin-right: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 
 
-.room-title {
+.room-heading {
   font-size: 2.5rem; 
   color: #3a3a3a;
   line-height: 1.2;
 }
 
-.room-desc {
+.room-subtext {
   font-size: 1rem; 
   color: #3a3a3a;
   margin-top: 1rem;
 }
 
-.explore-btn {
+.explore-more-btn {
   display: inline-block;
   margin-top: 1.5625rem; 
   padding: 0.75rem 1.5rem;
@@ -716,14 +716,12 @@ header li a {
 }
 
 
-
-
-.roomSwiper .swiper-wrapper {
+.room-carousel .swiper-wrapper {
   display: flex;
   align-items: flex-end;
 }
 
-.roomSwiper .swiper-slide {
+.room-carousel .swiper-slide {
   width: 23.25rem;  
   height: 30.375rem; 
   flex-shrink: 0;
@@ -731,7 +729,7 @@ header li a {
   transition: all 0.3s ease;
 }
 
-.roomSwiper .swiper-slide img {
+.room-carousel .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -739,7 +737,7 @@ header li a {
 }
 
 
-.roomSwiper .swiper-slide.active-slide {
+.room-carousel .swiper-slide.active-slide {
   width: 25.25rem;  
   height: 36.375rem; 
 }
@@ -772,7 +770,7 @@ header li a {
 }
 
 
-.roomSwiper .swiper-slide:not(.active-slide) .slide-caption {
+.room-carousel .swiper-slide:not(.active-slide) .slide-caption {
   display: none;
 }
 

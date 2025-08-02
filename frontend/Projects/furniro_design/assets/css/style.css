@@ -664,7 +664,7 @@ header li a {
     }
 }
 
-/* Room Inspiration Section */
+
 .room-inspiration-section {
   background-color: #f2f2f2;
   padding-block: 3rem;
@@ -673,10 +673,10 @@ header li a {
 .room-inspiration-container {
   max-width: 1200px;
   margin-inline: auto;
-  margin-block: 13.94rem; /* 223px */
+  margin-block: 13.94rem; 
   display: flex;
-  gap: 2.625rem; /* 42px */
-  padding-inline: 6.25rem; /* match banner image width */
+  gap: 2.625rem; 
+  padding-inline: 6.25rem;
 }
 
 .left-panel {
@@ -686,20 +686,20 @@ header li a {
 }
 
 .room-title {
-  font-size: 2.5rem; /* 40px */
+  font-size: 2.5rem; 
   color: #3a3a3a;
   line-height: 1.2;
 }
 
 .room-desc {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem; 
   color: #3a3a3a;
   margin-top: 1rem;
 }
 
 .explore-btn {
   display: inline-block;
-  margin-top: 1.5625rem; /* 25px */
+  margin-top: 1.5625rem; 
   padding: 0.75rem 1.5rem;
   background-color: #b88e2f;
   color: white;
@@ -708,7 +708,7 @@ header li a {
   border-radius: 4px;
 }
 
-/* Swiper Container */
+
 .right-panel {
   margin-right: 0;
   overflow: visible;
@@ -720,8 +720,8 @@ header li a {
 }
 
 .roomSwiper .swiper-slide {
-  width: 23.25rem;  /* 372px */
-  height: 30.375rem; /* 486px */
+  width: 23.25rem;  
+  height: 30.375rem; 
   flex-shrink: 0;
   position: relative;
   transition: all 0.3s ease;
@@ -734,10 +734,10 @@ header li a {
   display: block;
 }
 
-/* Active Slide */
+
 .roomSwiper .swiper-slide.active-slide {
-  width: 25.25rem;  /* 404px */
-  height: 36.375rem; /* 582px */
+  width: 25.25rem;  
+  height: 36.375rem; 
 }
 
 .slide-caption {
@@ -746,8 +746,8 @@ header li a {
   left: 1.5rem;
   background: white;
   padding: 1.5rem;
-  width: 26.75rem; /* 428px */
-  height: 10.1875rem; /* 163px */
+  width: 26.75rem; 
+  height: 10.1875rem; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -767,7 +767,7 @@ header li a {
   font-weight: bold;
 }
 
-/* Hide captions on non-active slides */
+
 .roomSwiper .swiper-slide:not(.active-slide) .slide-caption {
   display: none;
 }
@@ -805,7 +805,7 @@ footer section ul li:not(:last-child) {
     margin-bottom: 2.875rem;
 }
 
-/* Newsletter */
+
 .newsletter-form {
     display: flex;
     gap: var(--fs-5);

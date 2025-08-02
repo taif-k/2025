@@ -392,9 +392,32 @@
         const swiper = new Swiper(".swiper", {
             slidesPerView: 1.5,
             spaceBetween: 24,
+            loop: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 45,
+                },
+                1400: {
+                    slidesPerView: 2.4,
+                    spaceBetween: 45,
+                },
             },
         });
     </script>

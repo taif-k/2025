@@ -666,8 +666,8 @@ header li a {
 }
 
 .room-inspiration-section {
-  padding-block: 3rem;
-  margin-top: 4.3125rem;
+  padding-block: 1rem;
+  /* margin-top: 4.3125rem; */
 }
 
 .room-inspiration-container {
@@ -687,6 +687,8 @@ header li a {
 }
 
 .room-inspiration-right {
+  margin-block-start: 2.75rem;  
+  margin-block-end: 0;          
   margin-right: 0;
   overflow: hidden;
 }
@@ -717,6 +719,7 @@ header li a {
 
 .room-carousel{
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .room-carousel .swiper-wrapper {
@@ -730,6 +733,7 @@ header li a {
   flex-shrink: 0;
   position: relative;
   transition: all 0.3s ease;
+  margin-bottom: 0;
 }
 
 .room-carousel .swiper-slide img {

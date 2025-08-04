@@ -28,6 +28,15 @@
         .section_child_select>p{
             color: aqua;
         }
+
+        p+h1{
+            color: orange;
+        }
+        p~h3{
+            border-bottom: 0.2rem;
+            border-color: blue;
+            border-style: solid;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +76,19 @@
         </div>
     </section>
 
+                                <!--ADJACENT SELECTOR(+) & GENERAL SIBLING SELECTOR( ~ )-->    
+    <section class="section_adjacent_select">
+        <p>Direct child(p) of class section_adjacent_select </p>
+        <h1>h1(direct child) inside class "section_adjacent_select"</h2>
+        <p>Direct child(p) of class section_adjacent_select </p>
+        <h2>h2(direct child) inside class "section_adjacent_select"</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, consequatur!</span>
+            <h3>Lorem, ipsum dolor.</h3>
+        </div>
+    </section>
+                                
 </body>
 
 </html>

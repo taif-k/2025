@@ -21,6 +21,13 @@
         h5, h6{
             color: green;
         }
+        .section_desc_select p{
+            color: brown;
+        }
+
+        .section_child_select>p{
+            color: aqua;
+        }
     </style>
 </head>
 <body>
@@ -40,9 +47,26 @@
     <p class="class_p">Class paragarph ONE Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, repudiandae.</p>
     <p class="class_p">Class paragarph TWO Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, repudiandae.</p>
 
-                                <!--GROUP SELECTOR-->
+                                <!--GROUP SELECTOR-->       
     <h5>H5 Tag</h5>
     <h6>H6 Tag</h6>    
+
+                                <!--DESCENDANT SELECTOR--> 
+    <section class="section_desc_select">
+     <p>p inside section 1</p> 
+     <div>
+        <P>Lorem, ipsum.</P>
+     </div>
+    </section>
+
+                                <!--CHILD SELECTOR-->
+    <section class="section_child_select">
+        <p>Direct child(p) of "section_child_select" class</p>
+        <div>
+            <p>Not direct child(p) of "section_child_select" class</p>
+        </div>
+    </section>
+
 </body>
 
 </html>

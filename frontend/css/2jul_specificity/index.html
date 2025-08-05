@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity</title>
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        p{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p style="color: aqua;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ex eum laboriosam!</p>
+    </main>
+<!--According to order of appearance, if inline and internal css is removed then ext css red will be applied on p
+if only inline is removed then internal css is applied written below external link
+inline has more specificty that why it is applying.
+if want to apply something irespective of order than use !important.
+-->
+</body>
+
+</html>
+
+<!--Order of appearance
+BROWSER STYLE
+EXTERNAL CSS
+INTERNAL CSS
+INLINE CSS
+
+Specificity
+Universal selector - 0
+Element Selector/Psuedo Elements(::before & ::after) -1
+Class Selector/attr selector[]/Psuedo class(:hover, :focus, :active) - 10 
+ID - 100
+Inline style - 1000
+
+how to calc total specificty: no. of selector * it sspecificty keep on adding  
+->

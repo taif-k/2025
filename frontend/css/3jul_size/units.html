@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        .div-absoulte-unit{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .relative-precentage{
+            width: 50%; 
+            background-color: green;
+        }
+
+        .relative-em{
+            width: 5em;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!--ABSOLUTE UNITS will always represent constant value irrespective of viewport 
+        an inch/1px/or 1 cm will always be same even if screen size is small or large
+        -->
+        <div class="div-absoulte-unit">
+            ABSOLUTE ipsum dolor sit amet consectetur adipisicing elit. 
+            Itaque fugit consequatur dolore? Veniam nobis maxime minus provident quod blanditiis tenetur aperiam nulla
+            iste harum quam pariatur earum quia mollitia porro nesciunt, aliquid similique reprehenderit repudiandae.
+        </div>
+
+
+        <!--RELATIVE UNITS-->
+        <p class="relative-precentage">
+            <!--% is relative to its parent, EX width: 50% of p will be equal to parent(main here) width/2 -->
+            RELATIVE UNIT PERCENTAGEipsum dolor sit amet consectetur adipisicing elit. 
+            Itaque fugit consequatur dolore? Veniam nobis maxime minus provident quod blanditiis tenetur aperiam nulla
+            iste harum quam pariatur earum quia mollitia porro nesciunt, aliquid similique reprehenderit repudiandae a atque!.
+        </p>
+        <p class="relative-em">
+            <!--em is relative to its parent's font size, EX width: 5em of p will be equal to parent's font size * 5(16px) -->
+            RELATIVE UNIT EM ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
+    </main>
+</body>
+</html>

@@ -20,6 +20,16 @@
             width: 5em;
             background-color: blue;
         }
+
+        .relative-rem{
+            width: 6rem;
+        }
+
+        .div-vw{
+            width: 100vw;
+            background-color: greenyellow;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
@@ -45,6 +55,16 @@
             <!--em is relative to its parent's font size, EX width: 5em of p will be equal to parent's font size(16px) * 5 -->
             RELATIVE UNIT EM ipsum dolor sit amet consectetur adipisicing elit. 
         </p>
+
+        <p class="relative-rem">
+            <!--rem is relative to its root's(html tag) font size, EX width: 6rem of p will be equal to root's font size(if not changed thn 16px) * 6 -->
+            RELATIVE UNIT REM ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
+
+        <!--margin bloack and margin-inline isnt included in vw..any margin will cause scroller(sol do margin:0) -->
+        <div class="div-vw">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus facere consectetur error deleniti cumque omnis recusandae excepturi sint voluptatibus laudantium.
+        </div>
     </main>
 </body>
 </html>

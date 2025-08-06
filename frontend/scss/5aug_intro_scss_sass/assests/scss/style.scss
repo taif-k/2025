@@ -1,4 +1,5 @@
 @import "./_variable.scss";
+@import "./mixin.scss";
 
 .h1-color {
     color: $red-color;
@@ -17,4 +18,8 @@
         margin: $rem-05;
         padding: $rem-05;
     }
+}
+
+.btn-primary ,.btn-accent{
+    @include button($rem-05,dotted,$blue-color)
 }

@@ -1,0 +1,5 @@
+@mixin button($bdr_rad, $bdr_style, $bdr_clr) {
+        border-radius: $bdr_rad;
+        border-style:$bdr_style;
+        border-color: $bdr_clr;
+}

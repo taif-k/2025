@@ -1,10 +1,20 @@
+$red-color: red;
 
-$red-color:red;
-
-.h1-color{    
+.h1-color {
     color: $red-color;
 }
 
-.ul_four_links{
+.main_ul_four_links {
     padding-left: 0;
+}
+
+.header_nav_links {
+    display: flex;
+    padding: 0;
+
+    a {
+        display: block;
+        margin: .5rem;
+        padding: .2rem;
+    }
 }

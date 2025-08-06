@@ -1,4 +1,4 @@
-$red-color: red;
+@import "./_variable.scss";
 
 .h1-color {
     color: $red-color;
@@ -14,7 +14,7 @@ $red-color: red;
 
     a {
         display: block;
-        margin: .5rem;
-        padding: .2rem;
+        margin: $rem-05;
+        padding: $rem-05;
     }
 }

@@ -1,0 +1,83 @@
+body {
+
+    background-color: greenyellow;
+    margin-inline: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    width: max(94%, 1200px);
+    margin-inline: auto;
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 40px;
+}
+
+.image {
+    mask:
+        linear-gradient(to bottom, #000 40%, #0000 40%);
+    mask-size: 100% 5px;
+    mask-position: center;
+}
+
+.image2 {
+    mask: linear-gradient(to right, #000 40%, #0000 40%);
+    mask-size: 5px 100%;
+    mask-position: center;
+}
+
+.image3 {
+    mask: radial-gradient(circle at center, #000 20%, #0000 78%);
+    mask-size: 5px 5px;
+    mask-position: center;
+}
+
+.image4 {
+    mask: conic-gradient(#000 25%, #0000 25% 50%, #000 50% 75%, #0000 75% 100%);
+    mask-size: 20px 20px;
+    mask-position: center;
+}
+
+.image5 {
+    mask:
+        conic-gradient(#000 25%, #0000 25% 50%, #000 50% 75%, #0000 75% 100%) center / 20px 20px,
+        linear-gradient(45deg, #0000 35%, #000 45% 65%, #0000 65%) center / 20px 20px;
+    mask-position: center;
+    mask-composite: subtract;
+}
+
+.image6 {
+    mask: conic-gradient(#000 25%, #0000 25% 50%, #000 50% 75%, #0000 75% 100%) center / 20px 20px, linear-gradient(45deg, #0000 35%, #000 45% 65%, #0000 65%) center / 20px 20px;
+    mask-position: center;
+    mask-composite: intersect;
+}
+
+.image7 {
+    mask: conic-gradient(#000 25%, #0000 25% 50%, #000 50% 75%, #0000 75% 100%) center / 30px 30px, linear-gradient(45deg, #0000 45%, #000 45% 55%, #0000 55%) center / 30px 30px, linear-gradient(-45deg, #0000 45%, #000 45% 55%, #0000 55%) center / 30px 30px, linear-gradient(90deg, #0000 45%, #000 45% 55%, #0000 55%) center / 30px 30px, linear-gradient(180deg, #0000 45%, #000 45% 55%, #0000 55%) center / 30px 30px;
+    mask-position: center;
+    mask-composite: exclude;
+    mask-repeat: repeat;
+}
+
+.image8 {
+    mask: linear-gradient(25deg, #000 50%, #0000 50%);
+    mask-position: center;
+    mask-size: 100% 100%;
+}
+
+
+.image9 {
+    mask: repeating-linear-gradient(20deg,#000 0 1px,#0000 10px 20px);
+    mask-position: center;
+    mask-size: 100% 100%;
+}
+

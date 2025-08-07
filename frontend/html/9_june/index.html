@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Html Elements</title>
+</head>
+<style>
+    .body{
+        width: 500px;
+    }
+
+    .p{
+        display: inline-block;
+    }
+
+    .p-inline{
+        display: inline;
+    }
+</style>
+
+<body class="body">
+     <p>hello</p>
+<!-- this p takes the available width of iyts parent, which is body here inspect shows- body 1221.6ox p will also be same-->
+<!-- but if we use css to change body width to 500px it, above p will also be 500px -->
+ <p class="p">another hello (p tag made inline-block)</p> <!--it wont take parents width,-->
+ <p class="p-inline">3rd hello (this p made only inline)</p>  <!-- p made inline so wont take parent's width, and will come in same line-->
+<p>In Inline-block we can apply margin block also, but not in inline</p>
+</body>
+
+</html>

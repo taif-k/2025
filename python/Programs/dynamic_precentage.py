@@ -1,4 +1,6 @@
-import error_source
+import sys,os
+sys.path.append(os.getcwd())
+from python.Utils.file_io import file_io_obj
 
 def main():
     try:
@@ -47,7 +49,8 @@ def main():
             print("\nStudent 2 is topper")
     except Exception as e:
         print("Marks should be in digits only")
-        error_source.update_errorslog(error_source.error_details(e))
+        file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),file_io_obj.error_path)
+
         main()
 
 main()

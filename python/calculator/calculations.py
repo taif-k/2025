@@ -1,31 +1,35 @@
-import inputnumbers
-import sys,os
+# import inputnumbers
+from python.calculator.inputnumbers import number_obj
+from python.Utils.file_io import file_io_obj
+import sys
+import os
 sys.path.append(os.getcwd())
-import python
 
-err_log = r"D:\Repositories\2025\python\Programs\errordetails.txt"
+class Calculation_operations:
+    def addition(self):
+        firstnum, secondnum = number_obj.numbers_input()
+        add = firstnum + secondnum
+        return add
 
-def addition():
-    firstnum,secondnum = inputnumbers.numbers_input()
-    add = firstnum + secondnum
-    return add
+    def divide(self):
+        try:
+            firstnum, secondnum = number_obj.numbers_input()
+            div = firstnum / secondnum
+            return div
+        except Exception as e:
+            print("Invalid Number")
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))
+            return self.divide()
 
-def divide():
-    try:
-        firstnum,secondnum = inputnumbers.numbers_input()
-        div = firstnum / secondnum
-        return div
-    except Exception as e:
-        print("Second number should not be Zero")
-        python.update_errorslog(python.error_details(e),err_log)
-        return divide()
+    def subtraction(self):
+        firstnum, secondnum = number_obj.numbers_input()
+        sub = firstnum - secondnum
+        return sub
 
-def subtraction():
-    firstnum,secondnum = inputnumbers.numbers_input()
-    sub = firstnum - secondnum
-    return sub
+    def multiply(self):
+        firstnum, secondnum = number_obj.numbers_input()
+        mul = firstnum * secondnum
+        return mul
 
-def multiply():
-    firstnum,secondnum = inputnumbers.numbers_input()
-    mul = firstnum * secondnum
-    return mul
+
+cal_operartion_obj = Calculation_operations()

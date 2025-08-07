@@ -1,17 +1,20 @@
 import json
-import python as py_lang
+from python.Utils.file_io import file_io_obj
+from python.OOPS.Student_Records_System.Utils.read_writedata import file_obj
+from python.OOPS.Student_Records_System.Domain.all_paths import paths_obj
 
 class StudentSearch:
-    def __init__(self,datapath,errorlog_path):
+    def __init__(self,datapath):
         self.recordspath = datapath
-        self.err_path = errorlog_path
 
     def search_student(self):
-        search_name = input("Enter name to search: ")
-        listobj = py_lang.DataOperations(self.recordspath, self.err_path)
-        for data in listobj.studentlist:
-            if data["name"] == search_name:
-                print(json.dumps(data,indent=3))
-                print()
-                return None
-        print("\nNot found")
+        try:
+            search_name = input("Enter name to search: ")
+            for data in file_obj.studentlist:
+                if data["name"] == search_name:
+                    print(json.dumps(data,indent=3))
+                    print()
+                    return None
+            print("\nNot found")
+        except Exception as e:
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),paths_obj.err_log_path)

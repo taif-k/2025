@@ -1,3 +1,8 @@
+import sys,os
+# print(sys.path)
+sys.path.append(os.getcwd())
+from python.Utils.file_io import file_io_obj
+
 class BankAccout:
     def __init__(self):
         self.__account_no = 1234567890
@@ -10,26 +15,30 @@ class BankAccout:
         print("3-check balance")
 
     def verifyaccount(self):
-        enter_accountno = int(input("Enter account no: "))
-        if enter_accountno == self.__account_no:
-            enter_pin = int(input("Enter pin to verify: "))
-            if enter_pin == self.__pin:
-                while True:
-                    self.task_option()
-                    ask_option = int(input("Enter option: "))
-                    if ask_option == 1:
-                        self.withdrawl()
-                    elif ask_option == 2:
-                        self.deposit()
-                    elif ask_option == 3:
-                        balance = self.__totalbalance
-                        print(f"Total balance is {balance}")
-                    else:
-                        break
+        try:
+            enter_accountno = int(input("Enter account no: "))
+            if enter_accountno == self.__account_no:
+                enter_pin = int(input("Enter pin to verify: "))
+                if enter_pin == self.__pin:
+                    while True:
+                        self.task_option()
+                        ask_option = int(input("Enter option: "))
+                        if ask_option == 1:
+                            self.withdrawl()
+                        elif ask_option == 2:
+                            self.deposit()
+                        elif ask_option == 3:
+                            balance = self.__totalbalance
+                            print(f"Total balance is {balance}")
+                        else:
+                            break
+                else:
+                    print("Incorrect pin")
             else:
-                print("Incorrect pin")
-        else:
-            print("Enter valif account number to proceed further")                        
+                print("Enter valif account number to proceed further") 
+        except Exception as e:
+            print("checking error log")
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e))                       
 
     def withdrawl(self):
         self.withdraw_amount = int(input("Enter amount to withdrawl: "))

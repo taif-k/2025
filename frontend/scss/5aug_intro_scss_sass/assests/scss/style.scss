@@ -1,0 +1,25 @@
+@import "./_variable.scss";
+@import "./mixin.scss";
+
+.h1-color {
+    color: $red-color;
+}
+
+.main_ul_four_links {
+    padding-left: 0;
+}
+
+.header_nav_links {
+    display: flex;
+    padding: 0;
+
+    a {
+        display: block;
+        margin: $rem-05;
+        padding: $rem-05;
+    }
+}
+
+.btn-primary ,.btn-accent{
+    @include button($rem-05,dotted,$blue-color)
+}

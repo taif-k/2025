@@ -1,4 +1,6 @@
-import error_source
+import sys,os
+sys.path.append(os.getcwd())
+from python.Utils.file_io import file_io_obj
 
 def menu():
     print("Press 1 for Addition")
@@ -12,7 +14,8 @@ def numbers_input():
             first_number = int(input("Enter first number"))
             second_number = int(input("Enter second number"))
             return first_number,second_number
-        except:
+        except Exception as e:
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),file_io_obj.error_path)
             print("Numbers should be in digits only")    
             return numbers_input()
 
@@ -32,8 +35,9 @@ def division():
     try:
         first_num,second_num = numbers_input()
         return first_num / second_num
-    except:
+    except Exception as e:
         print("Second Number(Denominator) should not be zero")
+        file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),file_io_obj.error_path)
         return division()
     
 def main():    

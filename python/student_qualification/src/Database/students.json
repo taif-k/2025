@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "test",
+        "joined_date": "2025-07-23 20:31:59",
+        "qualification": [
+            {
+                "qname": "ba",
+                "passingyear": "2020"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "anothername",
+        "joined_date": "2025-07-23 20:32:20",
+        "qualification": [
+            {
+                "qname": "ma",
+                "passingyear": "2025"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "xyz",
+        "joined_date": "2025-07-23 20:32:30",
+        "qualification": [
+            {
+                "qname": "btech",
+                "passingyear": "2024"
+            }
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Sizes</title>
+    <style>
+        .width-fit-content{
+            width: fit-content;
+            height: 200px;
+        }
+
+        .width-min-content{
+            width: min-content;
+        }
+
+        .width-max-content{
+            width: max-content;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!--Fit-content takes only needed width or if the content is very large iy will take max width of its parent element-->
+        <div class="width-fit-content">lorem20
+
+        </div>
+
+        <!--In min-content the width is equal to the largest word-->
+        <div class="width-min-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quaerat! Necessitatibus in obcaecati quidem illum quos soluta, quaerat tempora assumenda?
+
+        </div>
+
+        <!--In max-content the width here is increased more than the main, horizontal scroller is applied auto. -->
+        <div class="width-max-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic quidem eligendi est nesciunt, dolore consequatur voluptas doloremque quis. Ab, amet possimus! Perferendis omnis ipsum at. Explicabo, quae saepe. Magni.
+
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,26 +1,14 @@
-import json
-import python as py_lang
+from python.OOPS.Student_Records_System.Domain.all_paths import paths_obj
+from python.Utils.file_io import file_io_obj
 
-datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Database\studentdata.json"
-errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Log\errorsdetail.txt"
 
 class DataOperations:
-        def __init__(self,datapath,errorlog_path):
+    def __init__(self, datapath):
+        try:
             self.recordspath = datapath
-            self.err_path = errorlog_path
-            self.studentlist = self.read_alldata()
+            self.studentlist = file_io_obj.read_alldata(self.recordspath)
+        except Exception as e:
+            print("Error logged...Try again after some time")
+            file_io_obj.update_errorslog(file_io_obj.get_errdetails(e),paths_obj.err_log_path)
 
-        def write_data(self):
-            with open(self.recordspath,"w") as file:
-                file.write(json.dumps(self.studentlist,indent=3))
-
-        def read_alldata(self):
-            try:
-                with open(self.recordspath, "r") as file:
-                    studentrecords = json.load(file)
-                    return studentrecords
-            except Exception as e:
-                print("Student Records are blank")
-                py_lang.update_errorslog(py_lang.error_details(e),self.err_path)
-                return []   
-            
+file_obj = DataOperations(paths_obj.datapath)

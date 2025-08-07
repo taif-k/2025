@@ -2,10 +2,8 @@ import sys
 import os
 sys.path.append(os.getcwd())
 
-import python as py_lang
+from python.OOPS.Student_Records_System.Domain.student_registration import StudentMenu
+from python.OOPS.Student_Records_System.Domain.all_paths import paths_obj
 
-datapath = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Database\studentdata.json"
-errorlog_path = r"D:\Repositories\2025\python\OOPS\Student_Records_System\Log\errorsdetail.txt"
-
-student_one = py_lang.StudentMenu(datapath,errorlog_path)
-student_one.menu_option()
+student_obj = StudentMenu(paths_obj.datapath)
+student_obj.menu_option()

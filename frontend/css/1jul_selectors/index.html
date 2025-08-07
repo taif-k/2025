@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        * { 
+            margin: 0;
+        }
+
+        #id_one{
+            color: blue;
+        }
+
+        .class_p{
+            border: .1rem solid red;
+        }
+
+        h5, h6{
+            color: green;
+        }
+        .section_desc_select p{
+            color: brown;
+        }
+
+        .section_child_select>p{
+            color: aqua;
+        }
+
+        p+h1{
+            color: orange;
+        }
+        p~h3{
+            border-bottom: 0.2rem;
+            border-color: blue;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+                                <!--UNIVERSAL SELECTOR-->
+<!--margin merge does happen in margin-block, if its margin-block then margins of two are merged -->
+    <h1 style="margin-bottom: 2rem;">Heading</h1>
+    <h2 style="margin-top: 2rem;">Sub-heading</h2>    
+<!--margin merge in each other doesnt happen in margin-inline, hello will take MR of 2rem then after 2rem hi will take 1rem -->
+    <p style="display:inline; margin-right: 2rem;">Hello</p> 
+    <p style="display: inline; margin-left: 1rem;">hi</p>
+
+                                <!--ID SELECTOR(keep it unique for every element)--> 
+    <h3 id="id_one">H3 tag</h3>
+    <h4 id="id_two">H4 tag</h4>
+    
+                                <!--CLASS SELECTOR-->
+    <p class="class_p">Class paragarph ONE Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, repudiandae.</p>
+    <p class="class_p">Class paragarph TWO Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, repudiandae.</p>
+
+                                <!--GROUP SELECTOR-->       
+    <h5>H5 Tag</h5>
+    <h6>H6 Tag</h6>    
+
+                                <!--DESCENDANT SELECTOR--> 
+    <section class="section_desc_select">
+     <p>p inside section 1</p> 
+     <div>
+        <P>Lorem, ipsum.</P>
+     </div>
+    </section>
+
+                                <!--CHILD SELECTOR-->
+    <section class="section_child_select">
+        <p>Direct child(p) of "section_child_select" class</p>
+        <div>
+            <p>Not direct child(p) of "section_child_select" class</p>
+        </div>
+    </section>
+
+                                <!--ADJACENT SELECTOR(+) & GENERAL SIBLING SELECTOR( ~ )-->    
+    <section class="section_adjacent_select">
+        <p>Direct child(p) of class section_adjacent_select </p>
+        <h1>h1(direct child) inside class "section_adjacent_select"</h2>
+        <p>Direct child(p) of class section_adjacent_select </p>
+        <h2>h2(direct child) inside class "section_adjacent_select"</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, consequatur!</span>
+            <h3>Lorem, ipsum dolor.</h3>
+        </div>
+    </section>
+                                
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        img{
+            max-width: 50%;    
+            height: auto;
+            height: 400px;
+            object-fit: fill;
+        }
+
+        .div-absoulte-unit{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .relative-precentage{
+            width: 50%; 
+            background-color: green;
+        }
+
+        .relative-em{
+            width: 5em;
+            background-color: blue;
+        }
+
+        .relative-rem{
+            width: 6rem;
+        }
+
+        .div-vw{
+            width: 100vw;
+            background-color: greenyellow;
+        }
+
+        .div-vh{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!--margin block and margin-inline isnt included in vw..any margin will cause scroller(sol do margin:0) -->
+        <div class="div-vw div-vh">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus facere consectetur error deleniti cumque omnis recusandae excepturi sint voluptatibus laudantium.
+        </div>
+
+        <!--when using max-width: 100% for image it can take max 100% of its parent's width
+        Parent is 500px wide.
+        Image is 300px wide.    
+        Result: Image stays 300px wide (not stretched to 500px).
+        If image is 800px wide, will be scaled down to 500px (to fit container).
+        
+        When using width:100%, parent's width and img will be same
+        Parent is 500px wide.
+        Image is 300px wide.
+        Result: Image stretches to 500px wide.
+        -->
+
+
+        <!--Object fit is used to scale image and prevent strech default value of object-fit is "fill"
+        
+        object-fit: cover
+        (if width is more height is less then some part of image vertically (height) will be cut) and vice versa
+        image is scaled from both w * h...aspect ratio is maintained thats why image is cropped vertically or horizontally
+        
+        object-fit: contain
+        image is not cropped, either width or height will be matched with its wrapper's w /h and if w is matched , there will be space with h and vice versa 
+        -->
+        <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" alt="sunset and trees">
+    </main>
+</body>
+</html>

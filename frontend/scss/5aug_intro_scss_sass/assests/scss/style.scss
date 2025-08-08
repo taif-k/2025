@@ -20,6 +20,11 @@
     }
 }
 
-.btn-primary ,.btn-accent{
+.btn-primary{
     @include button($rem-05,dotted,$blue-color)
+}
+
+.btn-accent{
+    @extend .btn-primary;
+    color: $red-color;
 }

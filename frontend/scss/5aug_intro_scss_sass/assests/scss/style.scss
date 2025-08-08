@@ -1,8 +1,8 @@
 @import "./_variable.scss";
-@import "./mixin.scss";
+@import "./_mixin.scss";
 
 .h1-color {
-    color: $red-color;
+    color: map-get($original-colors,'$blue-color')
 }
 
 .main_ul_four_links {
@@ -21,10 +21,10 @@
 }
 
 .btn-primary{
-    @include button($rem-05,dotted,$blue-color)
+    @include button($rem-05,dotted,map-get($original-colors,'$red-color'))
 }
 
 .btn-accent{
     @extend .btn-primary;
-    color: $red-color;
+    color: map-get($original-colors,'$blue-color');
 }

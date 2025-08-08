@@ -2,7 +2,11 @@
 @import "./_mixin.scss";
 
 .h1-color {
-    color: map-get($original-colors,'$blue-color')
+    color: map-get($map-merged-colors,'$red-color')
+}
+
+.h2-clr{
+    color: map-get($dark-shades,'$red-color');
 }
 
 .main_ul_four_links {
@@ -21,10 +25,10 @@
 }
 
 .btn-primary{
-    @include button($rem-05,dotted,map-get($original-colors,'$red-color'))
+    @include button($rem-05,dotted,map-get($dark-shades,'$red-color'))
 }
 
 .btn-accent{
     @extend .btn-primary;
-    color: map-get($original-colors,'$blue-color');
+    color: map-get($dark-shades,'$blue-color');
 }

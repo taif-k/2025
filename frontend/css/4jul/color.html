@@ -11,10 +11,15 @@
             margin-top: 50px;
             background-color: burlywood;
         }
-        .bg-img{
+        .bg-img-one{
             background-image: url('./images/pexels-photo-206359.jpeg');
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-img-two{
+            background: red url('./images/pexels-photo-206359.jpeg') no-repeat left bottom / contain scroll;
         }
     </style>
 </head>
@@ -39,9 +44,23 @@
         <!--background-size: fill(default)
         In fill - if img is small it will strech
         In contain - if img is scaled till either side (w or h) is not touched and image is not cropped
-        In cover - if there is not excat fit, img will be cropped-->
-        <div class="bg-box bg-img">
+        In cover - if there is not excat fit, img will be cropped
+        
+        background-position: center (centre part of image will be shown)
+        background-attachment: scroll;(default)
+        
+        SHORTHAND for all background properties
 
+        ------------------ background: bg-clr bg-img bg-repeat bg-position/bg-size bg-attachment   CIRP/SA
+        
+        -->
+        <div class="bg-box bg-img-one">
+        </div>
+
+        <div class="bg-box bg-img-two">
+        </div>
+
+        <div class="bg-box">
         </div>
     
     </main>

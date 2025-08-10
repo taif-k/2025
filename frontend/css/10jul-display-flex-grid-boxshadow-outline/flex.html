@@ -11,7 +11,17 @@
         <!--When flex-wrap:wrap is used elements will come in next line if there is no space for next element, and if nowrap is used then it will not break 
         when using wrap with flex-direction: column, height should be given to flex-container so that wrap works with column too
         
-        align-items: flex-end/flex-start/center/other are used for controlling direction for elements to start with-->
+        align-items: flex-end/flex-start/center/other are used for controlling direction for elements to start with
+
+        JUSTIFY-CONTENT WORKS ON SAME FLEX DIRECTION 
+        1. justify-content: space-BEWTWEEN ( Flex items are evenly distributed in the line and stick to the left and right respectively )
+        2. justify-content: space-AROUND ( if container width 800px, and there are 5 flex items(each 100px width: total 500px)300px left )
+        thn 300 will be divided be no of flex item that is 300/5 = 60(for each ele, 60/2 = 30 for left and right side each)
+
+        3. justify-content: space-EVENLY same space across each elemnt on left and right unlike space-around
+        justify-content: flex-start
+        justify-content: flex-end
+        -->
         <div class="flex-container">
             <div class="flex-item">1</div>
             <div class="flex-item">2</div>

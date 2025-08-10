@@ -39,6 +39,7 @@
     flex-wrap: wrap;
     /* height: 250px; */
     align-items: flex-end;
+    justify-content:space-evenly;
 }
 
 

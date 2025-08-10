@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Box Model</title>
     <style>
-        .box{
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
             /* display: inline-block; */
             width: 200px;
             height: 200px;
             background-color: red;
-            padding-block: 1rem 4rem;
-            padding-inline: 2rem 4rem;
+            padding-block: 1rem;
+            padding-inline: 1rem;
             margin: 1rem;
         }
-
     </style>
 </head>
 
@@ -24,9 +29,8 @@
         <!--In display:inline margin/padding block are not into effect..use inline-block for block level element or other-->
         <!--margin width is more than viewport width scroller will appear-->
         <div class="box">
-            <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis modi aliquam ea similique voluptatum
-                tenetur consectetur architecto, repellendus voluptatibus officiis provident et maxime quod cupiditate
-                excepturi eveniet numquam deleniti nemo?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis modi aliquam ea similique voluptatum
+                tenetur consectetur Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing</p>
         </div>
         <!-- <div class="box">
             <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis modi aliquam ea similique voluptatum
@@ -37,3 +41,12 @@
 </body>
 
 </html>
+
+
+<!-- if fixed width(or max-width) is given to block-level element and set margin-inline: auto;, 
+     the element will be horizontally centered inside its parent
+     
+     
+     WIDTH OF ELEMENT = WIDTH OF CONTENT + PADDING + BORDER
+     
+     box-sizing : border-box, when using this the width of content wont included extra padding and border width given, width of element will be whatever set -->

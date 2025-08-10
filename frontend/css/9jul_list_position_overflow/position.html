@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Position</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box, .middle-box {
+            border: 3px solid red;
+            width: 200px;
+            height: 180px;
+            text-align: center;
+        }
+
+        .middle-box {
+            border: 3px solid black;
+
+        }
+
+        .position-abs{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .position-rel{
+            position: relative;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .box2{
+            width: 15px;
+            height: 15px;
+            border: .1rem solid orangered;
+        }
+
+        .position-fixd{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        .position-sticky{
+            position: sticky;
+            top: 10px;
+            border-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box ">
+            1
+        </div>
+        <div class="box position-sticky">
+            sticky
+        </div>
+
+        <div class="box position-fixd">
+
+        </div>
+        <!--position: static is default value-->
+        <div class="middle-box position-rel">
+            <div class="box2 position-abs">
+                    position absolute
+            </div>
+        </div>
+        <div class="box">
+            
+        </div>
+        <div class="box">
+            
+        </div>
+        <div class="box">
+            Nesciunt fugit amet, eum ut minus odio officiis beatae iste modi id voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, architecto? perspiciatis voluptate delectus ipsam inventore illum provident corporis sunt?
+        </div>
+    </main>
+</body>
+
+</html>
+
+<!--In Position:relative it takes  own original postion to  have effect of Top/Right/Bottom/Left(inset for all)
+
+In Position:absolute it takes the  postion of closest ancestor(and not sibling) which has position rel/fixed/sticky(doesnt work with static) to have effect of 
+Top/Right/Bottom/Left(inset for all) and if no ancestor is poition rel it will position itself with body-->

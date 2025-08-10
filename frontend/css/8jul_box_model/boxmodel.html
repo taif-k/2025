@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Box Model</title>
+    <style>
+        .box{
+            /* display: inline-block; */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding-block: 1rem 4rem;
+            padding-inline: 2rem 4rem;
+            margin: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <!--In display:inline margin/padding block are not into effect..use inline-block for block level element or other-->
+        <!--margin width is more than viewport width scroller will appear-->
+        <div class="box">
+            <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis modi aliquam ea similique voluptatum
+                tenetur consectetur architecto, repellendus voluptatibus officiis provident et maxime quod cupiditate
+                excepturi eveniet numquam deleniti nemo?</p>
+        </div>
+        <!-- <div class="box">
+            <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis modi aliquam ea similique voluptatum
+                tenetur consectetur architecto, repellendus voluptatibus officiis provident et maxime quod cupiditate
+                excepturi eveniet numquam deleniti nemo?</p>
+        </div> -->
+    </main>
+</body>
+
+</html>

@@ -28,15 +28,31 @@
         ALIGN-ITEM WORKS WITH FLEX DIRECTION IN DIFF WAY THAN JUSTIFY-CONTENT | FLEX-DIRECTION IS ROW ALIGN ITEM WILL WORK ON COLUMN AND VICE VERSA
          -->
         <div class="flex-container">
+            <!--order is 0 (default), lesser the order, that will appear first-->
             <div class="flex-item">Item 1 Lorem, ipsum. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.</div>
             <div class="flex-item">Item 2 Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quasi laudantium sed commodi eaque nobis quibusdam, illo nostrum excepturi accusantium, quae aperiam consectetur quos modi? ipsum dolor sit amet.</div>
             <div class="flex-item">Item 3 Lorem ipsum dolor sit.</div>
             <div class="flex-item">Item 4 Lorem, Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, consequuntur. ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, labore.
                 Lorem, ipsum dolor.</div>
             <div class="flex-item">Item 5 Lorem, ipsum dolor.</div>
+
+            <!--flex-grow(0/1) when this is applied on an flex-item or all flex-item, it/will take the remaining space left in a row-->
             <div class="flex-item">Item 6 Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ullam sed ab quisquam amet dignissimos quos consectetur sapiente omnis id, nesciunt ut! Veritatis, ipsa soluta.</div>
             <div class="flex-item">Item 7 Lorem</div>
         </div>
+
+        <div class="flex-container">
+            <div class="img" style="background-color: blue; height: 100px; width: 50%; flex-grow: 1;">
+
+            </div>
+            <div class="content" style="background-color: green; height: 100px; width: 50%; flex-basis: 200px;">
+
+            </div>
+        </div>
+
+            <!--flex-shrink(0/1) tells if width of element should decrease or not in responsive design
+            align-self is used to alter individual element alignment, so thers will work with align-items and align-self with work with whatever element its applied on
+            -->
     </main>
 </body>
 

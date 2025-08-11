@@ -44,6 +44,16 @@
     width: 25%;
 }
 
+.flex-item:nth-child(1){
+    order: 1;
+}
+
+.flex-item:nth-child(6){
+        flex-grow: 1;
+}
+
+
+
 
 .grid-container {
     display: grid;

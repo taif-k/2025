@@ -25,21 +25,23 @@
     display: none;
 }
 
-.flex-item {
-    width: 100px;
-    height: 100px;
-    border: 2px solid red;
-    text-align: center;
-}
 
 .flex-container {
+    padding: 0 10px ;
     display: flex;
     /* flex-direction:column; */
     flex-direction: row;
     flex-wrap: wrap;
     /* height: 250px; */
-    align-items: flex-end;
-    justify-content:space-evenly;
+    justify-content:space-around;
+    border: 1px solid red;
+    align-items:center;
+}
+
+.flex-item {
+    padding: 1rem;
+    border: 1px solid black;
+    width: 25%;
 }
 
 

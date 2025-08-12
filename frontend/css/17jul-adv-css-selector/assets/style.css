@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.flex-container{
+    display: flex;
+    gap:5px
+}
+
+.flex-container .card{
+    border: 2px solid red;
+    width: 33.3%;
+}
+
+.flex-container .card-body{
+    padding: 10px;
+}
+
+/*:not(img) will not work because it will check whatever card is not image, 
+  here div is not image, inside div it has image so we are using :not(:has(img))*/
+.flex-container .card:not(:has(>img)){ 
+    background-color: orange;
+}

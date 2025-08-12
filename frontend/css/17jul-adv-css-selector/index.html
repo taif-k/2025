@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Advance Selectors</title>
-    <link href="./assets/style.css">
+    <link  rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
     <header>
         <h1>Css Advance Selectors</h1>
     </header>
     <main>
-        <div class="container">
-            
+        <!--Pseudo normal classes
+        :hover, :focus, :valid, :invalid, :active, :empty  specificity(10)-->
+
+        <!--Pseudo adv classes
+        :not (specificity -10, doesnt matter whats inside it), it checks at same level
+        :has, 
+        :is (specificity is decided on what inside it has the most specificity), 
+        :where (specificity -0, doesnt matter whats inside it)-->
+        <div class="flex-container">
+            <div class="card">
+                <img src="./assets/projectstructure.PNG" alt="test image" />
+                <div class="card-body">
+                    <h2>card 1</h2>
+                    <P>Lorem ipsum dolor sit. . Lorem ipsum dolor sit amet.</P>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/projectstructure.PNG" alt="test image" />
+                <div class="card-body">
+                    <h2>card 2</h2>
+                    <P>Lorem ipsum dolor sit. . Lorem ipsum dolor sit amet.</P>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h2>card 3</h2>
+                    <P>Lorem ipsum dolor sit. . Lorem ipsum dolor sit amet.</P>
+                </div>
+            </div>
         </div>
     </main>
-    
+
 </body>
+
 </html>

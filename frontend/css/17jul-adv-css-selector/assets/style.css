@@ -28,3 +28,27 @@ img{
 .flex-container .card:not(:has(>img)){ 
     background-color: orange;
 }
+
+
+/*specificity is 11*/
+/* :is(.flex-container, .flex-container-two) h2{
+    color: rgb(61, 61, 245);
+} */
+
+
+/*specificity is 1, so this will be applied on h2 outside containers*/
+/* h2{
+    color: purple;
+} */
+
+
+/*specificity is 0 +  = 1*/
+:where(.flex-container, .flex-container-two) h2{
+    color: rgb(61, 61, 245);
+}
+
+
+/*specificity is  also 1, so specificity is same cascade rule comes into effect ,so this will be applied on all h2 where will be overidden*/
+h2{
+    color: purple;
+}

@@ -52,3 +52,17 @@ img{
 h2{
     color: purple;
 }
+
+
+.parent{
+    padding: 2rem;
+    display: inline-block;
+}
+
+.child:not(:last-child){
+    margin-bottom: .5rem;
+}
+
+.child:nth-child(1){
+    color: blueviolet;
+}

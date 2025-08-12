@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+   --primary-color: crimson;
+   --accent-color: blue;
+}
+
+main{
+    padding: 3rem 1rem;
+}
+
+.btn{
+    --bg-color: var(--primary-color, red);
+    --color: white;
+    --border-color: var(--primary-color, red);
+    display: inline-block;
+    padding: .4rem .75rem;
+    border-radius: .4em;
+   
+    color: var(--color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color)
+}
+.rounded-pill{
+    border-radius: 30px;
+}
+
+.btn-primary{
+     --bg-color: var(--primary-color);
+     --color: white;
+     --border-color:  var(--accent-color);
+}
+.btn-accent{
+     --bg-color: var(--accent-color);
+     --color: white;
+     --border-color:  var(--accent-color);
+}
+.btn-outline-primary{
+    --bg-color: transparent;
+    --color: var(--primary-color);
+    --border-color: var(--primary-color)
+}
+
+h3{
+    color: var(--primary-color, red);
+    
+    background: var(--bg-color);
+}
+
+.flex-container{
+   display: flex; 
+   justify-content: space-between;
+   --gap: 40px;
+   gap: var(--gap);
+   --columns: 4;
+   flex-wrap: wrap;
+}
+
+.flex-item{
+    background: gray;
+    width: calc((100% - (var(--columns) - 1 )*var(--gap))/ var(--columns));
+}
+
+@media (max-width: 991.98px){
+    .flex-container{
+        --columns: 2;
+        --gap: 10px
+    }
+     body{
+        background: aqua;
+    }
+}
+@media (max-width: 575px){
+    .flex-container{
+        --columns: 1;
+    }
+   
+}
+@media (min-width: 992px) and (max-width: 1399.98px){
+     body{
+        background-color:rgb(250, 207, 151) ;
+    }
+   
+}
+@media (min-width: 992px) and (orientation: portrait){
+     body{
+        background-color:yellowgreen ;
+    }
+   
+}
+
+@media print {
+    body{
+        background: white;
+    }
+}

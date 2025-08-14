@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Color</title>
+    <style>
+        .bg-box{
+            width: 100%;
+            height: 80vh;
+            margin-top: 50px;
+            background-color: burlywood;
+        }
+        .bg-img-one{
+            background-image: url('./images/pexels-photo-206359.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-img-two{
+            background: red url('./images/pexels-photo-206359.jpeg') no-repeat left bottom / contain scroll;
+        }
+        .bg-gradient{
+            background-image: linear-gradient(to right ,rgb(117, 117, 239) 20%,rgb(135, 222, 135), rgb(236, 99, 99));
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!--color is applied on text only-->
+        
+        <!--FORMAT OF COLOR'S VALUE-->
+
+        <!-- 1. Named colors-->
+        <p style="color: blue;">NAMED colors Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, temporibus?</p>
+        
+        <!-- 2. hexa colors-->
+        <p style="color: #ff002f88;">HEX colors #RRGGBB will have more color combinations than #RGB. Repudiandae, temporibus?</p>
+        
+        <!-- 3. rgb colors -->
+        <p style="color: rgb(23, 195, 23);">RGB colors (0-255,0-255,0-255) use rgba(aplha) to add opcaity, 0 -full opacity ff no transparency, in rgba a is either 0 to 1</p>
+        
+        <!-- 4. hsl colors-->
+        <p style="color: hsl(0, 100%, 50%);"> HSL colors color: hsl(0-360(in deg, 0deg - red), 0-100% grey is mixed, 0-100%) for same color lightness should be 50%</p>
+
+        <!--background-size: fill(default)
+        In fill - if img is small it will strech
+        In contain - if img is scaled till either side (w or h) is not touched and image is not cropped
+        In cover - if there is not excat fit, img will be cropped
+        
+        background-position: center (centre part of image will be shown)
+        background-attachment: scroll;(default)
+        
+        SHORTHAND for all background properties
+
+        ------------------ background: bg-clr bg-img bg-repeat bg-position/bg-size bg-attachment   CIRP/SA
+        
+        -->
+        <div class="bg-box bg-img-one">
+        </div>
+
+        <div class="bg-box bg-img-two">
+        </div>
+
+        <div class="bg-box bg-gradient">
+        </div>
+    
+    </main>
+</body>
+</html>
+
+<!--Decimal base 10 (0-9)-->
+<!--Binary base 2 (0-1)-->
+<!--Octal  base 8 (0-7)-->
+<!--Hexa base 16 (0-9 A-F)-->

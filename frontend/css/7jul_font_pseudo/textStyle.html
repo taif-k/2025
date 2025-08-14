@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling</title>
+</head>
+<style>
+    p {
+        text-align: right;
+        text-decoration: overline;
+        text-transform: capitalize;
+        /* letter-spacing: 0.5rem; */
+        word-spacing: 2rem;
+        text-shadow: 1px 1px 1px rgb(126, 126, 201);
+        
+    }
+
+    span{
+        display: inline-block;
+        text-align: right;
+        text-decoration: overline;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+        word-spacing: 2rem;
+        width: 300px;
+        white-space: nowrap;
+    }
+
+    a:hover{
+        color: rgb(233, 88, 88);
+    }
+    a:focus{
+        color: rgb(88, 233, 216);
+    }
+    a:visited{
+        color: rgb(192, 233, 88);
+    }
+</style>
+
+<body>
+    <main>
+        <!--letter-spacing is used for horizontal letter gap-->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, eius.
+        </p>
+
+        <!--text-transform: capitalize will not work on title because its first letter is already in capital-->
+        <p>
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, eius.
+        </p>
+
+        <!--when white-space: nowrap; is used even if width 300px is given words(taking more than 300px) didnt break-->
+        <span>
+            lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor laudantium quidem atque enim. Non
+        </span>
+
+        <!--when we use tab on a it will show the color defined in focus-->
+        <div>
+            <a href="https://google.com" target="_blank" rel="noopener noreferrer">Google</a>
+        </div>
+        
+    </main>
+</body>
+
+</html>

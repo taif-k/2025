@@ -1,3 +1,14 @@
-$red-color: red;
 $rem-05: 0.5rem;
-$blue-color: blue;
+
+$dark-shades: (
+    '$red-color': rgb(99, 2, 2),
+    '$blue-color': rgb(0, 0, 97)
+    );
+
+$light-shades: (
+    '$red-color': rgb(247, 123, 123),
+    '$blue-color': rgb(92, 92, 230)
+    );
+
+
+$map-merged-colors: map-merge($map1: $dark-shades, $map2: $light-shades);

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Flexbox</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <!--When flex-wrap:wrap is used elements will come in next line if there is no space for next element, and if nowrap is used then it will not break 
+        when using wrap with flex-direction: column, height should be given to flex-container so that wrap works with column too
+        
+        align-items: flex-end/flex-start/center/other are used for controlling direction for elements to start with
+
+        JUSTIFY-CONTENT WORKS ON SAME FLEX DIRECTION 
+        1. justify-content: space-BEWTWEEN ( Flex items are evenly distributed in the line and stick to the left and right respectively )
+        2. justify-content: space-AROUND ( if container width 800px, and there are 5 flex items(each 100px width: total 500px)300px left )
+        thn 300 will be divided be no of flex item that is 300/5 = 60(for each ele, 60/2 = 30 for left and right side each)
+
+        3. justify-content: space-EVENLY same space across each elemnt on left and right unlike space-around
+        justify-content: flex-start
+        justify-content: flex-end
+        
+        
+        ALIGN-ITEM WORKS WITH FLEX DIRECTION IN DIFF WAY THAN JUSTIFY-CONTENT | FLEX-DIRECTION IS ROW ALIGN ITEM WILL WORK ON COLUMN AND VICE VERSA
+         -->
+        <div class="flex-container">
+            <!--order is 0 (default), lesser the order, that will appear first-->
+            <div class="flex-item">Item 1 Lorem, ipsum. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.</div>
+            <div class="flex-item">Item 2 Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quasi laudantium sed commodi eaque nobis quibusdam, illo nostrum excepturi accusantium, quae aperiam consectetur quos modi? ipsum dolor sit amet.</div>
+            <div class="flex-item">Item 3 Lorem ipsum dolor sit.</div>
+            <div class="flex-item">Item 4 Lorem, Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, consequuntur. ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, labore.
+                Lorem, ipsum dolor.</div>
+            <div class="flex-item">Item 5 Lorem, ipsum dolor.</div>
+
+            <!--flex-grow(0/1) when this is applied on an flex-item or all flex-item, it/will take the remaining space left in a row-->
+            <div class="flex-item">Item 6 Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ullam sed ab quisquam amet dignissimos quos consectetur sapiente omnis id, nesciunt ut! Veritatis, ipsa soluta.</div>
+            <div class="flex-item">Item 7 Lorem</div>
+        </div>
+
+        <div class="flex-container">
+            <div class="img" style="background-color: blue; height: 100px; width: 50%; flex-grow: 1;">
+
+            </div>
+            <div class="content" style="background-color: green; height: 100px; width: 50%; flex-basis: 200px;">
+
+            </div>
+        </div>
+
+            <!--flex-shrink(0/1) tells if width of element should decrease or not in responsive design
+            align-self is used to alter individual element alignment, so thers will work with align-items and align-self with work with whatever element its applied on
+            -->
+    </main>
+</body>
+
+</html>

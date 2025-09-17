@@ -33,3 +33,4 @@
 {"module": "_openpyxl.py", "function": "_write_cells", "error": "Sheet 'Links' already exists and if_sheet_exists is set to 'error'.", "date": "2025-07-25 08:42:39", "line": 463}
 {"module": "common.py", "function": "get_handle", "error": "[Errno 13] Permission denied: 'D:\\\\Repositories\\\\2025\\\\python\\\\web_scrap_concepts\\\\src\\\\Database\\\\npi_data.xlsx'", "date": "2025-07-25 08:53:37", "line": 882}
 {"module": "_openpyxl.py", "function": "_write_cells", "error": "Sheet 'Links' already exists and if_sheet_exists is set to 'error'.", "date": "2025-07-25 08:56:10", "line": 463}
+{"module": "common.py", "function": "get_handle", "error": "[Errno 13] Permission denied: 'D:\\\\Repositories\\\\2025\\\\python\\\\web_scrap_concepts\\\\Scrap_Html\\\\src\\\\Database\\\\npi_data.xlsx'", "date": "2025-08-12 15:24:37", "line": 882}

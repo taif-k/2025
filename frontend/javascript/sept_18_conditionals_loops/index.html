@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditionals & Loops</title>
+</head>
+<body>
+  <p id="Conditionals"></p>
+  <p id="switch"></p>
+
+  <script>
+    let numb = 80
+    // let numb = prompt('Enter Score: ');
+    let output = "";
+
+    if (numb > 80) {
+      output = "Above 80";
+    } else if (numb < 80) {
+      output = "Less than 80";
+    } else {
+      output = "Equal to 80";
+    }
+
+    let fruit = prompt('Enter Fruit Name')
+    switch(fruit){
+      case 'apple': outpt = 'This is a apple';
+      break;
+      case 'mango': outpt = 'This is a mango';
+      break;
+    }
+
+    document.getElementById('switch').textContent = outpt;
+    document.getElementById('Conditionals').textContent = output;
+  </script>
+</body>
+</html>

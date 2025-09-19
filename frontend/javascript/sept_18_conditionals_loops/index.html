@@ -8,8 +8,10 @@
 <body>
   <p id="Conditionals"></p>
   <p id="switch"></p>
+  <p id="ternary"></p>
 
   <script>
+    // if else if
     let numb = 80
     // let numb = prompt('Enter Score: ');
     let output = "";
@@ -22,7 +24,10 @@
       output = "Equal to 80";
     }
 
-    let fruit = prompt('Enter Fruit Name')
+
+    // switch
+    // let fruit = prompt('Enter Fruit Name')
+    let fruit = 'apple'
     switch(fruit){
       case 'apple': outpt = 'This is a apple';
       break;
@@ -30,6 +35,12 @@
       break;
     }
 
+
+    // ternary
+    let age = 18
+    let ternaryoutput = age >= 18 ? 'Adult': 'Minor'
+    
+    document.getElementById('ternary').textContent = ternaryoutput
     document.getElementById('switch').textContent = outpt;
     document.getElementById('Conditionals').textContent = output;
   </script>

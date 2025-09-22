@@ -44,10 +44,11 @@
         let j = 2
         let k = '2.0'
 
-        let l = false
-        let m = 0 // l to r
-        document.getElementById('and').textContent = l && m
-        
+        let l = 0
+        let m = undefined // l to r
+        let n = l && m
+        document.getElementById('and').textContent = String(n) 
+        // document.getElementById('and').textContent = typeof(String(n)) 
         
         document.getElementById('addition').textContent = i
         document.getElementById('equal').textContent = j == k

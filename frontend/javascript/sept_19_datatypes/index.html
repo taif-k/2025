@@ -14,6 +14,9 @@
     <p id="page6"></p>
     <p id="page7"></p>
     <p id="page8"></p>
+    <p id="addition"></p>
+    <p id="equal"></p>
+    <p id="and"></p>
 
     <script>
         let a = 'string'
@@ -32,14 +35,23 @@
             string: 'name',
             Number: 123
         }
+        let g = 1
+        // let h = 2
+        let h = 'str'
+        let i = g - h
+        // i += 3
+        
+        let j = 2
+        let k = '2.0'
 
-        typeoutput1 = 
-        typeoutput2 = 
-        typeoutput3 = 
-        typeoutput4 = 
-        typeoutput5 = 
-        typeoutput6 = 
-
+        let l = true
+        let m = '1'
+        document.getElementById('and').textContent = l && m
+        
+        
+        document.getElementById('addition').textContent = i
+        document.getElementById('equal').textContent = j == k
+        // document.getElementById('equal').textContent = j === k
         document.getElementById('page').textContent = typeof(a)
         document.getElementById('page2').textContent = typeof(b)
         document.getElementById('page3').textContent = typeof(c)

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number & Date</title>
+</head>
+
+<body>
+    <p id='withdeci'></p>
+    <p id='withoutdeci'></p>
+    <p id="currentdate"></p>
+    <script>
+        // let x = parseFloat(prompt('Enter decimal number')) // round off and value is compared with 5 
+        // let y = prompt('Enter a number to check if its Nan')
+        // let createdate = new Date(y,,m,d,h,s,ms)
+        let createdate = new Date()
+        // let createdate = new Date().toLocaleString()
+        // let createdate = new Date().getUTCHours()
+        // let createdate = new Date().getHours()
+        // document.getElementById('withdeci').textContent = x.toFixed(2)
+        // document.getElementById('withoutdeci').textContent = isNaN(y)
+        document.getElementById('currentdate').textContent = typeof(createdate)
+        document.getElementById('currentdate').textContent = createdate   
+    </script>
+
+</body>
+
+</html>

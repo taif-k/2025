@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Strings</title>
+</head>
+
+<body>
+    <p id="addition"></p>
+    <p id="arrowfunc"></p>
+    <p id="str"></p>
+    <script>
+        addition(5, 5)
+        function addition(a, b) {
+            // document.getElementById('addition').textContent = a + b
+        }
+        addition(5, 2)
+
+        // add(5,2)
+        const add = function (a, b) {
+            document.getElementById('addition').textContent = a + b
+        }
+        add(5,3)
+
+        var arrfunc = ()=>{
+            document.getElementById('arrowfunc').textContent = 'hello'
+        }
+        arrfunc()
+
+        let f_name = 'hello'
+        let l_name = 'world'
+        let full_name = `This is ${f_name} ${l_name} string`
+        // document.getElementById('str').textContent = full_name.slice(0,-1) // -1 in indexing for last ch
+        // document.getElementById('str').textContent = full_name.replace('string','')
+        document.getElementById('str').textContent = full_name.split(',')
+        // document.getElementById('str').textContent = full_name.trim()
+        // document.getElementById('str').textContent = full_name.includes('str')
+        // document.getElementById('str').textContent = full_name.charAt(full_name.length - 1)
+        // document.getElementById('str').textContent = full_name.charAt(0)
+        // document.getElementById('str').textContent = full_name.length
+
+        // addition(5,4)
+    </script>
+</body>
+
+</html>

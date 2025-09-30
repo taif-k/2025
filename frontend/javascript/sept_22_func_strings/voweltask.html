@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels, consonants and Digits Task</title>
+</head>
+
+<body>
+    <script>
+        function analyzeString(str) {
+            let sp_ch = 0
+            let vowels = 0
+            let consonants = 0
+            let digits = 0
+            
+            for (let i = 0; i < str.length; i++) {
+                let character = str[i].toLowerCase();
+
+                if ("aioue".includes(character)) {
+                    vowels++;
+                } else if (character >= "a" && character <= "z") {
+                    consonants++;
+                } else if (character >= "0" && character <= "9") {
+                    digits++;
+                }
+                else {
+                    sp_ch++
+                }
+            }
+
+            console.log("This string has " + vowels + " vowels " + consonants + " consonants and " + digits + " digits ");
+            // console.log("This string has " + vowels + " vowels " + consonants + " consonants and " + digits + " digits " + " special character" + sp_ch);
+        }
+
+        analyzeString('taif 123');
+
+    </script>
+</body>
+
+</html>

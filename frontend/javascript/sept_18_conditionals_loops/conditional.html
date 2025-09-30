@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditionals</title>
+</head>
+<body>
+  <p id="Conditionals"></p>
+  <p id="switch"></p>
+  <p id="ternary"></p>
+
+  <script>
+    // if else if
+    let numb = 80
+    // let numb = prompt('Enter Score: ');
+    let output = "";
+
+    if (numb > 80) {
+      output = "Above 80";
+    } else if (numb < 80) {
+      output = "Less than 80";
+    } else {
+      output = "Equal to 80";
+    }
+
+
+    // switch
+    // let fruit = prompt('Enter Fruit Name')
+    let fruit = 'apple'
+    switch(fruit){
+      case 'apple': outpt = 'This is a apple';
+      break;
+      case 'mango': outpt = 'This is a mango';
+      break;
+    }
+
+
+    // ternary
+    let age = 18
+    let ternaryoutput = age >= 18 ? 'Adult': 'Minor'
+    
+    document.getElementById('ternary').textContent = ternaryoutput
+    document.getElementById('switch').textContent = outpt;
+    document.getElementById('Conditionals').textContent = output;
+  </script>
+</body>
+</html>

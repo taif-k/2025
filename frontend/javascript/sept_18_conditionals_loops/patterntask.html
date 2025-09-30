@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Patterns</title>
+</head>
+<body>
+  <pre id="stars"></pre>
+
+  <script>
+    let n = parseInt(prompt("Enter number of rows:"));
+    let leftoutput = "";
+    let rightoutput = "";
+    let pyramidoutput = "";
+
+    for (let i = 1; i <= n; i++) {
+      let row = "";
+      for (let j = 1; j <= i; j++) {
+        row += "*";
+      }
+      leftoutput += row + "\n";
+    }
+
+    for (let i = 1; i <= n; i++) {
+      let row = "";
+      for (let s = 1; s <= n - i; s++) {
+        row += " ";
+      }
+      for (let j = 1; j <= i; j++) {
+        row += "*";
+      }
+      rightoutput += row + "\n";
+    }
+   
+    document.getElementById("stars").textContent =
+      "\n" + leftoutput +
+      "\n\n" + rightoutput
+  </script>
+</body>
+</html>

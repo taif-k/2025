@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes</title>
+</head>
+<body>
+    <script>
+        // let arrOne = ["five",6,"seven"]
+        // console.log(arrOne.join()) 
+        // console.log(arrOne[1])
+        // console.log(typeof(arrOne[1]))
+        // console.log(arrOne.includes("6"))
+
+        let arrOne = ["five",6,"seven"]
+        console.log('Before using join()')
+        console.log(arrOne)
+        console.log(`arrOne[0]: ${arrOne[0]}  |  typeof: ${typeof(arrOne[0])}`)
+        console.log(`arrOne[1]: ${arrOne[1]}  |  typeof: ${typeof(arrOne[1])}`)
+        console.log(`arrOne[2]: ${arrOne[2]}  |  typeof: ${typeof(arrOne[2])}`)
+        arrOne =  arrOne.join()
+
+        console.log(arrOne[5], typeof(arrOne[5]))
+        console.log(arrOne.includes("6"))
+
+
+    </script>
+</body>
+</html>

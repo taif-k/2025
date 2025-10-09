@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping over array</title>
+</head>
+<body>
+    <script>
+        let array = [1,2,3]
+
+        // forEach
+        console.log('forEach')
+        array.forEach((array,i)=>{ 
+            console.log(`Index ${i}: ${array}`) // change params order and check???
+        });
+        
+        
+        // for Of
+        console.log('for of')
+        for (const [element,i] of array.entries()) {
+            console.log(element,i)
+        }
+
+        // map()
+        console.log('map()')
+
+        let newArr = array.map((element)=>{
+            return element  - 1  // use return keyword when using {}, otherwise output will be undefined 
+        })
+        console.log(array)
+        console.log(newArr) 
+    </script>
+</body>
+</html>

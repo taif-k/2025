@@ -13,12 +13,30 @@
         // console.log(arr2)
         // console.log(arr2[arr2.length - 1])
         
-        let arr3 = ["one",'two'] // using single & double quotes
+        let arr3 = [1,'2'] 
         let arr4 = ["three",4]
-        let finalArr = arr3.concat(arr4) // doesnt modify old arr
-        console.log(finalArr)
-        console.log(arr3)
-        console.log(arr4)
+
+        let joinArr = arr3.join() // if join is used whole arr becomes string including ,
+        //  but without join normal array index will be different
+        
+        
+        // console.log(joinArr[1],joinArr[2])  // this will give output as "/" "@" if sep is '/@'
+        console.log(joinArr[0])
+        console.log(typeof(joinArr[0]))
+
+        console.log(joinArr[1])
+        console.log(typeof(joinArr[1]))
+
+        console.log(joinArr[2])
+        console.log(typeof(joinArr[2]))
+
+        
+        let concatArr = arr3.concat(arr4) // doesnt modify old arr
+        // console.log(concatArr)
+
+        // console.log(finalArr)
+        // console.log(arr3)
+        // console.log(arr4)
     </script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h2>Registration Form</h2>
+  <form id="userForm">
+    <p id="errorMsg" class="error"></p>
+    
+    <label>First Name:</label>
+    <input type="text" id="fname" placeholder="Enter first name">
+
+    <label>Last Name:</label>
+    <input type="text" id="lname" placeholder="Enter last name">
+
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter email">
+
+    <label>Mobile No:</label>
+    <input type="text" id="mobile">
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Password">
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" placeholder="Re-enter password">
+
+    <div class="gender">
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="M"> Male
+      <input type="radio" name="gender" value="F"> Female
+      <input type="radio" name="gender" value="O"> Other
+    </div>
+
+    <div class="skills">
+      <label>Skills:</label>
+      <input type="checkbox" name="skills" value="C"> C
+      <input type="checkbox" name="skills" value="Python"> Python
+      <input type="checkbox" name="skills" value="HTML"> HTML
+      <input type="checkbox" name="skills" value="CSS"> CSS
+      <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+      <input type="checkbox" name="skills" value="Bootstrap"> Bootstrap
+      <input type="checkbox" name="skills" value="React"> React
+    </div>
+
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Clear</button>
+    </div>
+
+    
+  </form>
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      let error = "";
+      try {
+        const fname = document.getElementById("fname").value?.trim();
+        const lname = document.getElementById("lname").value?.trim();
+        const email = document.getElementById("email").value?.trim();
+        const mobile = document.getElementById("mobile").value?.trim();
+        const password = document.getElementById("password").value?.trim();
+        const confirmPassword = document.getElementById("confirmPassword").value?.trim();
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const skills = document.querySelectorAll('input[name="skills"]:checked');
+
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const mobilePattern = /^(\+91|0)?[6-9]\d{9}$/;
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+        if (fname.length < 3 || lname.length < 3) {
+          error = "First and Last Name are required (min 3 characters).";
+        }
+        else if (!emailPattern.test(email)) {
+          error = "Email is required and must be valid.";
+        }
+        else if (!mobilePattern.test(mobile)) {
+          error = "Mobile number must start with 6-9 and be 10 digits (+91/0 optional).";
+        }
+        else if (!passwordPattern.test(password)) {
+          error = "Password not strong enough (8 chars, 1 lowercase, 1 uppercase, 1 digit, 1 special).";
+        }
+        else if (password !== confirmPassword) {
+          error = "Passwords do not match.";
+        }
+        else if (!gender) {
+          error = "Please select a gender.";
+        }
+        else if (skills.length === 0) {
+          error = "Select at least one skill.";
+        }
+
+        const msg = document.getElementById("errorMsg");
+        if (error) {
+          msg.textContent = error;
+        } else {
+          alert('Submitted')
+          document.getElementById("userForm").reset();
+        }
+
+      } catch (err) {
+        console.error("Check details again", err);
+        document.getElementById("errorMsg").textContent = "Try later";
+      }
+    });
+  </script>
+
+</body>
+
+</html>

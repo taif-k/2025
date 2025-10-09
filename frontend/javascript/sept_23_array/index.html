@@ -16,10 +16,15 @@
         let arr3 = [1,'2'] 
         let arr4 = ["three",4]
 
-        let joinArr = arr3.join() // if join is used whole arr becomes string including ,
+        let joinArr = arr3.join() // if join is nt used with sep it adds , by default
+        // let joinArr = arr3.join("") 
+        // let joinArr = arr3.join(" ") // all three join() has different indexing
+       
+        
+
         //  but without join normal array index will be different
         
-        
+        console.log(joinArr)
         // console.log(joinArr[1],joinArr[2])  // this will give output as "/" "@" if sep is '/@'
         console.log(joinArr[0])
         console.log(typeof(joinArr[0]))

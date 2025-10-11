@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // console.log(prod.then(response => response.json().then(resp => console.log(resp))))
+
+        async function getProducts(params) {
+            let prodResp = await fetch('https://fakestoreapi.com/users')
+            let data = prodResp.json()
+            return data
+        }
+        let finalData = getProducts().then(respo => console.log(respo)) 
+        // console.log(finalData) 
+    </script>
+</body>
+</html>

@@ -15,17 +15,18 @@
             greet: function () {
                 console.log("Hello, my name is " + this.name)
             }
-
         }
-        // console.log(person.name)
-        // person.greet()
+        person.greet()
+
+        console.log(person.name)
+
         Object.keys(person).forEach(key => {
             if (person[key] === 'function')
                 person[key]();
             else
                 console.log(person[key])
-        })  
-        // console.log(Object.values(person))
+        })
+        console.log(Object.values(person))
     </script>
 </body>
 

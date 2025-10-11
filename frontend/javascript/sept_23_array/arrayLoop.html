@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Looping over array</title>
 </head>
+
 <body>
     <script>
-        let array = [4,5,6]
-
+        let array = [4, 5, 6]
         // forEach
         console.log('forEach')
-        array.forEach((element,i)=>{ 
-            console.log(`Index ${i}: ${element}`) 
+        array.forEach((element, i) => {
+            console.log(`Index ${i}: ${element}`)
         });
-        
-        
+
+
         // for Of
         console.log('for of')
-        for (const [element,i] of array.entries()) {
-            console.log(element,i)
+        for (const [element, i] of array.entries()) {
+            console.log(element, i)
         }
 
         // map()
         console.log('map()')
-
-        let newArr = array.map((element)=>{
-            return element  - 1  // use return keyword when using {}, otherwise output will be undefined 
+        let newArr = array.map((element) => {
+            return element - 1  // use return keyword when using {}, otherwise output will be undefined 
         })
         console.log(array)
-        console.log(newArr) 
+        console.log(newArr)
+
+        // filter 
+        console.log('filter')
+        let fruits = ['abc', 'Abc', 'cab', 'abcdef']
+        const filteredFruit = fruits.filter(fruit => fruit.length > 5)
+        // const filteredFruit = fruits.filter(fruit=> /^a/.test(fruit))
+        console.log(filteredFruit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const students = [
+            {
+                name: 'jane',
+                marks: 100
+            },
+            {
+                name: 'joe',
+                marks: 10
+            }
+        ]
+
+        let totalMarks = students.reduce((total, student) => {  // total is acc/accumulator
+            return total += student.marks  // when using reduce total variable is changed inside the scope unlike forEach where total is defined outside scope 
+        }, 0)
+        console.log(totalMarks)
+
     </script>
 </body>
+
 </html>

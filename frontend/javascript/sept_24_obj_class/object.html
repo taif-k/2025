@@ -9,6 +9,28 @@
 
 <body>
     <script>
+        // SORT() AND REVERSE()
+
+
+        const unorderedArr = [3, 1, 5, 12, 0, 9]
+        console.log(unorderedArr.sort()) //  output: [0, 1, 12, 3, 5, 9]
+        console.log(unorderedArr.sort((a, b) => console.log(a, b))) // [0, 1, 3, 5, 9, 12]
+        // in above output are diff 
+
+        const words = ['mango', 'grapes', 'kiwi', 'apple', ()=>{}, function abc() { }]
+        console.log(words.sort())
+        console.log(words.sort().reverse())
+        // elements of arr are converted to string and then each unicide value of 1st character is checked,
+        // if therese is a difference (smaller value comes first) it arranges accordignly, otherwise 2nd character of each element is checked
+
+
+        // indexOf & splice
+        const arrStr = ['one',9,'two','three']
+        console.log(arrStr.indexOf('two'))
+        console.log(arrStr.splice(2,1))
+        console.log(arrStr)
+
+
         const person = {
             name: 'john',
             age: 1,
@@ -24,7 +46,7 @@
             if (person[key] === 'function')
                 person[key]();
             else
-                console.log(person[key])
+                console.log()
         })
         console.log(Object.values(person))
     </script>

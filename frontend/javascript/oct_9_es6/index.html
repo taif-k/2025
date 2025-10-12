@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES 6 features</title>
+</head>
+
+<body>
+    <p>test</p>
+    <button id="myBtn"></button>
+    <script>
+        var a = 1 
+        let b = 2 
+        
+        function hello() {
+            // console.log(a)
+            // console.log(b)    
+        }
+        hello()
+
+
+
+
+
+        // arrow function doesnot have its own context , it takes parent's context which is window..example below
+        const shop = {
+            purchase: ()=>{
+                console.log(this)
+            } 
+        }
+        // shop.purchase()
+
+        var shop2 = {
+            price: 10,
+            buy: function(){ 
+                myBtn.addEventListener('click',()=>{
+                    console.log(this.price)
+                }) // either use .bind(this) with regular function() or use =>
+            }
+        }
+        shop2.buy()
+
+    </script>
+</body>
+
+</html>

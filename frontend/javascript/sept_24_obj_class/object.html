@@ -59,14 +59,38 @@
             }
         })  
 
+        for(const key in person){
+            console.log(`${key} ${person[key]}`)
+        }
 
-    //     Object.keys(person).forEach(key => {
-    //         if (person[key] === 'function')
-    //             person[key]();
-    //         else
-    //             console.log()
-    //     })
-    //     console.log(Object.values(person))
+        // ASSIGN
+        group1 = {  // target
+            fname: 'a',
+            fage: 2
+        }
+        group2 = {  // source
+            lname: 'b',
+            lage: 'd'
+        }
+        // group2 = ['b','d']  // source if we use arr(which we dont usually use with assign) and obj arr will be emeregd with index
+        
+
+        console.log(Object.assign(group1,group2))  // merge two objs in one
+
+
+        // in js comparasion of obj and arr is done with refrence(ref add) and not actual value
+        const a1 = [1,2,3]
+        const a2 = [1,2,3]
+        if(a1 === a2){
+            console.log('same')
+        }
+        else{
+            console.log('not same')
+        }
+
+        console.log(a1);  // Logs array itself
+        console.dir(a1); 
+
     // </script>
 </body>
 

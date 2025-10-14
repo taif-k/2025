@@ -16,22 +16,22 @@
         ];
 
         function generateReport(students) {
-            const total = [];
-            
+            let finalArr = []
             students.forEach(student => {
-                let sum = 0;
-                for (let i = 0; i < student.marks.length; i++) {
-                    sum += student.marks[i];
-                }
-                const average = sum / student.marks.length;
-                const stu_report = `${student.name} scored an average of ${average.toFixed()}`;
-                total.push(stu_report);
+                let total = 0
+                student.marks.forEach((marks) => {
+                    total += marks
+                })
+                let percentage = (total / 300) * 100
+                const finalPercent = `${student.name} scored ${total} Marks and ${percentage.toFixed(2)}%`;
+                finalArr.push(finalPercent)
             });
-            return total;
+            return finalArr 
         }
-        console.log(generateReport(students));
-        // console.log(students[3]);
-        // console.log(students[1].marks);
+        let rslt = generateReport(students)
+        console.log(rslt)
+        
+
     </script>
 </body>
 

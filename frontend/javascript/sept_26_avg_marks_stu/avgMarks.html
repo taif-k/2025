@@ -18,19 +18,18 @@
         function generateReport(students) {
             let finalArr = []
             students.forEach(student => {
-                let total = 0
-                student.marks.forEach((marks) => {
-                    total += marks
-                })
+
+                let total =  student.marks.reduce((total, mark) =>  total += mark, 0)
                 let percentage = (total / 300) * 100
-                const finalPercent = `${student.name} scored ${total}/300 Marks and ${percentage.toFixed(2)}%`;
+                
+                const finalPercent = `${student.name} scored ${total}/300 Marks & ${percentage.toFixed(2)}% ]`;
                 finalArr.push(finalPercent)
             });
-            return finalArr 
+            return finalArr
         }
         let rslt = generateReport(students)
         console.log(rslt)
-        
+
 
     </script>
 </body>

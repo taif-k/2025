@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <button class="btn" id="btn1">Btn 1</button>
+        <button class="btn" id="btn2">Btn 2</button>
+    </main>
+    <script>
+        function clickBtn(e){
+            console.log(e)
+            console.log(` ${e.target.innerText} clicked alert test`)
+        }
+
+        Array.from(document.getElementsByClassName('btn')).forEach(element => {
+            element.onclick = clickBtn
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <button class="btn" id="btn1">Btn 1</button>
+            <button class="btn" id="btn2">Btn 2</button>
+        </section>
+    </main>
+    <script>
+        // Event Bubbling - first the func on innermost el will be triggered and will go till document's function 
+        function seeConsole() {
+            console.log('adding second func')
+        }
+
+        function clickBtn(e) {
+            console.log(e)
+            alert(` ${e.target.innerText} clicked alert test`)
+        }
+
+
+        function sectionFunction() {
+            console.log('Function on section')
+        }
+        function mainFunction() {
+            console.log('Function on main')
+        }
+
+        Array.from(document.getElementsByClassName('btn')).forEach(element => {
+            element.addEventListener('click', clickBtn)
+            element.addEventListener('click', seeConsole)
+        });
+
+        document.querySelector('main').addEventListener('click', mainFunction)
+        document.querySelector('section').addEventListener('click', sectionFunction)
+        document.addEventListener('click',()=>console.log('function directly on document'))
+        
+    </script>
+</body>
+
+</html>

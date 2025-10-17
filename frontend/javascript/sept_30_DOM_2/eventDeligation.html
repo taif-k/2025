@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Deligation</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="row">
+                <button class="btn delete" id="btn1" data-id="100">Btn 1</button>
+                <button class="btn toggleStatus" id="btn2" data-id="100">Btn 2</button>
+                <button class="btn edit" id="btn3" data-id="100">Btn 3</button>
+            </div>
+            <div class="row">
+                <button class="btn delete" id="btn4" data-id="101">Btn 4</button>
+                <button class="btn toggleStatus" id="btn5" data-id="101">Btn 5</button>
+                <button class="btn edit" id="btn6" data-id="101">Btn 6</button>
+            </div>
+            <div class="row">
+                <button class="btn delete" id="btn7" data-id="102">Btn 7</button>
+                <button class="btn toggleStatus" id="btn8" data-id="102">Btn 8</button>
+                <button class="btn edit" id="btn9" data-id="102">Btn 9</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Event deligation  - In below Example , we have added single event list along with single function on multiple elements
+        // Event deligation is done on parent
+
+        function eventDeligation(e) {
+            if (e.target.classList.contains('edit')) {
+                console.log(`Event on Edit class data-id${e.target.dataset.id}`)
+            }
+            else if (e.target.classList.contains('delete')) {
+                console.log(`Event on Delete class data-id${e.target.dataset.id}`)
+            }
+            else {
+                console.log(`Event on toggleStatus class data-id${e.target.dataset.id}`)
+            }
+        }
+
+        // EVENT DELIGATION ON PARENT
+        document.querySelector('section').addEventListener('click', eventDeligation)
+
+
+        // EVENT ON CHILDS AND NOT PARENT 
+        // Array.from(document.getElementsByClassName('row')).forEach(element => {
+        //     element.addEventListener('click', eventDeligation)
+        // })
+
+    </script>
+</body>
+
+</html>

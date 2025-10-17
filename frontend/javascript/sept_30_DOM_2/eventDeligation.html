@@ -33,13 +33,13 @@
 
         function eventDeligation(e) {
             if (e.target.classList.contains('edit')) {
-                console.log(`Event on Edit class data-id${e.target.dataset.id}`)
+                console.log(`Event on Edit class and id ${e.target.id}`)
             }
             else if (e.target.classList.contains('delete')) {
-                console.log(`Event on Delete class data-id${e.target.dataset.id}`)
+                console.log(`Event on Delete class and id ${e.targe.id}`)
             }
             else {
-                console.log(`Event on toggleStatus class data-id${e.target.dataset.id}`)
+                console.log(`Event on toggleStatus class and id ${e.target.id}`)
             }
         }
 

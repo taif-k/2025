@@ -14,17 +14,17 @@
                 <div class="form-child-div">
                     <label for="name">Name: </label>
                     <input id="name" type="text" name="name" placeholder="Enter Name">
-                    <span id="errMsg"></span>
+                    <span id="errMsg" class="errClass"></span>
                 </div>
                 <div class="form-child-div">
                     <label for="email">Email: </label>
-                    <input id="email" type="text" name="email" placeholder="Enter Email">
-                    <span id="emailErrMsg"></span>
+                    <input id="email" type="email" name="email" placeholder="Enter Email">
+                    <span class="errClass" id="emailErrMsg"></span>
                 </div>
                 <div class="form-child-div">
                     <label for="phone">Phone: </label>
-                    <input id="phone" type="text" name="phone" placeholder="Enter phone">
-                    <span id="phoneErrMsg"></span>
+                    <input id="phone" type="number" name="phone" placeholder="Enter phone">
+                    <span class="errClass" id="phoneErrMsg"></span>
                 </div>
                 <input type="submit" name="formSubmit" value="submit">
             </form>
@@ -33,56 +33,74 @@
     <script>
 
         const validateName = (nameVal) => {
-            if (nameVal.length < 2 || nameValue === '') {
+            if (nameVal.length < 2 || nameVal === '') {
                 document.getElementById('errMsg').innerText = 'Enter Valid name'
+                return false
             }
             else {
                 console.log('Name format is correct ')
                 document.getElementById('errMsg').innerText = ''
+                return true
             }
         }
 
         const validateEmail = (emailVal) => {
 
-            if (!(emailVal.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) || nameValue === '') {
+            if (!(emailVal.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) || emailVal === '') {
                 document.getElementById('emailErrMsg').innerText = 'Enter Valid Email'
+                return false
             }
             else {
                 document.getElementById('emailErrMsg').innerText = ''
+                return true
             }
         }
 
         const validateMobile = (phoneVal) => {
             if (phoneVal === '' || !(phoneVal.match(/^(\+91|0)?[6-9]\d{9}$/))) {
                 document.getElementById('phoneErrMsg').innerText = 'Enter Valid Phone'
+                return false
             }
             else {
                 document.getElementById('phoneErrMsg').innerText = ''
+                return true
             }
         }
 
-        function validateEachDetail() {  //if no params are passed and args while calling, it is till working?scoping?
-            validateName(nameValue)
-            validateEmail(emailValue)
-            validateMobile(phoneValue)
+        function validateEachDetail(e,nameValue,emailValue,phoneValue) {  //if no params are passed and args while calling, it is till working?scoping?
+
+            const isNameValid =  validateName(nameValue)
+            const isEmailValid = validateEmail(emailValue)
+            const isPhoneValid = validateMobile(phoneValue)
+            
+            console.log(isNameValid,isEmailValid,isPhoneValid)
+            const isFormValid = isNameValid && isEmailValid && isPhoneValid;
+            console.log(isFormValid)
+
+            if (!isFormValid) {
+                // console.log(isFormValid)
+                e.preventDefault()
+            }
+
+
         }
 
 
         let formEl = document.getElementById('userForm')
         function getInputValue(e) {
-            e.preventDefault()
+            // e.preventDefault()
             console.log(formEl)
 
             let nameEl = formEl.querySelector('#name')
-            nameValue = nameEl?.value?.trim()
+            let nameValue = nameEl?.value?.trim()
 
             let emailEl = formEl.querySelector('#email')
-            emailValue = emailEl?.value?.trim()
+            let emailValue = emailEl?.value?.trim()
 
             let phoneEl = formEl.querySelector('#phone')
-            phoneValue = phoneEl?.value?.trim()
+            let phoneValue = phoneEl?.value?.trim()
 
-            validateEachDetail()
+            validateEachDetail(e,nameValue,emailValue,phoneValue)
 
         }
 

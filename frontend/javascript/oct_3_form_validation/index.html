@@ -14,21 +14,79 @@
                 <div class="form-child-div">
                     <label for="name">Name: </label>
                     <input id="name" type="text" name="name" placeholder="Enter Name">
+                    <span id="errMsg"></span>
+                </div>
+                <div class="form-child-div">
+                    <label for="email">Email: </label>
+                    <input id="email" type="text" name="email" placeholder="Enter Email">
+                    <span id="emailErrMsg"></span>
+                </div>
+                <div class="form-child-div">
+                    <label for="phone">Phone: </label>
+                    <input id="phone" type="text" name="phone" placeholder="Enter phone">
+                    <span id="phoneErrMsg"></span>
                 </div>
                 <input type="submit" name="formSubmit" value="submit">
             </form>
         </div>
     </main>
     <script>
-        function getFormValues(e) {
-            e.preventDefault()
-            console.log(formEl)
-            let nameEl = formEl.querySelector('#name')
-            console.log(nameEl?.value.trim())
+
+        const validateName = (nameVal) => {
+            if (nameVal.length < 2 || nameValue === '') {
+                document.getElementById('errMsg').innerText = 'Enter Valid name'
+            }
+            else {
+                console.log('Name format is correct ')
+                document.getElementById('errMsg').innerText = ''
+            }
+        }
+
+        const validateEmail = (emailVal) => {
+
+            if (!(emailVal.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) || nameValue === '') {
+                document.getElementById('emailErrMsg').innerText = 'Enter Valid Email'
+            }
+            else {
+                document.getElementById('emailErrMsg').innerText = ''
+            }
+        }
+
+        const validateMobile = (phoneVal)=>{
+            if(phoneVal === '' || !(phoneVal.match(/^(\+91|0)?[6-9]\d{9}$/))){
+                document.getElementById('phoneErrMsg').innerText = 'Enter Valid Phone'
+            }
+            else{
+                document.getElementById('phoneErrMsg').innerText = ''
+            }
+        }
+        function validateEachDetail(nameValue, emailValue, phoneValue) {
+            validateName(nameValue)
+            validateEmail(emailValue)
+            validateMobile(phoneValue)
         }
 
         let formEl = document.getElementById('userForm')
-        formEl.addEventListener('submit',getFormValues)
+
+        function getInputValue(e) {
+            e.preventDefault()
+            console.log(formEl)
+
+            let nameEl = formEl.querySelector('#name')
+            nameValue = nameEl?.value?.trim()
+
+            let emailEl = formEl.querySelector('#email')
+            emailValue = emailEl?.value?.trim()
+
+            let phoneEl = formEl.querySelector('#phone')
+            phoneVal = phoneEl?.value?.trim()
+
+            validateEachDetail(nameValue,emailValue,phoneVal)
+
+        }
+
+
+        formEl.addEventListener('submit', getInputValue)
     </script>
 </body>
 

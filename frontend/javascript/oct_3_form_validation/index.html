@@ -67,18 +67,20 @@
             }
         }
 
-        function validateEachDetail(e,nameValue,emailValue,phoneValue) {  //if no params are passed and args while calling, it is till working?scoping?
+        function validateEachDetail(e, nameValue, emailValue, phoneValue) {  //if no params are passed and args while calling, it is till working?scoping?
 
-            const isNameValid =  validateName(nameValue)
+            const isNameValid = validateName(nameValue)
             const isEmailValid = validateEmail(emailValue)
             const isPhoneValid = validateMobile(phoneValue)
-            
-            console.log(isNameValid,isEmailValid,isPhoneValid)
-            const isFormValid = isNameValid && isEmailValid && isPhoneValid;
-            console.log(isFormValid)
 
-            if (!isFormValid) {
-                // console.log(isFormValid)
+            const isFormValid = isNameValid && isEmailValid && isPhoneValid;
+
+            // console.log(`isNameValid ${isNameValid}`)
+            // console.log(`isEmailValid ${isEmailValid}`)
+            // console.log(`isPhoneValid ${isPhoneValid}`)
+
+            if (!isFormValid) { // if stat runs if value is false
+                // console.log(`Final isFornValid value: ${isFormValid}`)
                 e.preventDefault()
             }
 
@@ -100,7 +102,7 @@
             let phoneEl = formEl.querySelector('#phone')
             let phoneValue = phoneEl?.value?.trim()
 
-            validateEachDetail(e,nameValue,emailValue,phoneValue)
+            validateEachDetail(e, nameValue, emailValue, phoneValue)
 
         }
 

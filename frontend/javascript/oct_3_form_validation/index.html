@@ -52,22 +52,23 @@
             }
         }
 
-        const validateMobile = (phoneVal)=>{
-            if(phoneVal === '' || !(phoneVal.match(/^(\+91|0)?[6-9]\d{9}$/))){
+        const validateMobile = (phoneVal) => {
+            if (phoneVal === '' || !(phoneVal.match(/^(\+91|0)?[6-9]\d{9}$/))) {
                 document.getElementById('phoneErrMsg').innerText = 'Enter Valid Phone'
             }
-            else{
+            else {
                 document.getElementById('phoneErrMsg').innerText = ''
             }
         }
-        function validateEachDetail(nameValue, emailValue, phoneValue) {
+
+        function validateEachDetail() {  //if no params are passed and args while calling, it is till working?scoping?
             validateName(nameValue)
             validateEmail(emailValue)
             validateMobile(phoneValue)
         }
 
-        let formEl = document.getElementById('userForm')
 
+        let formEl = document.getElementById('userForm')
         function getInputValue(e) {
             e.preventDefault()
             console.log(formEl)
@@ -79,14 +80,14 @@
             emailValue = emailEl?.value?.trim()
 
             let phoneEl = formEl.querySelector('#phone')
-            phoneVal = phoneEl?.value?.trim()
+            phoneValue = phoneEl?.value?.trim()
 
-            validateEachDetail(nameValue,emailValue,phoneVal)
+            validateEachDetail()
 
         }
 
-
         formEl.addEventListener('submit', getInputValue)
+
     </script>
 </body>
 

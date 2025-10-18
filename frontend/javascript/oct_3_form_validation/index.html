@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
 </head>
+
 <body>
-    
+    <main>
+        <div>
+            <form action="" id="userForm">
+                <div class="form-child-div">
+                    <label for="name">Name: </label>
+                    <input id="name" type="text" name="name" placeholder="Enter Name">
+                </div>
+                <input type="submit" name="formSubmit" value="submit">
+            </form>
+        </div>
+    </main>
+    <script>
+        function getFormValues(e) {
+            e.preventDefault()
+            console.log(formEl)
+            let nameEl = formEl.querySelector('#name')
+            console.log(nameEl?.value.trim())
+        }
+
+        let formEl = document.getElementById('userForm')
+        formEl.addEventListener('submit',getFormValues)
+    </script>
 </body>
+
 </html>

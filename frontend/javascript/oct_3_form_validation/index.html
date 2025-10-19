@@ -108,6 +108,52 @@
 
         formEl.addEventListener('submit', getInputValue)
 
+        // Debouncing
+
+        
+        function searchQuery(e) {
+            let val = e.target.value.trim()
+            console.log(val)
+        }
+
+        function debounce(func) { // param is searchQuery()
+            let timer; // debounce fn to keep timer within scope and it is higher order func that eturns anthoer fn
+
+            return function (event) {
+                clearTimeout(timer);
+
+                timer = setTimeout(function () {
+                    func(event);
+                }, 300);
+            };
+        }
+
+
+        let nameEl = document.getElementById('name')
+        nameEl.addEventListener('input', debounce(searchQuery))
+
+
+
+
+
+        // nameEl.addEventListener('input', debounce(eventLogger))
+        // const eventLogger = (e) => {
+        //     console.log(nameEl?.value?.trim())
+        // }
+
+        // function debounce(fn, delay = 2000) {
+        //     let time;
+        //     return function (...args) {
+        //         clearTimeout(time)
+        //         time = setTimeout(() => {
+        //             fn.apply(this, args)
+        //         }, delay)
+        //     }
+        // }
+
+
+
+
     </script>
 </body>
 

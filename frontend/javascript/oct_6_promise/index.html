@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promise</title>
+    <title>Js Promise</title>
 </head>
+
 <body>
     <script>
-        let prom = new Promise((resolve,reject)=>{
-            let sucess = true;
-            setTimeout(()=>{
-                if (sucess){
-                    resolve('Sucessfully completed')
-                } else
-                {
-                    reject('Error msg')
+        let testPromise = new Promise((resolve, reject) => {
+            const sucess = true // false is caught in .catch()
+
+            setTimeout(() => {
+                if (sucess) {
+                    resolve('Done')
+                } else {
+                    reject('Not Done')
                 }
-            },1000)
+            }, 1000)
+
         })
-        console.log(prom)
-        prom
-        .then(response => {
-            console.log(prom)
-            console.log(response)
-        })
-        .catch(err => 
-        {
-            console.log(prom)
-            console.log(err)
+
+        async function testAsyncAwait() {
+            let checkPromise1 = await testPromise
+            console.log(`typeof: ${typeof(checkPromise1)}` )
+            console.log(checkPromise1)
         }
-    )
+        testAsyncAwait()
+
+        // console.log(typeof (testPromise)) // obj
+        // console.log(testPromise)
+
+        // testPromise.then((resp) => {
+        //     console.log(resp)
+        //     console.log(testPromise)
+        // }).catch((err) => {
+        //     console.log(err)
+        //     console.log(testPromise)
+        // })
     </script>
 </body>
+
 </html>

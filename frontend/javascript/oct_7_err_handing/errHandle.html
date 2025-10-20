@@ -11,11 +11,19 @@
     <script>
         (() => {
             try {
-                const a = 1
+                let a = 1
+                // const a = 1
+                if (a < 2) {
+                    throw new Error("a is below 2");
+                }
                 a = 2
                 console.log(a)
-            } catch {
-                console.log('dont assign to const')
+
+            } catch (e) {
+                console.log(e.message)
+                console.log('or re-assignemnt to const')
+            } finally {
+                console.log('Finally block runs irrespective of err or not')
             }
 
         })()

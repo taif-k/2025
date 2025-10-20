@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        // using then catch
+        // using then() and catch()
         let respFetch = fetch('https://fakestoreapi.com/users')
 
         respFetch.then((r) => {
@@ -29,9 +29,13 @@
             let data = await respFetch.json()
             // console.log(typeof(data), data)
             console.log(data)
+            return data
         }
-        fetchResp()
+        fetchResp().then((finalData)=>{
+            console.log(finalData)
+        })
 
+        
     </script>
 </body>
 

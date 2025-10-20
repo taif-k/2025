@@ -35,5 +35,20 @@
 | 13  | Writing Errors Log & Minor Project     | 10 Apr - 12 Apr   |
 | 14  | Project Review (Student Records Management System) | 14 Apr            |
 | 15  | Packages & Clean Code Architecture     | 15 Apr - 17 Apr   |
+| 16  | OOPS Intro                             | 21 Apr - 23 Apr   |
+| 17  | Inheritance                            | 23 Apr - 25 Apr   |
+| 18  | Encapsulation                          | 25 Apr - 26 Apr   |
+| 19  | Abstraction                            | 26 Apr - 27 Apr   |
+| 20  | Polymorphsim                           | 28 Apr - 29 Apr   |
+| 21  | Debugging & Abstarct class             | 29 Apr - 30 Apr   |
+| 22  | Project (Restaurant Management System) | 1 May - 18 May    |
  
+
+ ---
+
+## Canva Basics
+
+| No. | Topic                                  | Dates             |
+|-----|----------------------------------------|-------------------|
+| 1   | Canva                                  | 20 May - 24 May   |
 

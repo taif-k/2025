@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Error Handling</title>
 </head>
+
 <body>
-    
+    <script>
+        (() => {
+            try {
+                const a = 1
+                a = 2
+                console.log(a)
+            } catch {
+                console.log('dont assign to const')
+            }
+
+        })()
+    </script>
 </body>
+
 </html>

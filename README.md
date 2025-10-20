@@ -116,19 +116,38 @@
 
 | No. | Topic                            | Dates           |
 |-----|----------------------------------|-----------------|
-| 1   | BS Layout: Utilities, z-index    | 6 Jan - 8 Jan   |
-| 2   | Reboot, Typography, Img & Table  | 9 Jan - 13 Jan  |
-| 3   | Forms                            | 15 Jan - 17 Jan |
-| 4   | Accordion, Alert, Button Badge, Breadcrumb    | 6 Jan - 8 Jan   |
-| 5   | Card, Carousel, Collapse, Dropdown  | 9 Jan - 13 Jan  |
-| 6   | Modal, List Group, Navbar, Nav & Tabs| 15 Jan - 17 Jan |
-| 7   | Offcanvas, Pagination, Placeholder, Popover, Progress  | 6 Jan - 8 Jan   |
-| 8   | Popover, Progress, Scrollspy, Spinner & Toasts  | 9 Jan - 13 Jan  |
-| 9   | Utilities Classes| 15 Jan - 17 Jan |
-| 10  |  Project 1  | 9 Jan - 13 Jan  |
-| 11  | Project 1  | 15 Jan - 17 Jan |
+| 1   | BS Layout: Utilities, z-index    | 11 Aug - 12 Aug |
+| 2   | Reboot, Typography, Img & Table  | 12 Aug - 13 Aug|
+| 3   | Forms                            | 13 Aug - 14 Aug|
+| 4   | Accordion, Alert, Button Badge, Breadcrumb    | 13 Aug - 14 Aug|
+| 5   | Card, Carousel, Collapse, Dropdown  | 20 Aug - 21 Aug|
+| 6   | Modal, List Group, Navbar, Nav & Tabs| 21 Aug - 22 Aug|
+| 7   | Offcanvas, Pagination, Placeholder, Popover, Progress  | 22 Aug - 23 Aug|
+| 8   | Popover, Progress, Scrollspy, Spinner & Toasts  | 25 Aug - 26 Aug|
+| 9   | Utilities Classes| 28 Aug - 27 Aug|
+| 10  |  Project 1  | 28 Aug - 08 Sept|
+| 11  | Project 2   | 09 Sept - 12 Sept|
 
 
+---
+
+## 📘 JavaScript
+
+| No. | Topic                            | Dates           |
+|-----|----------------------------------|-----------------|
+| 1   | Javascript Introduction          |17 Sept - 18 Sept|
+| 2   | Javascript Conditionals & Loops  |18 Sept - 19 Sept|
+| 3   | Javascript Functions & String    |22 Sept - 23 Sept|
+| 4   | JavaScript Array                 |23 Sept - 24 Sept|
+| 5   | Javascript Object                |24 Sept - 25 Sept|
+| 6   | Javascript Numbers & Date        |25 Sept - 26 Sept|
+| 7   | Html DOM                         |29 Sept - 30 Sept|
+| 8   | Form Validation                  |3 Oct   - 4 Oct  |
+| 9   | Promise                          |6 Oct   - 7 Oct  |
+| 10  | Form Validation                  |3 Oct   - 4 Oct  |
+| 11  | Promise                          |6 Oct   - 7 Oct  |
+| 12  | ES 6                             |7 Oct   - 10 Oct |
+| 13  | Event Loops                      |13 Oct  - 15 Oct |
 
 
 

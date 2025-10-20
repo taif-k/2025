@@ -89,9 +89,26 @@
 
 | No. | Topic                            | Dates           |
 |-----|----------------------------------|-----------------|
-| 1   | Variables and Data Types         | 6 Jan - 8 Jan   |
-| 2   | Control Flow                     | 9 Jan - 13 Jan  |
-| 3   | Nested if & Switch Case          | 15 Jan - 17 Jan |
+| 1   | Introduction to CSS              | 30 June - 1 July|
+| 2   | Selectors                        | 1 July - 2 July |
+| 3   | Specificity                      | 2 July - 3 July |
+| 4   | Units                            | 3 July - 4 July |
+| 5   | Colors                           | 7 July - 8 July |
+| 6   | Font/Text/Pseudo-Selectors       | 7 July - 8 July |
+| 7   | Box-Model                        | 8 July - 9 July |
+| 8   | List-Position-and-Overflow       | 8 July - 9 July |
+| 9   | Display Shadow and Outline       | 9 July - 10 July|
+| 10  | Flexbox                          |11 July - 12 July|
+| 11  | Grid                             |15 July - 16 July|
+| 12  | Variables & Media Query          |17 July - 18 July|
+| 13  | Advance Selectors & CSS Masking  |18 July - 19 July|
+| 14  | CSS Masking and Filter           |21 July - 22 July|
+| 15  | Transform, Transition & Animation|21 July - 22 July|
+| 16  | Project  (Minor)                 |22 July - 25 July|
+| 17  | Key SEO & Accessibility setup    |25 July - 26 July|
+| 18  | Project  (Major)                 |28 July - 1 Aug  |
+| 19  | Scss -Functions & Layout         |04 Aug -  8 Aug  |
+
 
 ---
 
@@ -99,9 +116,18 @@
 
 | No. | Topic                            | Dates           |
 |-----|----------------------------------|-----------------|
-| 1   | Variables and Data Types         | 6 Jan - 8 Jan   |
-| 2   | Control Flow                     | 9 Jan - 13 Jan  |
-| 3   | Nested if & Switch Case          | 15 Jan - 17 Jan |
+| 1   | BS Layout: Utilities, z-index    | 6 Jan - 8 Jan   |
+| 2   | Reboot, Typography, Img & Table  | 9 Jan - 13 Jan  |
+| 3   | Forms                            | 15 Jan - 17 Jan |
+| 4   | Accordion, Alert, Button Badge, Breadcrumb    | 6 Jan - 8 Jan   |
+| 5   | Card, Carousel, Collapse, Dropdown  | 9 Jan - 13 Jan  |
+| 6   | Modal, List Group, Navbar, Nav & Tabs| 15 Jan - 17 Jan |
+| 7   | Offcanvas, Pagination, Placeholder, Popover, Progress  | 6 Jan - 8 Jan   |
+| 8   | Popover, Progress, Scrollspy, Spinner & Toasts  | 9 Jan - 13 Jan  |
+| 9   | Utilities Classes| 15 Jan - 17 Jan |
+| 10  |  Project 1  | 9 Jan - 13 Jan  |
+| 11  | Project 1  | 15 Jan - 17 Jan |
+
 
 
 

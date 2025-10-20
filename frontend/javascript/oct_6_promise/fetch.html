@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
-        // console.log(prod.then(response => response.json().then(resp => console.log(resp))))
+        // using then catch
+        let respFetch = fetch('https://fakestoreapi.com/users')
 
-        async function getProducts(params) {
-            let prodResp = await fetch('https://fakestoreapi.com/users')
-            let data = prodResp.json()
-            return data
+        respFetch.then((r) => {
+            r.json().then((finalResp) => {
+                console.log(finalResp)
+            }).catch((finalErr) => {
+                console.log(finalErr)
+            })
+        }).catch((err) => {
+            console.log(err)
+        })
+
+        // using async await
+        async function fetchResp(){
+            let respFetch = await fetch('https://fakestoreapi.com/users')
+            // console.log(typeof(respFetch), respFetch)
+            let data = await respFetch.json()
+            // console.log(typeof(data), data)
+            console.log(data)
         }
-        let finalData = getProducts().then(respo => console.log(respo)) 
-        // console.log(finalData) 
+        fetchResp()
+
     </script>
 </body>
+
 </html>

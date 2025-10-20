@@ -52,3 +52,58 @@
 |-----|----------------------------------------|-------------------|
 | 1   | Canva                                  | 20 May - 24 May   |
 
+
+---
+
+## Agile Methodology
+
+| No. | Topic                                  | Dates             |
+|-----|----------------------------------------|-------------------|
+| 1   | Agile Methodology                      | 26 May - 27 May   |
+| 2   | Agile Principle                        | 27 May - 28 May   |
+| 3   | User Story                             | 29 May - 30 May   |
+| 4   | Jira                                   | 29 May - 30 May   |
+
+---
+
+## 📘 Html
+
+| No. | Topic                            | Dates           |
+|-----|----------------------------------|-----------------|
+| 1   | Introduction to HTML             | 2 June - 3 June |
+| 2   | HTML Tags                        | 4 June - 5 June |
+| 3   | HTML Text formatting tags        | 5 June - 6 June |
+| 4   | HTML Elements                    | 9 June - 10 June|
+| 5   | HTML-Images List and Table       | 10 June- 11 June|
+| 6   | HTML Attributes                  | 12 June- 13 June|
+| 7   | HTML Form                        | 13 June- 17 June|
+| 8   | HTML Media Elements              | 18 June- 19 June|
+| 9   | HTML SEO & Accessibility         | 19 June- 20 June|
+| 10  | HTML Project Setup.              | 20 June- 20 June|
+| 11  | HTML Lay outing                  | 23 June- 25 June|
+| 12  | Project Travel Agency HTML       | 25 June- 27 June|
+
+---
+
+## 📘 CSS
+
+| No. | Topic                            | Dates           |
+|-----|----------------------------------|-----------------|
+| 1   | Variables and Data Types         | 6 Jan - 8 Jan   |
+| 2   | Control Flow                     | 9 Jan - 13 Jan  |
+| 3   | Nested if & Switch Case          | 15 Jan - 17 Jan |
+
+---
+
+## 📘 Bootstrap
+
+| No. | Topic                            | Dates           |
+|-----|----------------------------------|-----------------|
+| 1   | Variables and Data Types         | 6 Jan - 8 Jan   |
+| 2   | Control Flow                     | 9 Jan - 13 Jan  |
+| 3   | Nested if & Switch Case          | 15 Jan - 17 Jan |
+
+
+
+
+

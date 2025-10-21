@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const words = [function xyz() {console.log('hi') }, function abc() { console.log('hello ')}]
+        console.log(words.sort())
+        // elements of arr are converted to string and then each unicide value of 1st character is checked,
+        // if therese is a difference (smaller value comes first) it arranges accordignly, otherwise 2nd character of each element is checked
+
+        let word = "i"; // put any string here to see characters unicode value
+        let unicodeValues = [];
+        word.split('').forEach((char) => unicodeValues.push(char.charCodeAt(0))); // decimal values
+        // word.split('').forEach((char) => unicodeValues.push(char.charCodeAt(0).toString(16))); // hexadecimal
+        console.log(unicodeValues)
+    </script>
+</body>
+
+</html>

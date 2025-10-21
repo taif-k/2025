@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object</title>
+</head>
+
+<body>
+    <script>
+        // SORT() AND REVERSE()
+
+        const unorderedArr = [3, 1, 5, 12, 0, 9]
+        console.log(unorderedArr.sort()) //  output: [0, 1, 12, 3, 5, 9]
+        console.log(unorderedArr.sort((a, b) => console.log(a, b))) // [0, 1, 3, 5, 9, 12]
+        // in above output are diff 
+
+        const words = ['mango', 'grapes', 'kiwi', 'apple', () => { }, function abc() { }]
+        console.log(words.sort())
+        console.log(words.sort().reverse())
+        // elements of arr are converted to string and then each unicide value of 1st character is checked,
+        // if therese is a difference (smaller value comes first) it arranges accordignly, otherwise 2nd character of each element is checked
+
+
+        // INDEX OF & SLICE
+        const arrStr = ['one', 9, 'two', 'three']
+        console.log(arrStr.indexOf('two'))
+        console.log(arrStr.splice(2, 1))
+        console.log(arrStr)
+
+
+        // OBJECT
+        const person = {
+            name: 'john',
+            age: 1,
+            age2: 2,
+            age3: 3,
+            age4: 4,
+            age5: 5,
+            greet: function () {
+                console.log("This is called from fn greet/ object person")
+                return "Hello, my name is " + this.name
+            }
+        }
+        person.greet()
+
+        console.log(typeof (Object.keys(person)), Object.keys(person))
+        console.log(typeof (Object.keys(person)), Object.values(person))
+        console.log(typeof (Object.keys(person)), Object.entries(person))
+
+        // forEach and other similar fn dont work on object, first use Object(this will give arr) and then use forEach on that rec'd sarr 
+        // Object.keys(person).forEach((key)=>{
+        //     console.log(`key name: ${key}   key type: ${typeof(key)}  value of key: ${person[key]}`)
+        // })   
+        Object.keys(person).forEach((key) => {
+            if (typeof (person[key]) === 'function') {
+                person[key]()
+            }
+        })
+
+        for (const key in person) {
+            console.log(`${key} ${person[key]}`)
+        }
+
+        // ASSIGN
+        group1 = {  // target
+            fname: 'a',
+            fage: 2
+        }
+        group2 = {  // source
+            lname: 'b',
+            lage: 'd'
+        }
+        // group2 = ['b','d']  // source if we use arr(which we dont usually use with assign) and obj arr will be emeregd with index
+
+
+        console.log(Object.assign(group1, group2))  // merge two objs in one
+
+
+        // in js comparasion of obj and arr is done with refrence(ref add) and not actual value
+        const a1 = [1, 2, 3]
+        const a2 = [1, 2, 3]
+        if (a1 === a2) {
+            console.log('same')
+        }
+        else {
+            console.log('not same')
+        }
+
+        console.log(a1);  // Logs array itself
+        console.dir(a1);
+
+
+        // Class
+
+        class University {
+            constructor(name, id) {
+                this.name = name
+                this.id = id
+            }
+
+            hello(){
+                console.log(`Hello ${this.name}`)
+            }
+        }
+
+        class School extends University{
+            constructor(empName,empId,nam,identityNo){
+                super(nam,identityNo)
+                this.empName = empName
+                this.empId = empId
+            }
+        }
+        schoolOne = new School('xyz',321,'test',465)
+        console.log(schoolOne)
+        schoolOne.hello() 
+        </script>
+</body>
+
+</html>

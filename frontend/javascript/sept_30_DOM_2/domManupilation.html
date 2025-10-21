@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="main">
+        <button class="btn" id="btn1">Btn 1</button>
+        <button class="btn" id="btn2">Btn 2</button>
+        <div id="testDisplay">Difference b/w Text content <span style="display:none">and</span> inner Html </div>
+        <div id="removeDiv">Lorem ipsum dolor sit amet.</div>
+    </main>
+    <script>
+        // method 1 of using event list.
+        function clickBtn(e) {
+            console.log(e)
+            if (e.target.classList.contains('btn')) {
+                alert(` ${e.target.innerText} clicked alert test`)
+            }
+        }
+
+        function seeConsole(){
+            console.log('adding second func')
+        }
+
+        // Array.from(document.getElementsByClassName('btn')).forEach(element => {
+        //     element.onclick = function (e){
+        //         clickBtn(e)
+        //         seeConsole()
+        //     }
+        // });
+
+        // method 2 of using event list. (prefer)
+        document.addEventListener('click', clickBtn,seeConsole)
+        
+        let createDomDiv = document.createElement('div')
+        createDomDiv.classList.add('domDiv1','test')
+        createDomDiv.textContent = 'Added div from DOM'
+        document.getElementsByTagName('main')[0].appendChild(createDomDiv)
+        console.log(document.getElementsByTagName('main')[0])
+
+        console.log(document.getElementById('testDisplay').innerText) 
+        console.log(document.getElementById('testDisplay').textContent) 
+        // in id 'testDisplay' style = 'display:none', innerText will not display it but textContent will 
+
+        setTimeout(() => document.querySelector('#removeDiv').remove(),5000);
+    </script>
+</body>
+
+</html>

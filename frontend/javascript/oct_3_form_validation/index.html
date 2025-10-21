@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <form action="" id="userForm">
+                <div class="form-child-div">
+                    <label for="name">Name: </label>
+                    <input id="name" type="text" name="name" placeholder="Enter Name">
+                    <span id="errMsg" class="errClass"></span>
+                </div>
+                <div class="form-child-div">
+                    <label for="email">Email: </label>
+                    <input id="email" type="email" name="email" placeholder="Enter Email">
+                    <span class="errClass" id="emailErrMsg"></span>
+                </div>
+                <div class="form-child-div">
+                    <label for="phone">Phone: </label>
+                    <input id="phone" type="number" name="phone" placeholder="Enter phone">
+                    <span class="errClass" id="phoneErrMsg"></span>
+                </div>
+                <input type="submit" name="formSubmit" value="submit">
+            </form>
+        </div>
+    </main>
+    <script>
+
+        const validateName = (nameVal) => {
+            if (nameVal.length < 2 || nameVal === '') {
+                document.getElementById('errMsg').innerText = 'Enter Valid name'
+                return false
+            }
+            else {
+                console.log('Name format is correct ')
+                document.getElementById('errMsg').innerText = ''
+                return true
+            }
+        }
+
+        const validateEmail = (emailVal) => {
+
+            if (!(emailVal.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) || emailVal === '') {
+                document.getElementById('emailErrMsg').innerText = 'Enter Valid Email'
+                return false
+            }
+            else {
+                document.getElementById('emailErrMsg').innerText = ''
+                return true
+            }
+        }
+
+        const validateMobile = (phoneVal) => {
+            if (phoneVal === '' || !(phoneVal.match(/^(\+91|0)?[6-9]\d{9}$/))) {
+                document.getElementById('phoneErrMsg').innerText = 'Enter Valid Phone'
+                return false
+            }
+            else {
+                document.getElementById('phoneErrMsg').innerText = ''
+                return true
+            }
+        }
+
+        function validateEachDetail(e, nameValue, emailValue, phoneValue) {  //if no params are passed and args while calling, it is till working?scoping?
+
+            const isNameValid = validateName(nameValue)
+            const isEmailValid = validateEmail(emailValue)
+            const isPhoneValid = validateMobile(phoneValue)
+
+            const isFormValid = isNameValid && isEmailValid && isPhoneValid;
+
+            // console.log(`isNameValid ${isNameValid}`)
+            // console.log(`isEmailValid ${isEmailValid}`)
+            // console.log(`isPhoneValid ${isPhoneValid}`)
+
+            if (!isFormValid) { // if stat runs if value is false
+                // console.log(`Final isFornValid value: ${isFormValid}`)
+                e.preventDefault()
+            }
+
+
+        }
+
+
+        let formEl = document.getElementById('userForm')
+        function getInputValue(e) {
+            // e.preventDefault()
+            console.log(formEl)
+
+            let nameEl = formEl.querySelector('#name')
+            let nameValue = nameEl?.value?.trim()
+
+            let emailEl = formEl.querySelector('#email')
+            let emailValue = emailEl?.value?.trim()
+
+            let phoneEl = formEl.querySelector('#phone')
+            let phoneValue = phoneEl?.value?.trim()
+
+            validateEachDetail(e, nameValue, emailValue, phoneValue)
+
+        }
+
+        formEl.addEventListener('submit', getInputValue)
+
+        // Debouncing
+
+        
+        function searchQuery(e) {
+            let val = e.target.value.trim()
+            console.log(val)
+        }
+
+        function debounce(func) { // param is searchQuery()
+            let timer; // debounce fn to keep timer within scope and it is higher order func that eturns anthoer fn
+
+            return function (event) {
+                clearTimeout(timer);
+
+                timer = setTimeout(function () {
+                    func(event);
+                }, 300);
+            };
+        }
+
+
+        let nameEl = document.getElementById('name')
+        nameEl.addEventListener('input', debounce(searchQuery))
+
+
+
+
+
+        // nameEl.addEventListener('input', debounce(eventLogger))
+        // const eventLogger = (e) => {
+        //     console.log(nameEl?.value?.trim())
+        // }
+
+        // function debounce(fn, delay = 2000) {
+        //     let time;
+        //     return function (...args) {
+        //         clearTimeout(time)
+        //         time = setTimeout(() => {
+        //             fn.apply(this, args)
+        //         }, delay)
+        //     }
+        // }
+
+
+
+
+    </script>
+</body>
+
+</html>

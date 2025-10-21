@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array</title>
+</head>
+<body>
+    <script>
+        let arr1 = ['1','2','3']
+        let arr2 = [arr1,['4','5'],['6','7']]
+        arr2.push(()=>{console.log('Function added in last')})
+        // console.log(arr2)
+        // console.log(arr2[arr2.length - 1])
+        
+        let arr3 = [1,'2'] 
+        let arr4 = ["three",4]
+
+        let joinArr = arr3.join() // if join is nt used with sep it adds , by default
+        // let joinArr = arr3.join("") 
+        // let joinArr = arr3.join(" ") // all three join() has different indexing
+       
+        
+
+        //  but without join normal array index will be different
+        
+        console.log(joinArr)
+        // console.log(joinArr[1],joinArr[2])  // this will give output as "/" "@" if sep is '/@'
+        console.log(joinArr[0])
+        console.log(typeof(joinArr[0]))
+
+        console.log(joinArr[1])
+        console.log(typeof(joinArr[1]))
+
+        console.log(joinArr[2])
+        console.log(typeof(joinArr[2]))
+
+        
+        let concatArr = arr3.concat(arr4) // doesnt modify old arr
+        // console.log(concatArr)
+
+        // console.log(finalArr)
+        // console.log(arr3)
+        // console.log(arr4)
+    </script>
+</body>
+</html>

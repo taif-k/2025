@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+    <main>
+        <div id="userEmail"></div>
+    </main>
+    <script>
+
+        async function ftch() {
+            try {
+                let respFetch = await fetch('https://fakestoreapi.com/users')
+                let data = await respFetch.json()
+                let loadingTest = document.createElement('div')
+                loadingTest.classList.add('loadingP')
+                loadingTest.innerText = 'Loading...'
+                emailDiv.append(loadingTest)
+                return data
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        let emailDiv = document.getElementById('userEmail') // isnt this is global?(out of func & block scope)
+
+        ftch().then((data) => {
+            console.log(data)
+            data.forEach(element => {
+                let createPTag = document.createElement('div')
+                createPTag.innerText = element.email
+                document.getElementById('userEmail').appendChild(createPTag)
+            });
+
+        }).catch((err) => {
+            console.log(err)
+        }).finally(() => {
+            setTimeout(() => {
+                emailDiv.querySelector('.loadingP').remove()
+            }, 1000)
+
+        })
+        console.log(document)
+
+    </script>
+</body>
+
+</html>

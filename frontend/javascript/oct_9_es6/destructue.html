@@ -21,15 +21,30 @@
                     return nm,console.log('hi')
                 }
             } 
-            const {name,id,z} = obj
-            z()
-            console.log(z()) // this will give undefined because of console.log(cosnole.log())
-            console.log(z) 
 
-        // const arr2 = ['a','b','c',1,2,3];
-        // const [z,x,y,...restElem] = arr2;
-        // console.log(arr2,restElem,restElem[0], typeof(restElem)  )
-        
+            // object
+            const {name,id,z} = obj
+            z()              // output: hi 
+            console.log(z()) // output: undefined (because of console.log(console.log()))
+            console.log(z)  // output: function(){.....}
+
+            // Rest 
+            const arr2 = ['a','b','c',1,2,3];
+            const [g,h,i,...restArrEl] = arr2
+            console.log(`type of restArrEl: ${typeof(restArrEl)}  value of restArrEl: ${restArrEl}`, restArrEl)
+
+            const obj2 = {
+                name2: 'joe',
+                id2:2,
+                address: 'test',
+                phone: 1234567890
+            }  
+            const {name2,id2,...restObjitems} = obj2
+            console.log(`type of restObjitems: ${typeof(restObjitems)}`)
+            console.log(`value of restObjitems: ${restObjitems}`)
+            console.log(`value of restObjitems.address: ${restObjitems.address}`)
+            console.log(`value of restObjitems.phone: ${restObjitems.phone}`) 
+
     </script>
 </body>
 </html>

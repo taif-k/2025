@@ -46,13 +46,35 @@
             console.log(`value of restObjitems.phone: ${restObjitems.phone}`) 
 
             // Spread
+             // array
             let arr3 = ['seven','eight','nine']
             let arr4 = [...arr3]
             arr3[2] = 'zero'
             console.log(arr3)
             console.log(arr4) // value will not be changed from 'nine' to 'zero'
             
+             // obj
+            let obj3 = {
+                name3: 'abc',
+                id3: 3
+            }
+            console.log(obj3)
+            obj3 = {...obj3,testId:300}
+            console.log(`obj3.TestId after spread: ${obj3.testId}`)
+            console.log(obj3)
+            
+             // function
+            let emp = {
+                nm: 'abc',
+                reg: 123
+            }
+            let {nm,reg} = emp
 
+            function testFuncDestructure({nm,reg}){
+                console.log(nm)
+                console.log(reg)
+            }
+            testFuncDestructure(emp)
     </script>
 </body>
 </html>

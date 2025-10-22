@@ -7,9 +7,28 @@
 </head>
 <body>
     <script>
-        const arr = ['a','b','c',1,2,3];
-        const [z,x,y,...restElem] = arr;
-        console.log(arr,restElem,restElem[0], typeof(restElem)  )
+        // destructuring
+            // array
+            const arr = ['one','two','three','four','five','six'] 
+            const [a,b,c,d,e,f] = arr
+            console.log(a,b,c,d,e,f)
+
+            const obj = {
+                name: 'jane',
+                id: 1,
+                z: function(){
+                    const nm = 100
+                    return nm,console.log('hi')
+                }
+            } 
+            const {name,id,z} = obj
+            z()
+            console.log(z()) // this will give undefined because of console.log(cosnole.log())
+            console.log(z) 
+
+        // const arr2 = ['a','b','c',1,2,3];
+        // const [z,x,y,...restElem] = arr2;
+        // console.log(arr2,restElem,restElem[0], typeof(restElem)  )
         
     </script>
 </body>

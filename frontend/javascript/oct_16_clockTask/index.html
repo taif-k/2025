@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+</head>
+
+<body>
+    <!-- <button id="seeClock">See Clock</button> -->
+    <div id="clock">
+        <div id="time">
+            <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+        </div>
+        <div id="day-date">
+            <span id="day"></span>, <span id="date"></span>
+        </div>
+    </div>
+    <button id="switchTimeFormat">Switch Time Format - 24/12</button>
+    <script>
+        function updateClock() {
+            const hrs = document.getElementById('hours');
+            const mins = document.getElementById('minutes');
+            const scnd = document.getElementById('seconds');
+            const day = document.getElementById('day');
+            const date = document.getElementById('date');
+
+            const now = new Date();
+            console.log(now) //////
+
+            let hour = now.getHours();
+            hrs.textContent = hour;
+
+            let minute = now.getMinutes();
+            mins.textContent = minute;
+
+            let second = now.getSeconds();
+            scnd.textContent = second;
+
+            const days = now.getDay()
+            let daysInWords = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+            daysInWords = daysInWords[0]
+            day.textContent = daysInWords;
+
+            const dayNum = now.getDate();
+            const monthNum = now.getMonth() + 1; 
+            const year = now.getFullYear();
+
+            const formattedDate = `${dayNum}/${monthNum}/${year}`;        
+            date.textContent = formattedDate;
+
+        }
+        updateClock()
+        setInterval(updateClock, 1000);
+
+    </script>
+</body>
+
+</html>

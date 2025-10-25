@@ -7,10 +7,74 @@
 </head>
 <body>
     <script>
-        const arr = ['a','b','c',1,2,3];
-        const [z,x,y,...restElem] = arr;
-        console.log(arr,restElem,restElem[0], typeof(restElem)  )
-        
+        // destructuring
+            // array
+            const arr = ['one','two','three','four','five','six'] 
+            const [a,b,c,d,e,f] = arr
+            console.log(a,b,c,d,e,f)
+
+            const obj = {
+                name: 'jane',
+                id: 1,
+                z: function(){
+                    const nm = 100
+                    return nm,console.log('hi')
+                }
+            } 
+
+            // object
+            const {name,id,z} = obj
+            z()              // output: hi 
+            console.log(z()) // output: undefined (because of console.log(console.log()))
+            console.log(z)  // output: function(){.....}
+
+            // Rest 
+            const arr2 = ['a','b','c',1,2,3];
+            const [g,h,i,...restArrEl] = arr2
+            console.log(`type of restArrEl: ${typeof(restArrEl)}  value of restArrEl: ${restArrEl}`, restArrEl)
+
+            const obj2 = {
+                name2: 'joe',
+                id2:2,
+                address: 'test',
+                phone: 1234567890
+            }  
+            const {name2,id2,...restObjitems} = obj2
+            console.log(`type of restObjitems: ${typeof(restObjitems)}`)
+            console.log(`value of restObjitems: ${restObjitems}`)
+            console.log(`value of restObjitems.address: ${restObjitems.address}`)
+            console.log(`value of restObjitems.phone: ${restObjitems.phone}`) 
+
+            // Spread
+             // array
+            let arr3 = ['seven','eight','nine']
+            let arr4 = [...arr3]
+            arr3[2] = 'zero'
+            console.log(arr3)
+            console.log(arr4) // value will not be changed from 'nine' to 'zero'
+            
+             // obj
+            let obj3 = {
+                name3: 'abc',
+                id3: 3
+            }
+            console.log(obj3)
+            obj3 = {...obj3,testId:300}
+            console.log(`obj3.TestId after spread: ${obj3.testId}`)
+            console.log(obj3)
+            
+             // function
+            let emp = {
+                nm: 'abc',
+                reg: 123
+            }
+            let {nm,reg} = emp
+
+            function testFuncDestructure({nm,reg}){
+                console.log(nm)
+                console.log(reg)
+            }
+            testFuncDestructure(emp)
     </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
-names = ["Alice", "Bob", "Charlie"]
+# ENUMERATE
 
+names = ["Alice", "Bob", "Charlie"]
 
 # without enumerate [manual index]
 index = 0

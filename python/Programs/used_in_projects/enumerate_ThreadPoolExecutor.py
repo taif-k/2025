@@ -41,10 +41,16 @@ def api_fetch():
             future = executor.submit(get_npi, npi)  # imm returns future object (fulfill or pending state)
             futures[future] = npi
 
+        print("Result in Submission Order")
+        for future in futures: # it gives same submission order from future dict
+            result_in_submission_order = future.result()
+            print(result_in_submission_order)
+        print()
+        print()
+        print("Result in completion Order")
         for future in as_completed(futures): # it gives completion order from future dict
-            print(f"npi done: {futures[future]}")
-            result = future.result()
-            print(result)
+            result_in_completion_order = future.result()
+            print(result_in_completion_order)
             # all_results_using_append.append(result) # [[{}],[{}]...] 
             # all_results_using_extend.extend(result)  # [{},{}...]
 

@@ -1,5 +1,4 @@
 # ENUMERATE
-
 def intro_enumerate():
     names = ["Alice", "Bob", "Charlie"]
 
@@ -17,6 +16,8 @@ def intro_enumerate():
 
 
 def get_npi(npi):
+    import random, time
+    time.sleep(random.uniform(0.5, 3.0))
     map_to_avoid_ifelif = {
         "111": [{'fname': "a", "npi": "111"}],
         "222": [{'fname': "b", "npi": "222"}],
@@ -30,47 +31,24 @@ def get_npi(npi):
 
 def api_fetch():
     from concurrent.futures import ThreadPoolExecutor, as_completed
-    all_results = []
-
+    # all_results_using_append = []
+    # all_results_using_extend = []
+    
     with ThreadPoolExecutor(max_workers=2) as executor:
         futures = {}  # <Future at 0x20fbbebb770 state=running>: '111', ..., ..
         
         for npi in ["111","222","333","444","555","666"]:    
-            future = executor.submit(get_npi, npi) 
+            future = executor.submit(get_npi, npi)  # imm returns future object (fulfill or pending state)
             futures[future] = npi
 
-        for future in as_completed(futures):
+        for future in as_completed(futures): # it gives completion order from future dict
+            print(f"npi done: {futures[future]}")
             result = future.result()
-            if result:
-                all_results.extend(result)
+            print(result)
+            # all_results_using_append.append(result) # [[{}],[{}]...] 
+            # all_results_using_extend.extend(result)  # [{},{}...]
 
-        print(all_results)
+        # print(all_results_using_extend)
+        # print(all_results_using_append)
 
 api_fetch()
-
-
-# Defines a simple worker function (get_npi) that simulates fetching data for an NPI.
-
-# Uses a dictionary lookup (nice and efficient).
-
-# Returns an empty list if the NPI isn’t found — safe default.
-
-# Creates a thread pool with max_workers=2.
-
-# That means up to two get_npi() calls run concurrently.
-
-# Submits all tasks to the executor and stores futures in a dict.
-
-# The key is the Future object.
-
-# The value (npi) lets you know which task each future corresponds to.
-
-# Uses as_completed(futures) to iterate as each future finishes.
-
-# This ensures results are processed as soon as they’re ready.
-
-# The order of results may differ from the submission order — that’s expected.
-
-# Extends all_results with each returned list.
-
-# Prints all results at the end.

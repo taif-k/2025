@@ -49,3 +49,8 @@ anything_but_string = "[]"
 print(type(ast.literal_eval(anything_but_string)))
 
 
+s = "{'a': 1, 'b': 2}"  
+# d = json.loads(s) # when using loads json prperty should be in double qoutes otherwise its an err but literal_eval() can handle this
+d = ast.literal_eval(s)
+print(d)  
+

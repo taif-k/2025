@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="menu-item">
+                <button class="dropdown-btn">Services ▾</button>
+                <ul class="dropdown">
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li class="menu-item">
+                        <button class="dropdown-btn">Marketing ▾</button>
+                        <ul class="dropdown sub-dropdown">
+                            <li>SEO</li>
+                            <li>Social Media</li>
+                            <li>Email Campaigns</li>
+                        </ul>
+                    </li>
+                    <li>Consulting</li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <button class="dropdown-btn">About ▾</button>
+                <ul class="dropdown">
+                    <li>Our Team</li>
+                    <li>Careers</li>
+                </ul>
+            </li>
+
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let dropdownButtons = document.querySelectorAll('.dropdown-btn');
+
+            function mobView() {
+                return window.innerWidth <= 768;
+            }
+
+            function closeDropDowns(except) {
+                const allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function (dropdown) {
+                    if (!dropdown.contains(except) && dropdown !== except) {
+                        dropdown.classList.remove('open');
+                    }
+                });
+            }
+
+            dropdownButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    if (!mobView()) return;
+
+                    event.stopPropagation();
+
+                    const dropdown = button.nextElementSibling;
+                    const isOpen = dropdown.classList.contains('open');
+
+                    closeDropDowns(dropdown);
+
+                    dropdown.classList.toggle('open', !isOpen);
+                });
+            });
+
+            document.addEventListener('click', function () {
+                if (mobView()) {
+                    document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('open'));
+                }
+            });
+        });
+    </script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            let dropdownButtons = document.querySelectorAll('.dropdown-btn');
+
+            function mobView() {
+                return window.innerWidth <= 768;
+            }
+
+            function closeDropDowns(keepOpenDropdown) {
+                let dropDowns = document.querySelectorAll('.dropdown');
+                dropDowns.forEach(function (dropdown) {
+                    if (dropdown !== keepOpenDropdown) {
+                        dropdown.classList.remove('open');
+                    }
+                });
+            }
+
+
+            dropdownButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    if (!mobView()) {
+                        return;
+                    } else {
+
+                        let dropdown = button.nextElementSibling;
+                        let isOpen = dropdown.classList.contains('open');
+
+                        closeDropDowns(dropdown);
+
+                        if (!isOpen) {
+                            dropdown.classList.add('open');
+                        } else {
+                            dropdown.classList.remove('open');
+                        }
+                    }
+                });
+            });
+
+        });
+
+    </script> -->
+
+</body>
+
+</html>      

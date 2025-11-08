@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+export function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -32,4 +32,11 @@ function App() {
   )
 }
 
-export default App
+// export Txt = ()=> {return "hi"}
+export const Txt = ()=>{
+  return (
+    <>
+    <p>test p tag for multiple named export</p>
+    </>
+  )
+}

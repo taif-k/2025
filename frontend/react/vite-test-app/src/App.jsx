@@ -34,8 +34,12 @@ export function App() {
 
 // export Txt = ()=> {return "hi"}
 export const Txt = ()=>{
+  const use_variable = 'string in variable within {}'
+  const use_function = () => 'calling function in {}'
   return (
     <>
+    {use_variable}<br></br>
+    {use_function()}
     <p>test p tag for multiple named export</p>
     </>
   )

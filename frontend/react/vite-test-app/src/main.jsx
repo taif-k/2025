@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
       Phone="810-858-3292"
     /> */}
     <Profile
-      Name="kevin Williams"
+      Name="Kevin Williams"
       Email="Kevinwilliams@gmail.com"
       Phone="810-858-3292"
     />

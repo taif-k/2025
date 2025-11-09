@@ -38,8 +38,13 @@ export const Txt = ()=>{
   const use_function = () => 'calling function in {}'
   return (
     <>
-    {use_variable}<br></br>
-    {use_function()}
+    Variable: {use_variable}<br/>
+    Function: {use_function()}<br/>
+    Arth: {"2" - 2}<br/>
+    Ternry: {2>1?'true':'false'}<br/>
+    Map : {["seven","three","eight"].map((string)=>{
+      return string + " "
+    })}
     <p>test p tag for multiple named export</p>
     </>
   )

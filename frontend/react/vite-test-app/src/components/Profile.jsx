@@ -1,51 +1,28 @@
-import React from 'react'
 import kevinPhoto from '../assets/kevin_willi_table_left.PNG';
+import '../app.css'; 
 
-
-const Profile = (props) => {
-  const { Name = "Taif", Email = "Test@mail.com", Phone = 1234567890 } = props
+const Profile = ({ Name = "Taif", Email = "Test@mail.com", Phone = 1234567890 }) => {
   return (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table className="profile-table">
       <tbody>
         <tr>
-          <td
-            rowSpan="2"
-            style={{
-              width: "150px",
-              textAlign: "center",
-              verticalAlign: "middle",
-              borderRight: "1px solid #ddd",
-            }}
-          >
-            <img
-              src={kevinPhoto}
-              alt="Profile"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
+          <td rowSpan="3" className="profile-photo-cell">
+            <img src={kevinPhoto} alt="Profile" className="profile-photo" />
           </td>
-
-          <td style={{ fontWeight: "bold", padding: "8px", width: "30%" }}>
-            Name
-          </td>
-          <td style={{ padding: "8px" }}>{Name}</td>
+          <td className="profile-label">Name</td>
+          <td>{Name}</td>
         </tr>
-
         <tr>
-          <td style={{ fontWeight: "bold", padding: "8px" }}>Email <br /> Phone</td>
-          <td style={{ padding: "8px" }}>
-            {Email}<br />
-            {Phone}
-          </td>
+          <td className="profile-label">Email</td>
+          <td>{Email}</td>
+        </tr>
+        <tr>
+          <td className="profile-label">Phone</td>
+          <td>{Phone}</td>
         </tr>
       </tbody>
     </table>
+  );
+};
 
-
-  )
-}
-
-export default Profile
+export default Profile;

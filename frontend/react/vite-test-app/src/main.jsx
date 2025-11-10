@@ -8,17 +8,10 @@ import MultipleComponenets from './components/MultipleComponenets.jsx'
 
 createRoot(document.getElementById('root')).render(
   <>
-    {/* <MultipleComponenets
-      Name="kevin Williams"
-      Email="Kevinwilliams@gmail.com"
-      Phone="810-858-3292"
-    /> */}
     <Profile
       Name="Kevin Williams"
       Email="Kevinwilliams@gmail.com"
       Phone="810-858-3292"
     />
-    {/* <App/> */}
-    {/* <Txt/> */}
   </>
 )

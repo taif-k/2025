@@ -26,3 +26,22 @@ const Profile = ({ Name = "Taif", Email = "Test@mail.com", Phone = 1234567890 })
 };
 
 export default Profile;
+
+
+// export Txt = ()=> {return "hi"}
+export const Txt = ()=>{
+  const use_variable = 'string in variable within {}'
+  const use_function = () => 'calling function in {}'
+  return (
+    <>
+    Variable: {use_variable}<br/>
+    Function: {use_function()}<br/>
+    Arth: {"2" - 2}<br/>
+    Ternry: {2>1?'true':'false'}<br/>
+    Map : {["seven","three","eight"].map((string)=>{
+      return string + " "
+    })}
+    <p>test p tag for multiple named export</p>
+    </>
+  )
+}

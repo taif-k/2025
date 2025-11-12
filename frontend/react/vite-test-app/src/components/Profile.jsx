@@ -1,5 +1,5 @@
 import kevinPhoto from '../assets/kevin_willi_table_left.PNG';
-import '../app.css';
+// import '../app.css';
 
 const Profile = (props) => {
 const { Name = "Taif", Email = "Test@mail.com", Phone = 1234567890, imgg = kevinPhoto  } = props

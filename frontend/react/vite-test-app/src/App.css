@@ -70,3 +70,9 @@
 .profile-label {
   font-weight: bold;
 }
+
+
+.avatar-left {
+  padding-top: 1rem;
+  display: flex; 
+}

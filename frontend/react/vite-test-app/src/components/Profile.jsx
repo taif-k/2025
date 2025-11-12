@@ -36,7 +36,7 @@ export default Profile;
 export const Avatar = ({imgg}) => {
   return (
     <>
-      <img src={imgg} alt="Avatar" className="avatar-photo" />
+      <img src={imgg} alt="Avatar" />
     </>
   )
-} 
+}

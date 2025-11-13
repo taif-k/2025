@@ -13,12 +13,12 @@ export function App() {
     <>
     <ToDoList/>
     <UserStatus status={"false"}/>
-    {/* <HeadingStyle/> */}
-    {/* <Profile Name='William John' Email='williamjohn@gmail.com' Phone="810-999-3292" imgg = {williamjohnimg}/>
+    <HeadingStyle/>
+    <Profile Name='William John' Email='williamjohn@gmail.com' Phone="810-999-3292" imgg = {williamjohnimg}/>
     <Profile Name='Williams' Email='kevinwilliams@gmail.com' Phone="810-858-3292" imgg = {williamimg}/>
     <div className="avatar-left">
       <Avatar imgg={noNameImg} />
-    </div> */}
+    </div>
     </>
   )
 }

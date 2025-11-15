@@ -21,16 +21,7 @@ const Count = () => {
        <div>Count Value = {count}</div> 
       <button className='btn btn-outline-primary' onClick={add}>INCREMENT</button>
       <button className='btn btn-outline-primary' onClick={sub}>DECREMENT</button>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     {count === 20 && <p>Maximum limit reached.</p>}
     {count === 0 && <p>Minimum limit reached.</p>}
     </>

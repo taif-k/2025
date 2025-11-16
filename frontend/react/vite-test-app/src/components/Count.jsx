@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 const Count = () => {
     const [count, setState] = useState(0)
     const add = ()=>{
-        // count < 20 ? setState(count + 1) : "" 
         count < 20 && setState(count + 1)
 
         console.log(count)

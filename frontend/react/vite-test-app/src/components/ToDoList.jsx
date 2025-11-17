@@ -1,40 +1,88 @@
-import React from 'react'
+import React, { useReducer, useState } from "react";
 
-const ToDoList = () => {
-    return (
-        <div className="card" style={{ 'width': '30rem' }}>
-            <div className="card-body">
-                <h5 className="card-title">ToDo List</h5>
-                <div class="input-group mb-3">
-                    <input type="text" className="form-control" placeholder="Enter List Item Names" aria-label="List Item Names " aria-describedby="button-addon2" />
-                    <button className="btn btn-outline-secondary" type="button" id="button-addon2">Add Todo Items</button>
-                </div>
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=32&id=cL95UuXTO0nU&format=png' width={15} />Learn HTML, CSS & JS
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=60&id=78597&format=png' width={15} />Learn React
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=60&id=78597&format=png' width={15} />Create Projects
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=60&id=78597&format=png' width={15} />Upload on Github
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=60&id=78597&format=png' width={15} />Create Portfolio
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=60&id=78597&format=png' width={15} />Create Resume
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                    <li className="list-group-item">
-                        <img src='https://img.icons8.com/?size=60&id=78597&format=png' width={15} />Apply For a Job
-                        <button className="btn btn-outline-secondary btn-remove" type="button" id="button-addon2">Remove</button></li>
-                </ul>
-            </div>
-        </div>
-    )
+function todoReducer(state, action) {
+  switch (action.type) {
+    case "ADD_ITEM":
+      return [...state,{id: Date.now(),text: action.payload,completed: false}];
+
+    case "REMOVE_ITEM":
+      return state.filter((item) => item.id !== action.payload);
+
+    case "COMPLETED_ITEM":
+      return state.map((item) =>
+        item.id === action.payload? { ...item, completed: !item.completed }: item);
+
+    default:
+      return state;
+  }
 }
 
-export default ToDoList
+const ToDoList = () => {
+  const [todos, dispatch] = useReducer(todoReducer, []);
+  const [input, setInput] = useState("");
+
+  const handleAdd = () => {
+    if (input.trim() === "") return;
+    dispatch({ type: "ADD_ITEM", payload: input });
+    setInput("");
+  };
+
+  return (
+    <div className="card" style={{ width: "30rem" }}>
+      <div className="card-body">
+        <h5 className="card-title">ToDo List</h5>
+
+        
+        <div className="input-group mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter List Item Names"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button
+            className="btn btn-outline-secondary"
+            type="button"
+            onClick={handleAdd}
+          >
+            Add Todo Items
+          </button>
+        </div>
+
+        
+        <ul className="list-group list-group-flush">
+          {todos.map((item) => (
+            <li
+              key={item.id}
+              className="list-group-item"
+              onClick={() =>
+                dispatch({ type: "COMPLETED_ITEM", payload: item.id })
+              }
+              style={{
+                textDecoration: item.completed ? "line-through" : "none",
+                cursor: "pointer",
+              }}
+            >
+              <img src="https://img.icons8.com/?size=32&id=cL95UuXTO0nU&format=png"width={15}alt="icon"/>
+              {" "}
+              {item.text}
+              <button
+                className="btn btn-outline-secondary btn-remove"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation(); 
+                  dispatch({ type: "REMOVE_ITEM", payload: item.id });
+                }}
+              >
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default ToDoList;

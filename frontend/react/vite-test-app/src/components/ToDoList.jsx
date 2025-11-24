@@ -5,9 +5,6 @@ function todoReducer(state, action) {
     case "ADD_ITEM":
       return [...state,{id: Date.now(),text: action.payload,completed: false}];
 
-    case "REMOVE_ITEM":
-      return state.filter((item) => item.id !== action.payload);
-
     case "COMPLETED_ITEM":
       return state.map((item) =>
         item.id === action.payload? { ...item, completed: !item.completed }: item);

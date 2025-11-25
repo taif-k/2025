@@ -1,17 +1,22 @@
 import './App.css'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, RouterProvider } from 'react-router-dom'
+import {router} from './routes/DataMode'
 import DeclarativeMode from './routes/DeclarativeMode'
 
-
-export function App() {
+function App() {
 
   return (
-    <>
-      <BrowserRouter>
-        <DeclarativeMode/>
-      </BrowserRouter>
-    </>
+    <RouterProvider router={router} />
+
+    // <>
+    //   <BrowserRouter>
+    //     <DeclarativeMode/>
+    //   </BrowserRouter>
+    // </>
   )
 }
+
+export default App
+
 
 

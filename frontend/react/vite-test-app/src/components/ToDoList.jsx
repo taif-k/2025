@@ -1,7 +1,11 @@
-import React, { useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 
 function todoReducer(state, action) {
   switch (action.type) {
+
+    case "REMOVE_ITEM":
+      return state.filter((item) => item.id !== action.payload);
+
     case "ADD_ITEM":
       return [...state,{id: Date.now(),text: action.payload,completed: false}];
 
@@ -19,9 +23,7 @@ const ToDoList = () => {
   const [input, setInput] = useState("");
 
   const handleAdd = () => {
-    if (input.trim() === "") return;
-    dispatch({ type: "ADD_ITEM", payload: input });
-    setInput("");
+    (input.trim() === "") ? true :  dispatch({ type: "ADD_ITEM", payload: input }); setInput("");
   };
 
   return (
@@ -61,7 +63,7 @@ const ToDoList = () => {
                 cursor: "pointer",
               }}
             >
-              <img src="https://img.icons8.com/?size=32&id=cL95UuXTO0nU&format=png"width={15}alt="icon"/>
+              {/* <img src="https://img.icons8.com/?size=32&id=cL95UuXTO0nU&format=png"width={15}alt="icon"/> */}
               {" "}
               {item.text}
               <button

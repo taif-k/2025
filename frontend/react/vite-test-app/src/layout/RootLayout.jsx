@@ -12,10 +12,10 @@ const RootLayout = () => {
                     <li><NavLink to='/todo' >Todo List</NavLink></li>
                     <li><NavLink to='/usereduce' >useReducer</NavLink></li>
                     <li><NavLink to='/usestate' >useState</NavLink></li>
+                    <li><NavLink to='/reactbootstrap' >React Bootstrap</NavLink></li>
                 </ul>
             </div>
             <div className='col-md-9 border border-1'>
-                Component
                 <Outlet/>
             </div>
         </div>

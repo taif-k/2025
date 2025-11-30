@@ -24,7 +24,7 @@ const RootLayout = () => {
                         <li><NavLink to='/buttongroups' >ButtonGroup</NavLink></li>
                         <li><NavLink to='/cards' >Card</NavLink></li>
                         <li><NavLink to='/images' >Images</NavLink></li>
-                        <li><NavLink to='listgroup'>List Groups</NavLink></li>
+                        <li><NavLink to='/listgroup'>List Groups</NavLink></li>
                         <li><NavLink to='/figures'>Figures</NavLink></li>
                         <li><NavLink to='/pagination' >Pagination</NavLink></li>
                         <li><NavLink to='/progressbar' >Progress Bars</NavLink></li>

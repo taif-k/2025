@@ -36,13 +36,13 @@ const RbButtons = () => {
         <p>Toggle Buttons</p>
         <ToggleButtonGroup type="checkbox" value={value} onChange={handleChange}>
           <ToggleButton id="tbg-btn-1" value={1}>
-            B
+            Bold
           </ToggleButton>
           <ToggleButton id="tbg-btn-2" value={2}>
-            I
+            Italic
           </ToggleButton>
           <ToggleButton id="tbg-btn-3" value={3}>
-            S
+            underline
           </ToggleButton>
         </ToggleButtonGroup>
         <p className='m-2' style={getTextStyle()}>

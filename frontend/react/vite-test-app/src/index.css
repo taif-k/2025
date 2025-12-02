@@ -124,11 +124,68 @@ button:focus-visible {
   height: 50px;
   border-radius: 50%;
   border: 2px solid #fff;
-  margin-left: -25px; /* half the width */
+  margin-left: -25px; 
   position: relative;
   z-index: 1;
 }
 
 .avatar-group img:first-child {
-  margin-left: 0; /* first avatar normal */
+  margin-left: 0; 
+}
+
+
+.nav-link {
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: block;
+}
+
+.nav-link:hover {
+  background: rgba(0, 123, 255, 0.15);
+  color: #007bff !important;
+}
+
+.nav-link.active {
+  background: #007bff !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+
+.content-box {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  min-height: 70vh;
+  color: #000 !important; 
+}
+
+
+.breadcrumb {
+  margin-bottom: 20px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #6c757d;
+}
+
+.breadcrumb-item.active {
+  font-weight: 600;
+  color: #007bff !important;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: block; 
+}
+
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #6c757d;
+  margin: 0 6px;
 }

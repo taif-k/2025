@@ -1,14 +1,20 @@
-import CloseButton from 'react-bootstrap/CloseButton';
+import { useState } from "react";
+import CloseButton from "react-bootstrap/CloseButton";
 
 const RbCloseButton = () => {
-    return (
-        <>
-            <div data-bs-theme="dark" className='bg-dark p-2'>
-                <CloseButton />
-                <CloseButton disabled />
-            </div>
-        </>
-    )
-}
+  const [isShown, setIsVisible] = useState(true);
+  let closeBtn = () => setIsVisible(false)
 
-export default RbCloseButton
+  return (
+    <>
+      {isShown && (
+        <div data-bs-theme="dark" className='bg-dark p-2 d-flex align-items-center gap-2'>
+          <span className="text-white">Close This Button</span>
+          <CloseButton onClick={closeBtn} />
+        </div>
+      )}
+    </>
+  );
+};
+
+export default RbCloseButton;

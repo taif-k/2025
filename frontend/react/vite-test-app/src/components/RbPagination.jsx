@@ -1,25 +1,57 @@
 import Pagination from 'react-bootstrap/Pagination';
+import { useState } from 'react';
 
 const RbPagination = () => {
+  const [currentPage, setCurrentPage] = useState(12);
+
+  const handleChange = (page) => {
+    if (page !== 14) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
-    <Pagination>
-      <Pagination.First />
-      <Pagination.Prev />
-      <Pagination.Item>{1}</Pagination.Item>
-      <Pagination.Ellipsis />
+    <div>
+      <p>Current page: {currentPage}</p>
 
-      <Pagination.Item>{10}</Pagination.Item>
-      <Pagination.Item>{11}</Pagination.Item>
-      <Pagination.Item active>{12}</Pagination.Item>
-      <Pagination.Item>{13}</Pagination.Item>
-      <Pagination.Item disabled>{14}</Pagination.Item>
+      <Pagination>
+        <Pagination.First onClick={() => setCurrentPage(1)} />
+        <Pagination.Prev onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)} />
 
-      <Pagination.Ellipsis />
-      <Pagination.Item>{20}</Pagination.Item>
-      <Pagination.Next />
-      <Pagination.Last />
-    </Pagination>
-  )
-}
+        <Pagination.Item
+          active={currentPage === 1}
+          onClick={() => handleChange(1)}
+        >
+          1
+        </Pagination.Item>
 
-export default RbPagination
+        <Pagination.Ellipsis disabled />
+
+        {[10, 11, 12, 13, 14].map((num) => (
+          <Pagination.Item
+            key={num}
+            active={currentPage === num}
+            disabled={num === 14}
+            onClick={() => handleChange(num)}
+          >
+            {num}
+          </Pagination.Item>
+        ))}
+
+        <Pagination.Ellipsis disabled />
+
+        <Pagination.Item
+          active={currentPage === 20}
+          onClick={() => handleChange(20)}
+        >
+          20
+        </Pagination.Item>
+
+        <Pagination.Next onClick={() => currentPage < 20 && setCurrentPage(currentPage + 1)} />
+        <Pagination.Last onClick={() => setCurrentPage(20)} />
+      </Pagination>
+    </div>
+  );
+};
+
+export default RbPagination;

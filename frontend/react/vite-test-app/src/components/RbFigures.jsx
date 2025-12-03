@@ -1,16 +1,17 @@
 import Figure from 'react-bootstrap/Figure';
+import figureimage from '../assets/fig.PNG'
 
 const RbFigures = () => {
     return (
         <Figure>
-            <Figure.Image
+            <Figure.Image fluid
                 width={171}
                 height={180}
                 alt="171x180"
-                src="holder.js/171x180"
+                src={figureimage}
             />
             <Figure.Caption>
-                This is a simple text
+                Image Resource: Google.com
             </Figure.Caption>
         </Figure>
     )

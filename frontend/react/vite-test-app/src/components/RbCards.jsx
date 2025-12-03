@@ -1,6 +1,9 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 const RbCards = () => {
   const headphones = [
@@ -23,25 +26,31 @@ const RbCards = () => {
   ]
 
 
-  return (
-    headphones.map((headphone) => (
-      <Card style={{ width: '25rem' }}>
-        <Card.Title className='mt-2 ps-2'>{headphone.name}</Card.Title>
-        <Card.Img variant="top" src={headphone.img} />
-        <Card.Body>
-          <Card.Text>
-            {headphone.description}
-          </Card.Text>
-          <p>{headphone.price}<span className='ms-2 text-decoration-line-through'>MRP {headphone.mrp}</span></p>
-        </Card.Body>
-        <Card.Footer className='d-flex justify-content-between'>
-          <Button variant='outline-primary' size='sm'>Add to Cart</Button>
-          <Button variant='primary' size='sm'>Buy Know</Button>
-        </Card.Footer>
-      </Card>
-    ))
-
-  )
+return (
+  <Row className="g-3">
+    {headphones.map((headphone) => (
+      <Col key={headphone.id} md={6} lg={4}>
+        <Card style={{ width: '100%' }}>
+          <Card.Title className='mt-2 ps-2'>{headphone.name}</Card.Title>
+          <Card.Img variant="top" src={headphone.img} />
+          <Card.Body>
+            <Card.Text>{headphone.description}</Card.Text>
+            <p>
+              {headphone.price}
+              <span className='ms-2 text-decoration-line-through'>
+                MRP {headphone.mrp}
+              </span>
+            </p>
+          </Card.Body>
+          <Card.Footer className='d-flex justify-content-between'>
+            <Button variant='outline-primary' size='sm'>Add to Cart</Button>
+            <Button variant='primary' size='sm'>Buy Now</Button>
+          </Card.Footer>
+        </Card>
+      </Col>
+    ))}
+  </Row>
+);
 }
 
 export default RbCards

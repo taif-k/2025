@@ -1,4 +1,4 @@
-import './App.css'
+import './assets/style/App.css'
 import { BrowserRouter, RouterProvider } from 'react-router-dom'
 import {router} from './routes/DataMode'
 import DeclarativeMode from './routes/DeclarativeMode'

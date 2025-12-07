@@ -15,12 +15,10 @@ const RbAccordion = () => {
 
   return (
     <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
-      <style>{`.accordion-button::after { display: none  }`}</style>
-
       {accordionItems.map((item) => {
         const isOpen = activeKey === item.id;
         return (
-          <AccordionItem key={item.id} eventKey={item.id}>
+          <AccordionItem key={item.id} eventKey={item.id} bsPrefix=" ">
             <AccordionButton className="d-flex justify-content-between">
               {item.title}  
               {isOpen ? <DashCircle /> : <PlusCircle />}

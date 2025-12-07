@@ -1,5 +1,5 @@
 import Figure from 'react-bootstrap/Figure';
-import figureimage from '../assets/fig.PNG'
+import figureimage from '../assets/images/fig.PNG'
 
 const RbFigures = () => {
     return (

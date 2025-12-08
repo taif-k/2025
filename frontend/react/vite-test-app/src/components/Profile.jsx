@@ -1,8 +1,7 @@
-import kevinPhoto from '../assets/kevin_willi_table_left.PNG';
-// import '../app.css';
+import kevinPhoto from '../assets/images/kevin_willi_table_left.PNG';
 
 const Profile = (props) => {
-const { Name = "Taif", Email = "Test@mail.com", Phone = 1234567890, imgg = kevinPhoto  } = props
+const { Name = "test name", Email = "testemail@mail.com", Phone = 1234567890, imgg = kevinPhoto  } = props
   return (
     <>
       <table className="profile-table">

@@ -22,6 +22,15 @@ import RbProgressBar from "../components/RbProgressBar";
 import RbSpinner from "../components/RbSpinner";
 import RbTable from "../components/RbTable";
 import RbCloseButton from "../components/RbCloseButton";
+import RbBreadCrumb from "../components/RbBreadCrumbs";
+import RbAccordion from "../components/RbAccordion";
+import RbCrousel from "../components/RbCrousel";
+import RBOverlayToolTip from "../components/RBOverlayToolTip";
+import RbModal from "../components/RbModal";
+import RbDropdown from "../components/RbDropdown";
+import RbNavbarOffCanvas from "../components/RbNavbarOffCanvas";
+import RbNavTab from "../components/RbNavTab";
+import RhFormYurik from "../forms/rhFormYurik";
 
 
 
@@ -40,6 +49,7 @@ export const router = createBrowserRouter([
       { path: '/avatar', element: <Avatar /> },
       { path: '/reactbootstrap', element: <ReactBootstrap /> },
       { path: '/badges', element: <RbBadges /> },
+      { path: '/breadcrumb', element: <RbBreadCrumb /> },
       { path: '/buttons', element: <RbButtons /> },
       { path: '/buttongroups', element: <RbButtonGroup /> },
       { path: '/cards', element: <RbCards /> },
@@ -51,6 +61,15 @@ export const router = createBrowserRouter([
       { path: '/spinner', element: <RbSpinner /> },
       { path: '/table', element: <RbTable /> },
       { path: '/closebutton', element: <RbCloseButton /> },
+      { path: '/accordion', element: <RbAccordion /> },
+      { path: '/crousel', element: <RbCrousel /> },
+      { path: '/overlay', element: <RBOverlayToolTip /> },
+      { path: '/modal', element: <RbModal /> },
+      { path: '/dropdown', element: <RbDropdown /> },
+      { path: '/navbar-offcanvas', element: <RbNavbarOffCanvas /> },
+      { path: '/navtab', element: <RbNavTab /> },
+      { path: '/rhformyurik', element: <RhFormYurik /> },
+
     ]
   },
   {

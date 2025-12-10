@@ -1,30 +1,39 @@
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import { AccordionButton, AccordionItem, AccordionBody } from "react-bootstrap";
 import { PlusCircle, DashCircle } from "react-bootstrap-icons";
 
 const RbAccordion = () => {
-  const [activeKey, setActiveKey] = useState("1");
+  const [openItem, setOpenItem] = useState(null);
 
-  const accordionItems = [
-    { id: "1", title: "What is the cost of an online course", content: "Lorem ipsum dolor sit amet" },
-    { id: "2", title: "Do I need to visit any physical location", content: "Lorem ipsum dolor sit amet" },
-    { id: "3", title: "What are the technologies requirements", content: "Lorem ipsum dolor sit amet" },
-    { id: "4", title: "How can I ask questions or clear doubts", content: "Lorem ipsum dolor sit amet" }
+  const items = [
+    { id: "1", title: "What is the cost of an online course?" },
+    { id: "2", title: "Do I need to visit any physical location?" },
+    { id: "3", title: "What are the technology requirements?" },
+    { id: "4", title: "How can I ask questions or clear doubts?" },
   ];
 
+  const toggleItem = (id) => {
+    setOpenItem(openItem === id ? null : id);
+  };
+
   return (
-    <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
-      {accordionItems.map((item) => {
-        const isOpen = activeKey === item.id;
+    <Accordion activeKey={openItem}>
+      {items.map((item) => {
+        const isOpen = openItem === item.id;
+
         return (
-          <AccordionItem key={item.id} eventKey={item.id} bsPrefix=" ">
-            <AccordionButton className="d-flex justify-content-between">
-              {item.title}  
+          <Accordion.Item eventKey={item.id} key={item.id}>
+
+            <div className="d-flex justify-content-between align-items-center p-3" onClick={() => toggleItem(item.id)}>
+              {item.title}
               {isOpen ? <DashCircle /> : <PlusCircle />}
-            </AccordionButton>
-            <AccordionBody>{item.content}</AccordionBody>
-          </AccordionItem>
+            </div>
+
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Accordion.Body>
+
+          </Accordion.Item>
         );
       })}
     </Accordion>

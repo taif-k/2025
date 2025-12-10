@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "date-fns": "^4.1.0",
     "react": "^19.2.1",
     "react-bootstrap": "^2.10.10",
     "react-bootstrap-icons": "^1.11.6",
+    "react-datepicker": "^9.0.0",
     "react-dom": "^19.2.1",
+    "react-hook-form": "^7.68.0",
     "react-router-dom": "^7.10.1"
   },
   "devDependencies": {

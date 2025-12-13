@@ -1,8 +1,5 @@
 
 import Profile, { Avatar } from '../components/Profile'
-// import williamjohnimg from './assets/williamjohn.PNG'
-// import williamimg from './assets/william.PNG'
-// import noNameImg from './assets/noName.PNG'
 import HeadingStyle from '../components/HeadingStyle'
 import UserStatus from '../components/UserStatus'
 import ToDoList from '../components/ToDoList'
@@ -19,6 +16,9 @@ const DeclarativeMode = () => {
     return (
         <>
             <Routes>
+                <Route element={<AuthLayout/>}>
+                    <Route path="/login" element={<Login/>} />
+                </Route>
                 <Route path="/" element={<RootLayout />}>
                     <Route index element={<Home />} />
                     <Route path="/usereduce" element={<CountWithReducer />} />
@@ -29,9 +29,7 @@ const DeclarativeMode = () => {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/avatar" element={<Avatar />} />
                 </Route>
-                <Route element={<AuthLayout/>}>
-                    <Route path="/login" element={<Login/>} />
-                </Route>
+
             </Routes>
         </>
     )

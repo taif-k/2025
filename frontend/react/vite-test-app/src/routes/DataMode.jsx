@@ -30,7 +30,7 @@ import RbModal from "../components/RbModal";
 import RbDropdown from "../components/RbDropdown";
 import RbNavbarOffCanvas from "../components/RbNavbarOffCanvas";
 import RbNavTab from "../components/RbNavTab";
-import RhFormYurik from "../forms/rhFormYurik";
+import RhForm from "../forms/RhForm";
 
 
 
@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
       { path: '/dropdown', element: <RbDropdown /> },
       { path: '/navbar-offcanvas', element: <RbNavbarOffCanvas /> },
       { path: '/navtab', element: <RbNavTab /> },
-      { path: '/rhformyurik', element: <RhFormYurik /> },
+      { path: '/rhform', element: <RhForm /> },
 
     ]
   },

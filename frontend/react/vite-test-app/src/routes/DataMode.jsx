@@ -31,6 +31,7 @@ import RbDropdown from "../components/RbDropdown";
 import RbNavbarOffCanvas from "../components/RbNavbarOffCanvas";
 import RbNavTab from "../components/RbNavTab";
 import RhForm from "../forms/RhForm";
+import RhFormYup from "../forms/RhFormYup";
 
 
 
@@ -69,6 +70,7 @@ export const router = createBrowserRouter([
       { path: '/navbar-offcanvas', element: <RbNavbarOffCanvas /> },
       { path: '/navtab', element: <RbNavTab /> },
       { path: '/rhform', element: <RhForm /> },
+      { path: '/rhformyup', element: <RhFormYup /> },
 
     ]
   },

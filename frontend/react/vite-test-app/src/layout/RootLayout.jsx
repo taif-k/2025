@@ -6,7 +6,6 @@ import { ArrowRight, Columns } from "react-bootstrap-icons";
 import { Container, Row, Col } from 'react-bootstrap';
 
 
-
 const nonInteractiveLinks = [
   { path: "/badges", label: "Badges" },
   { path: "/breadcrumb", label: "Breadcrumbs" },
@@ -31,6 +30,11 @@ const interactiveLinks = [
   { path: "/navbar-offcanvas", label: "Navbar Offcanvas" },
   { path: "/navtab", label: "Navtab" },
   { path: "/overlay", label: "Overlay" }
+];
+
+const forms = [
+  { path: "/rhform", label: "RH Form" },
+  { path: "/rhformyup", label: "RH Form Yup" }
 ];
 
 const RootLayout = () => {
@@ -64,6 +68,20 @@ const RootLayout = () => {
               <Accordion.Body>
                 <ul className="list-unstyled">
                   {interactiveLinks.map((item, index) => (
+                    <li key={index} className="sidebar-link">
+                      <ArrowRight className="me-2 icon-blue" />
+                      <NavLink to={item.path}>{item.label}</NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>Forms</Accordion.Header>
+              <Accordion.Body>
+                <ul className="list-unstyled">
+                  {forms.map((item, index) => (
                     <li key={index} className="sidebar-link">
                       <ArrowRight className="me-2 icon-blue" />
                       <NavLink to={item.path}>{item.label}</NavLink>

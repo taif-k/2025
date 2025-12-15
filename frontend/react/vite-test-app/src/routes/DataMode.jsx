@@ -9,7 +9,7 @@ import AuthLayout from "../layout/AuthLayout";
 import RootLayout from "../layout/RootLayout";
 import Login from "../pages/Login";
 import { createBrowserRouter } from "react-router-dom";
-import ReactBootstrap from "../pages/ReactBootstrap";
+// import ReactBootstrap from "../pages/ReactBootstrap";
 import RbBadges from "../components/RbBadges";
 import RbButtons from "../components/RbButtons";
 import RbButtonGroup from "../components/RbButtonGroup";
@@ -48,7 +48,7 @@ export const router = createBrowserRouter([
       { path: '/headingstyle', element: <HeadingStyle /> },
       { path: '/profile', element: <Profile /> },
       { path: '/avatar', element: <Avatar /> },
-      { path: '/reactbootstrap', element: <ReactBootstrap /> },
+      // { path: '/reactbootstrap', element: <ReactBootstrap /> },
       { path: '/badges', element: <RbBadges /> },
       { path: '/breadcrumb', element: <RbBreadCrumb /> },
       { path: '/buttons', element: <RbButtons /> },

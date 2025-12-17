@@ -2,12 +2,14 @@ import './assets/style/App.css'
 import { BrowserRouter, RouterProvider } from 'react-router-dom'
 import {router} from './routes/DataMode'
 import DeclarativeMode from './routes/DeclarativeMode'
+import UserProvider from './provider/UserProvider'
 
 function App() {
 
   return (
-    <RouterProvider router={router} />
-
+    <UserProvider>
+        <RouterProvider router={router} />
+    </UserProvider>
     // <>
     //   <BrowserRouter>
     //     <DeclarativeMode/>

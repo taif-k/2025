@@ -7,20 +7,39 @@ const WishListProvider = ({ children }) => {
     const WishListReducer = (state, action) => {
         console.log("Current state: " + JSON.stringify(state))
         console.log("Current action: " + JSON.stringify(action))
+        const { type, payload } = action
+        switch (type) {
+            case "ADD_TO_WISHLIST":
+                console.log("ADD_TO_WISHLIST: " + JSON.stringify(type))
+                return {
+                    ...state,
+                    wishlistItems: [
+                        ...state.wishlistItems,
+                        {
+                            id: payload?.id,
+                            title: payload?.title,
+                            thumbnail: payload?.thumbnail
+                        }
+
+
+                    ]
+                }
+            case "REMOVE_FROM_WISHLIST":
+                console.log("REMOVE_FROM_WISHLIST: " + JSON.stringify(type))
+                return {
+                    ...state,
+                    wishlistItems: state.wishlistItems.filter((product => product.id !== payload))
+                }
+            default:
+                return state
+
+        }
+
     }
 
     const [wishListState, wishListDispatch] = useReducer(WishListReducer, {
         userId: 1,
-        wishlistItems: [{
-            "id": 1,
-            "title": "Essence Mascara Lash Princess",
-            "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-        }, {
-            "id": 2,
-            "title": "Eyeshadow Palette with Mirror",
-            "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
-
-        }],
+        wishlistItems: [],
     })
     return (
         <WishListContext.Provider value={{ wishListState, wishListDispatch }}>

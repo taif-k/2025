@@ -6,12 +6,19 @@ import { ProductsData } from '../data/product';
 import WishList from './WishList';
 import { WishListContext } from '../context/Context';
 
-const Products = ({item}) => {
-    const { wishListState, wishListDispatch } = useContext(WishListContext)
-  
-  const AddToWishListBtn = () => {
-    const handleAddToWishList = () =>{
-      wishListDispatch({type: "ADD_WISHLIST", payload: item})
+const Products = () => {
+  const { wishListState, wishListDispatch } = useContext(WishListContext)
+
+  const AddToWishListBtn = ({ product }) => {
+    const itemPresent = wishListState.wishlistItems.filter((item)=>item.id === product.id).length > 0 ? true : false
+    const handleAddToWishList = () => {
+      if(itemPresent){
+        alert('Already present in Wish List')
+      }  else{
+          wishListDispatch({ type: "ADD_TO_WISHLIST", payload: product })
+      alert('Item added to Wish List')
+      }
+      
     }
 
 
@@ -34,7 +41,7 @@ const Products = ({item}) => {
                 </Card.Body>
                 <Card.Footer className='d-flex justify-content-between'>
                   <Button variant="primary">Cart</Button>
-                  <AddToWishListBtn product = {item}/>
+                  <AddToWishListBtn product={item} />
                 </Card.Footer>
               </Card>
             </Col>

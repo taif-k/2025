@@ -3,7 +3,9 @@ import RbBreadCrumb from '../components/RbBreadCrumbs';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import { ArrowRight, Columns } from "react-bootstrap-icons";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Badge } from 'react-bootstrap';
+import { useContext } from 'react';
+import { UserContext, WishListContext } from '../context/Context';
 
 
 const nonInteractiveLinks = [
@@ -37,9 +39,25 @@ const forms = [
   { path: "/rhformyup", label: "RH Form Yup" }
 ];
 
-const RootLayout = () => {
-  return (
 
+const management = [
+  { path: "/statemanagement", label: "State Management" },
+  { path: "/product", label: "Product" },
+  { path: "/wishlist", label: "Wish List" }
+]
+
+const blogaccordion = [
+  { path: "/blog", label: "Blogs" },
+  // { path: "/blog/:id", label: "Blog Detail" }
+]
+
+const RootLayout = () => {
+
+  const { name } = useContext(UserContext)
+  const { wishListState } = useContext(WishListContext)
+
+
+  return (
     <Container>
       <Row>
         <Col className="p-3 border-end" md={3}>
@@ -47,7 +65,7 @@ const RootLayout = () => {
             Bootstrap Components
           </Button>
 
-          <Accordion defaultActiveKey="0">
+          <Accordion defaultActiveKey="4">
             <Accordion.Item eventKey="0">
               <Accordion.Header>Non Interactive</Accordion.Header>
               <Accordion.Body>
@@ -90,11 +108,40 @@ const RootLayout = () => {
                 </ul>
               </Accordion.Body>
             </Accordion.Item>
+
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Context Api</Accordion.Header>
+              <Accordion.Body>
+                <ul className="list-unstyled">
+                  {management.map((item, index) => (
+                    <li key={index} className="sidebar-link">
+                      <ArrowRight className="me-2 icon-blue" />
+                      <NavLink to={item.path}>{item.label}</NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>Blogs</Accordion.Header>
+              <Accordion.Body>
+                <ul className="list-unstyled">
+                  {blogaccordion.map((item, index) => (
+                    <li key={index} className="sidebar-link">
+                      <ArrowRight className="me-2 icon-blue" />
+                      <NavLink to={item.path}>{item.label}</NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
           </Accordion>
         </Col>
 
         <Col md={9}>
           <RbBreadCrumb />
+          <NavLink to="/wishlist" variant='outline-primary' className='btn'>Wishlist<Badge className='m-2'>{wishListState.wishlistItems.length}</Badge></NavLink>
           <Outlet />
         </Col>
       </Row>

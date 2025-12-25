@@ -32,6 +32,11 @@ import RbNavbarOffCanvas from "../components/RbNavbarOffCanvas";
 import RbNavTab from "../components/RbNavTab";
 import RhForm from "../forms/RhForm";
 import RhFormYup from "../forms/RhFormYup";
+import StateManagement from "../pages/StateManagement";
+import Products from "../pages/Products";
+import WishList from "../pages/WishList";
+import Blog from "../pages/blog/Blog"
+import BlogDetail from "../pages/blog/BlogDetail"
 
 
 
@@ -71,6 +76,11 @@ export const router = createBrowserRouter([
       { path: '/navtab', element: <RbNavTab /> },
       { path: '/rhform', element: <RhForm /> },
       { path: '/rhformyup', element: <RhFormYup /> },
+      {path: "/statemanagement", element: <StateManagement/>},
+      {path: "/product", element: <Products/>},
+      {path: "/wishlist", element: <WishList/>},
+      {path: "/blog/:id", element: <BlogDetail/>},
+      {path: "/blog", element: <Blog/>},
 
     ]
   },

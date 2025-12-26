@@ -1,27 +1,21 @@
-import './assets/style/App.css'
-import { BrowserRouter, RouterProvider } from 'react-router-dom'
-import {router} from './routes/DataMode'
-import DeclarativeMode from './routes/DeclarativeMode'
-import UserProvider from './provider/UserProvider'
-import WishListProvider from './provider/WishListProvider'
+import "./assets/style/App.css";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/DataMode";
+
+import UserProvider from "./provider/UserProvider";
+import WishListProvider from "./provider/WishListProvider";
+import CartListProvider from "./provider/CartListProvider";
 
 function App() {
-
   return (
     <UserProvider>
       <WishListProvider>
-        <RouterProvider router={router} />
+        <CartListProvider>
+          <RouterProvider router={router} />
+        </CartListProvider>
       </WishListProvider>
     </UserProvider>
-    // <>
-    //   <BrowserRouter>
-    //     <DeclarativeMode/>
-    //   </BrowserRouter>
-    // </>
-  )
+  );
 }
 
-export default App
-
-
-
+export default App;

@@ -5,7 +5,8 @@ import Button from 'react-bootstrap/Button';
 import { ArrowRight, Columns } from "react-bootstrap-icons";
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { useContext } from 'react';
-import { UserContext, WishListContext } from '../context/Context';
+import { CartListContext, UserContext, WishListContext } from '../context/Context';
+import ScrollToTop from '../components/ScrollToTop';
 
 
 const nonInteractiveLinks = [
@@ -43,11 +44,14 @@ const forms = [
 const management = [
   { path: "/statemanagement", label: "State Management" },
   { path: "/product", label: "Product" },
-  { path: "/wishlist", label: "Wish List" }
+  { path: "/wishlist", label: "Wish List" },
+  { path: "/cartlist", label: "Cart List" }
 ]
 
 const blogaccordion = [
   { path: "/blog", label: "Blogs" },
+  { path: "/navigatehook", label: "useNavigate Hook" },
+  { path: "/navigatepage", label: "Navigate Page" },
   // { path: "/blog/:id", label: "Blog Detail" }
 ]
 
@@ -55,6 +59,7 @@ const RootLayout = () => {
 
   const { name } = useContext(UserContext)
   const { wishListState } = useContext(WishListContext)
+  const { cartListState } = useContext(CartListContext)
 
 
   return (
@@ -142,7 +147,9 @@ const RootLayout = () => {
         <Col md={9}>
           <RbBreadCrumb />
           <NavLink to="/wishlist" variant='outline-primary' className='btn'>Wishlist<Badge className='m-2'>{wishListState.wishlistItems.length}</Badge></NavLink>
+          <NavLink to="/cartlist" variant='outline-primary' className="btn">Cart <Badge className='m-2'>{cartListState.cartItems.length}</Badge></NavLink>
           <Outlet />
+          <ScrollToTop/>
         </Col>
       </Row>
     </Container>

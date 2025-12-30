@@ -37,6 +37,7 @@ import Products from "../pages/Products";
 import WishList from "../pages/WishList";
 import Blog from "../pages/blog/Blog"
 import BlogDetail from "../pages/blog/BlogDetail"
+import CartList from "../pages/CartList";
 
 
 
@@ -81,7 +82,7 @@ export const router = createBrowserRouter([
       {path: "/wishlist", element: <WishList/>},
       {path: "/blog/:id", element: <BlogDetail/>},
       {path: "/blog", element: <Blog/>},
-
+      {path: "/cartlist", element: <CartList/>},
     ]
   },
   {
